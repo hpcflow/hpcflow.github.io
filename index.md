@@ -1,5 +1,9 @@
+---
+layout: default
+---
+
 # Welcome to hpcflow!
 
-[Install](install.md)
-[Documentation](docs/stable/index.md)
-[Documentation (dev)](docs/dev/index.md)
+[Install](install)
+[Documentation](docs/stable)
+[Documentation (dev)](docs/dev)
