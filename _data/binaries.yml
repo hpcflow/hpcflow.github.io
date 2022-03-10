@@ -1,4 +1,6 @@
-hpcflow-v0.58.0a23-CentOS: https://github.com/hpcflow/hpcflow-new/releases/v0.58.0a23/download/release-artifacts/hpcflow-v0.58.0a23-CentOS
+v0.58.0a28:
+  hpcflow-v0.58.0a28-linux: https://github.com/hpcflow/hpcflow-new/releases/download/v0.58.0a28/hpcflow-v0.58.0a28-linux
+  hpcflow-v0.58.0a28-CentOS: https://github.com/hpcflow/hpcflow-new/releases/download/v0.58.0a28/hpcflow-v0.58.0a28-CentOShpcflow-v0.58.0a23-CentOS: https://github.com/hpcflow/hpcflow-new/releases/v0.58.0a23/download/release-artifacts/hpcflow-v0.58.0a23-CentOS
 
 hpcflow-v0.58.0a23-linux: https://github.com/hpcflow/hpcflow-new/releases/v0.58.0a23/download/release-artifacts/hpcflow-v0.58.0a23-linux
 hpcflow-v0.58.0a24-linux: https://github.com/hpcflow/hpcflow-new/releases/download/v0.58.0a24/hpcflow-v0.58.0a24-linux
