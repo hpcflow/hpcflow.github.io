@@ -7,3 +7,4 @@ layout: default
 [Install](install)
 [Documentation](docs/stable)
 [Documentation (dev)](docs/dev)
+[Contribute](contribute)
