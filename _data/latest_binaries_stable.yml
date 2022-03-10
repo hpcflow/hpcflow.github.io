@@ -1,3 +1,5 @@
-v0.59.0:
-  hpcflow-v0.59.0-CentOS: https://github.com/hpcflow/hpcflow-new/releases/download/v0.59.0/hpcflow-v0.59.0-CentOS
-  hpcflow-v0.59.0-linux: https://github.com/hpcflow/hpcflow-new/releases/download/v0.59.0/hpcflow-v0.59.0-linux
+v0.60.0:
+  hpcflow-v0.60.0-macOS: https://github.com/hpcflow/hpcflow-new/releases/download/v0.60.0/hpcflow-v0.60.0-macOS
+  hpcflow-v0.60.0-win.exe: https://github.com/hpcflow/hpcflow-new/releases/download/v0.60.0/hpcflow-v0.60.0-win.exe
+  hpcflow-v0.60.0-linux: https://github.com/hpcflow/hpcflow-new/releases/download/v0.60.0/hpcflow-v0.60.0-linux
+
