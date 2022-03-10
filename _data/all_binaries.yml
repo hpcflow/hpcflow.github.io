@@ -1,3 +1,6 @@
+v0.59.0:
+  hpcflow-v0.59.0-CentOS: https://github.com/hpcflow/hpcflow-new/releases/download/v0.59.0/hpcflow-v0.59.0-CentOS
+  hpcflow-v0.59.0-linux: https://github.com/hpcflow/hpcflow-new/releases/download/v0.59.0/hpcflow-v0.59.0-linux
 v0.59.0a4:
   hpcflow-v0.59.0a4-linux: https://github.com/hpcflow/hpcflow-new/releases/download/v0.59.0a4/hpcflow-v0.59.0a4-linux
   hpcflow-v0.59.0a4-CentOS: https://github.com/hpcflow/hpcflow-new/releases/download/v0.59.0a4/hpcflow-v0.59.0a4-CentOS
