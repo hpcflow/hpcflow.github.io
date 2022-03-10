@@ -52,6 +52,6 @@ Release notes: [link](https://github.com/hpcflow/hpcflow-new/releases/tag/{{ lat
 
 <ul>
 {% for binary in site.data.all_binaries %}
-  <li>{{ binary[0] }}</li>
+  <li><a href="https://github.com/hpcflow/hpcflow-new/releases/tag/{{ binary[0] }}">{{ binary[0] }}</a></li>
 {% endfor %}
 </ul>
