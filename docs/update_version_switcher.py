@@ -9,7 +9,7 @@ def update(switcher_path, branch, new_version):
     with open(switcher_path, 'w') as fh:
         switches_new = [
             {
-                'name': f"{new_version} {'(stable)' if branch == 'main' else '(dev)'}",
+                'name': f"{new_version.lstrip('v')} {'(stable)' if branch == 'main' else '(dev)'}",
                 "version": new_version.lstrip('v'),
             }
         ]

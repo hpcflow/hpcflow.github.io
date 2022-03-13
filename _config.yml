@@ -1,1 +1,0 @@
-include: [_sources, _static] # sphinx folders in docs/<version>/
