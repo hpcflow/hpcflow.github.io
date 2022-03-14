@@ -1,1 +1,1 @@
-[{"name": "dev", "version": ".git"}, {"name": "stable", "version": "docs"}]
+[{"name": "dev", "version": "dev"}, {"name": "stable", "version": "stable"}, {"name": "v0.65.0a1", "version": "v0.65.0a1"}, {"name": "v0.65.0", "version": "v0.65.0"}, {"name": "v0.66.0a1", "version": "v0.66.0a1"}, {"name": "v0.66.0a4", "version": "v0.66.0a4"}, {"name": "v0.66.0a5", "version": "v0.66.0a5"}]
