@@ -11,5 +11,6 @@ vers_switcher = [
         "version": vers,
     } for idx, vers in enumerate(all_vers)
 ]
+docs_dir = Path(__file__).parent.resolve()
 with Path('switcher.json').open('w') as fh:
-    json.dump(vers_switcher, fh)
+    json.dump(str(docs_dir.join(vers_switcher)), fh)
