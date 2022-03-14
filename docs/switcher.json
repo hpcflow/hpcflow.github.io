@@ -1,42 +1,38 @@
 [
     {
-        "name": "dev (v0.65.0a1)",
-        "version": "0.65.0a1"
+        "name": "dev (v0.67.0a0)",
+        "version": "0.67.0a0"
     },
     {
-        "name": "stable (v0.65.0)",
-        "version": "0.65.0"
-    },
-    {
-        "name": "v0.66.0a1",
-        "version": "0.66.0a1"
-    },
-    {
-        "name": "v0.66.0a4",
-        "version": "0.66.0a4"
-    },
-    {
-        "name": "v0.66.0a5",
-        "version": "0.66.0a5"
-    },
-    {
-        "name": "v0.66.0a6",
-        "version": "0.66.0a6"
-    },
-    {
-        "name": "v0.66.0a7",
-        "version": "0.66.0a7"
-    },
-    {
-        "name": "v0.66.0a8",
-        "version": "0.66.0a8"
+        "name": "stable (v0.66.0)",
+        "version": "0.66.0"
     },
     {
         "name": "v0.66.0a9",
         "version": "0.66.0a9"
     },
     {
-        "name": "v0.66.0",
-        "version": "0.66.0"
+        "name": "v0.66.0a8",
+        "version": "0.66.0a8"
+    },
+    {
+        "name": "v0.66.0a7",
+        "version": "0.66.0a7"
+    },
+    {
+        "name": "v0.66.0a6",
+        "version": "0.66.0a6"
+    },
+    {
+        "name": "v0.66.0a5",
+        "version": "0.66.0a5"
+    },
+    {
+        "name": "v0.66.0a4",
+        "version": "0.66.0a4"
+    },
+    {
+        "name": "v0.66.0a1",
+        "version": "0.66.0a1"
     }
 ]
