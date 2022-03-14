@@ -13,4 +13,4 @@ vers_switcher = [
     } for idx, vers in enumerate(all_vers)
 ]
 with docs_dir.joinpath('switcher.json').open('w') as fh:
-    json.dump(vers_switcher, fh)
+    json.dump(vers_switcher, fh, indent=4)
