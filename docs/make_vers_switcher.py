@@ -13,4 +13,4 @@ vers_switcher = [
 ]
 docs_dir = Path(__file__).parent.resolve()
 with Path('switcher.json').open('w') as fh:
-    json.dump(str(docs_dir.join(vers_switcher)), fh)
+    json.dump(str(docs_dir.joinpath(vers_switcher)), fh)
