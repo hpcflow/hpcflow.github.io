@@ -8,8 +8,8 @@ all_vers = sorted(
 )
 vers_switcher = [
     {
-        "name": "dev" if idx == 0 else ("stable" if idx == 1 else vers),
-        "version": vers,
+        "name": f"dev ({vers})" if idx == 0 else (f"stable ({vers})" if idx == 1 else vers),
+        "version": vers.lstrip('v'),
     } for idx, vers in enumerate(all_vers)
 ]
 with docs_dir.joinpath('switcher.json').open('w') as fh:
