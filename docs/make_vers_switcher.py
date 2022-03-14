@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
 
+docs_dir = Path(__file__).parent.resolve()
 all_vers = sorted(
-    (i.name for i in Path('.').glob('*') if i.is_dir()),
+    (i.name for i in docs_dir.glob('*') if i.is_dir()),
     key=lambda i: i if not i[-1].isdigit() else i + 'z'
 )
 vers_switcher = [
@@ -11,6 +12,5 @@ vers_switcher = [
         "version": vers,
     } for idx, vers in enumerate(all_vers)
 ]
-docs_dir = Path(__file__).parent.resolve()
 with docs_dir.joinpath('switcher.json').open('w') as fh:
     json.dump(vers_switcher, fh)
