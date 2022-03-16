@@ -1,1 +1,1 @@
-Website for the [hpcFlow](https://github.com/hpcflow/hpcflow-new) package.
+Built content for the [hpcFlow](https://github.com/hpcflow/hpcflow-new) website: https://hpcflow.github.io
