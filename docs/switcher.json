@@ -1,5 +1,9 @@
 [
     {
+        "name": "dev (v0.80.1a0)",
+        "version": "0.80.1a0"
+    },
+    {
         "name": "stable (v0.80.0)",
         "version": "0.80.0"
     },
