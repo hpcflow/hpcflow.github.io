@@ -1,6 +1,10 @@
 [
     {
-        "name": "dev (v0.2.0a3)",
+        "name": "dev (v0.2.0a4)",
+        "version": "0.2.0a4"
+    },
+    {
+        "name": "v0.2.0a3",
         "version": "0.2.0a3"
     },
     {
