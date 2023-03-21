@@ -24,7 +24,7 @@ for idx, vers in enumerate(all_vers):
         name = f"dev ({vers})"
     else:
         name = vers
-    vers_switcher.append({"name": name, "version": vers.lstrip('v')})
+    vers_switcher.append({"name": name, "version": vers.lstrip('v'), "url": "/docs/"+vers+"/"})
 
 with docs_dir.joinpath('switcher.json').open('w') as fh:
     json.dump(vers_switcher, fh, indent=4)
