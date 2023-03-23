@@ -1,46 +1,6 @@
 [
     {
-        "name": "dev (v0.2.0a9)",
-        "version": "0.2.0a9",
-        "url": "/docs/v0.2.0a9/"
-    },
-    {
-        "name": "v0.2.0a8",
-        "version": "0.2.0a8",
-        "url": "/docs/v0.2.0a8/"
-    },
-    {
-        "name": "v0.2.0a7",
-        "version": "0.2.0a7",
-        "url": "/docs/v0.2.0a7/"
-    },
-    {
-        "name": "v0.2.0a6",
-        "version": "0.2.0a6",
-        "url": "/docs/v0.2.0a6/"
-    },
-    {
-        "name": "v0.2.0a5",
-        "version": "0.2.0a5",
-        "url": "/docs/v0.2.0a5/"
-    },
-    {
-        "name": "v0.2.0a4",
-        "version": "0.2.0a4",
-        "url": "/docs/v0.2.0a4/"
-    },
-    {
-        "name": "v0.2.0a3",
-        "version": "0.2.0a3",
-        "url": "/docs/v0.2.0a3/"
-    },
-    {
-        "name": "v0.2.0a2",
-        "version": "0.2.0a2",
-        "url": "/docs/v0.2.0a2/"
-    },
-    {
-        "name": "v0.2.0a23",
+        "name": "dev (v0.2.0a23)",
         "version": "0.2.0a23",
         "url": "/docs/v0.2.0a23/"
     },
@@ -58,11 +18,6 @@
         "name": "v0.2.0a20",
         "version": "0.2.0a20",
         "url": "/docs/v0.2.0a20/"
-    },
-    {
-        "name": "v0.2.0a1",
-        "version": "0.2.0a1",
-        "url": "/docs/v0.2.0a1/"
     },
     {
         "name": "v0.2.0a19",
@@ -103,6 +58,51 @@
         "name": "v0.2.0a10",
         "version": "0.2.0a10",
         "url": "/docs/v0.2.0a10/"
+    },
+    {
+        "name": "v0.2.0a9",
+        "version": "0.2.0a9",
+        "url": "/docs/v0.2.0a9/"
+    },
+    {
+        "name": "v0.2.0a8",
+        "version": "0.2.0a8",
+        "url": "/docs/v0.2.0a8/"
+    },
+    {
+        "name": "v0.2.0a7",
+        "version": "0.2.0a7",
+        "url": "/docs/v0.2.0a7/"
+    },
+    {
+        "name": "v0.2.0a6",
+        "version": "0.2.0a6",
+        "url": "/docs/v0.2.0a6/"
+    },
+    {
+        "name": "v0.2.0a5",
+        "version": "0.2.0a5",
+        "url": "/docs/v0.2.0a5/"
+    },
+    {
+        "name": "v0.2.0a4",
+        "version": "0.2.0a4",
+        "url": "/docs/v0.2.0a4/"
+    },
+    {
+        "name": "v0.2.0a3",
+        "version": "0.2.0a3",
+        "url": "/docs/v0.2.0a3/"
+    },
+    {
+        "name": "v0.2.0a2",
+        "version": "0.2.0a2",
+        "url": "/docs/v0.2.0a2/"
+    },
+    {
+        "name": "v0.2.0a1",
+        "version": "0.2.0a1",
+        "url": "/docs/v0.2.0a1/"
     },
     {
         "name": "v0.2.0a0",
