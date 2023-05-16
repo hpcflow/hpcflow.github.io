@@ -1,0 +1,2237 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hpcflow.sdk.persistence package &#8212; hpcflow 0.2.0a39 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/hpcflow.sdk.persistence';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hpcflow.github.io/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.2.0a39';
+        </script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="hpcflow.sdk.scripting package" href="hpcflow.sdk.scripting.html" />
+    <link rel="prev" title="hpcflow.sdk.helper package" href="hpcflow.sdk.helper.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo-v2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo-v2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install/index.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contribute/index.html">
+                        Contribute
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.2.0a39  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../install/index.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../contribute/index.html">
+                        Contribute
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.2.0a39  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="hpcflow.api.html">hpcflow API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.api_methods.html">hpcflow API methods</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.api_methods.make_workflow.html">make_workflow</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.api_classes.html">hpcflow API classes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.api_classes.Workflow.html">Workflow</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.api_classes.WorkflowTemplate.html">WorkflowTemplate</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hpcflow.cli.html">hpcflow CLI</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="hpcflow.sdk.html">hpcflow SDK</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hpcflow.sdk.config.html">hpcflow.sdk.config package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpcflow.sdk.core.html">hpcflow.sdk.core package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.sdk.data.html">hpcflow.sdk.data package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.data.template_components.html">hpcflow.sdk.data.template_components package</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.sdk.demo.html">hpcflow.sdk.demo package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.demo.scripts.html">hpcflow.sdk.demo.scripts package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.demo.scripts.subdir.html">hpcflow.sdk.demo.scripts.subdir package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpcflow.sdk.helper.html">hpcflow.sdk.helper package</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">hpcflow.sdk.persistence package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpcflow.sdk.scripting.html">hpcflow.sdk.scripting package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.sdk.submission.html">hpcflow.sdk.submission package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.submission.schedulers.html">hpcflow.sdk.submission.schedulers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.submission.shells.html">hpcflow.sdk.submission.shells package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="hpcflow.sdk.html" class="nav-link">hpcflow SDK</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">hpcflow.sdk.persistence package</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="hpcflow-sdk-persistence-package">
+<h1>hpcflow.sdk.persistence package<a class="headerlink" href="#hpcflow-sdk-persistence-package" title="Permalink to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="module-hpcflow.sdk.persistence.base">
+<span id="hpcflow-sdk-persistence-base-module"></span><h2>hpcflow.sdk.persistence.base module<a class="headerlink" href="#module-hpcflow.sdk.persistence.base" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.base.</span></span><span class="sig-name descname"><span class="pre">PersistentStore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>workflow</strong> (<a class="reference internal" href="hpcflow.api_classes.Workflow.html#hpcflow.api.hpcflow.Workflow" title="hpcflow.api.hpcflow.Workflow"><em>Workflow</em></a>) – </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_EARs">
+<span class="sig-name descname"><span class="pre">add_EARs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iter_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EARs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_src_updates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_EARs" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_iter_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>EARs</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>param_src_updates</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_element_iterations">
+<span class="sig-name descname"><span class="pre">add_element_iterations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iters_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_element_iterations" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_iterations</strong> (<em>List</em><em>[</em><em>Dict</em><em>]</em>) – </p></li>
+<li><p><strong>element_iters_idx</strong> (<em>Dict</em><em>[</em><em>int</em><em>, </em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_element_set">
+<span class="sig-name descname"><span class="pre">add_element_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_set_js</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_element_set" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_set_js</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_elements">
+<span class="sig-name descname"><span class="pre">add_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iterations</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_elements" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>elements</strong> (<em>List</em><em>[</em><em>Dict</em><em>]</em>) – </p></li>
+<li><p><strong>element_iterations</strong> (<em>List</em><em>[</em><em>Dict</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_empty_task">
+<span class="sig-name descname"><span class="pre">add_empty_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_js</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_empty_task" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_js</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_loop">
+<span class="sig-name descname"><span class="pre">add_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loop_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable_parameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_loop" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialise the zeroth iterations of a named loop across the specified task
+subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_indices</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – List of task indices that identifies the task subset over which the new loop
+should iterate.</p></li>
+<li><p><strong>loop_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>iterable_parameters</strong> (<em>Dict</em><em>[</em><em>str:Dict</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_parameter_data">
+<span class="sig-name descname"><span class="pre">add_parameter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>Any</em>) – </p></li>
+<li><p><strong>source</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_submission">
+<span class="sig-name descname"><span class="pre">add_submission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">submission_js</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_submission" title="Permalink to this definition">#</a></dt>
+<dd><p>Add a new submission to the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>submission_js</strong> (<em>Dict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_template_components">
+<span class="sig-name descname"><span class="pre">add_template_components</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_components</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_template_components" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>template_components</strong> (<em>Dict</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.add_unset_parameter_data">
+<span class="sig-name descname"><span class="pre">add_unset_parameter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.add_unset_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>source</strong> (<em>Dict</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.append_submission_attempt">
+<span class="sig-name descname"><span class="pre">append_submission_attempt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submitted_js_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.append_submission_attempt" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>submitted_js_idx</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.cached_load">
+<span class="sig-name descname"><span class="pre">cached_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.cached_load" title="Permalink to this definition">#</a></dt>
+<dd><p>Override this if a more performant implementation, is possible.</p>
+<p>For example, in a JSON persistent store, we need to load the whole document from
+disk to read anything from it, so we can temporarily cache the document if we know
+we will be making multiple reads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Iterator</em>[None]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.check_parameters_exist">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_parameters_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.check_parameters_exist" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indices</strong> (<em>int</em><em> | </em><em>List</em><em>[</em><em>int</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool | <em>List</em>[bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.clear_pending">
+<span class="sig-name descname"><span class="pre">clear_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.clear_pending" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.commit_pending">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">commit_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.commit_pending" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.copy">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.copy" title="Permalink to this definition">#</a></dt>
+<dd><p>Make a copy of the store.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>PathLike</em><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.delete" title="Permalink to this definition">#</a></dt>
+<dd><p>Delete the persistent workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.delete_no_confirm">
+<span class="sig-name descname"><span class="pre">delete_no_confirm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.delete_no_confirm" title="Permalink to this definition">#</a></dt>
+<dd><p>Permanently delete the workflow data with no confirmation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.exists">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.exists" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.features">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">features</span></span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.features" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_all_parameter_data">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_parameter_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_all_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em>[int, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_all_tasks_metadata">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_all_tasks_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_all_tasks_metadata" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_creation_info">
+<span class="sig-name descname"><span class="pre">get_creation_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_creation_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Get information about the app that created the workflow.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_loops">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_loops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_loops" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_num_added_tasks">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_num_added_tasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_num_added_tasks" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the total number of tasks ever added to the workflow, regardless of whether
+any of those tasks were subsequently removed from the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_parameter_data">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_parameter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Tuple</em>[bool, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_parameter_source">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_parameter_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_parameter_source" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_submissions">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_submissions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_submissions" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_task_elements">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_task_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_task_elements" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>selection</strong> (<em>slice</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>List</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_task_elements_islice">
+<span class="sig-name descname"><span class="pre">get_task_elements_islice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_task_elements_islice" title="Permalink to this definition">#</a></dt>
+<dd><p>Override this for a more performant implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>selection</strong> (<em>int</em><em> | </em><em>slice</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Iterator</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_template">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_template</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_template" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.get_template_components">
+<span class="sig-name descname"><span class="pre">get_template_components</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.get_template_components" title="Permalink to this definition">#</a></dt>
+<dd><p>Get all template components, including pending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.has_pending">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_pending</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.has_pending" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns True if there are pending changes that are not yet committed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.is_modified_on_disk">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_modified_on_disk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.is_modified_on_disk" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if the workflow (metadata) has been modified on disk since initial
+load (this is bad).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.is_parameter_set">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_parameter_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.is_parameter_set" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.path_has_store">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path_has_store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.path_has_store" title="Permalink to this definition">#</a></dt>
+<dd><p>Is a given workflow path of this store type?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.reinstate_replaced_dir">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reinstate_replaced_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.reinstate_replaced_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.reject_pending">
+<span class="sig-name descname"><span class="pre">reject_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.reject_pending" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.remove_replaced_dir">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_replaced_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.remove_replaced_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.save" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_EAR_end">
+<span class="sig-name descname"><span class="pre">set_EAR_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iteration_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_EAR_end" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_iteration_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>action_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>run_idx</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_EAR_start">
+<span class="sig-name descname"><span class="pre">set_EAR_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iteration_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_EAR_start" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_iteration_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>action_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>run_idx</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_EAR_submission_indices">
+<span class="sig-name descname"><span class="pre">set_EAR_submission_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EAR_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_EAR_submission_indices" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sub_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>EAR_indices</strong> (<em>Tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_job_ID">
+<span class="sig-name descname"><span class="pre">set_jobscript_job_ID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">js_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_ID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_job_ID" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sub_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>js_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>job_ID</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_submit_time">
+<span class="sig-name descname"><span class="pre">set_jobscript_submit_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">js_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submit_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_submit_time" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sub_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>js_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>submit_time</strong> (<em>datetime</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_version_info">
+<span class="sig-name descname"><span class="pre">set_jobscript_version_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">js_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vers_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_version_info" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sub_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>js_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>vers_info</strong> (<em>Tuple</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.set_parameter">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.set_parameter" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of a pre-allocated parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – </p></li>
+<li><p><strong>data</strong> (<em>Any</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.store_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_name</span></span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.store_name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.store_path">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_path</span></span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.store_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the store path, which may be the same as the workflow path.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.ts_fmt">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ts_fmt</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.ts_fmt" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.update_loop_num_added_iters">
+<span class="sig-name descname"><span class="pre">update_loop_num_added_iters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loop_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_added_iters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.update_loop_num_added_iters" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loop_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>num_added_iters</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.workflow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">workflow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="hpcflow.api_classes.Workflow.html#hpcflow.api.hpcflow.Workflow" title="hpcflow.api.hpcflow.Workflow"><span class="pre">Workflow</span></a></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.workflow" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.workflow_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">workflow_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Path</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.workflow_path" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStore.write_empty_workflow">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_empty_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_components_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workflow_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replaced_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creation_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStore.write_empty_workflow" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>template_components_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>workflow_path</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>replaced_dir</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>creation_info</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStoreFeatures">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.base.</span></span><span class="sig-name descname"><span class="pre">PersistentStoreFeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobscript_parallelism</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EAR_parallelism</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedulers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">submission</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to represent the features provided by a persistent store.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>jobscript_parallelism</strong> (<em>bool</em>) – If True, the store supports workflows running multiple independent jobscripts
+simultaneously.</p></li>
+<li><p><strong>EAR_parallelism</strong> (<em>bool</em>) – If True, the store supports workflows running multiple EARs simultaneously.</p></li>
+<li><p><strong>schedulers</strong> (<em>bool</em>) – If True, the store supports submitting workflows to a scheduler</p></li>
+<li><p><strong>submission</strong> (<em>bool</em>) – If True, the store supports submission. If False, the store can be considered to
+be an archive, which would need transforming to another store type before
+submission.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStoreFeatures.EAR_parallelism">
+<span class="sig-name descname"><span class="pre">EAR_parallelism</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.EAR_parallelism" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStoreFeatures.jobscript_parallelism">
+<span class="sig-name descname"><span class="pre">jobscript_parallelism</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.jobscript_parallelism" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStoreFeatures.schedulers">
+<span class="sig-name descname"><span class="pre">schedulers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.schedulers" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.PersistentStoreFeatures.submission">
+<span class="sig-name descname"><span class="pre">submission</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.submission" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.dropbox_retry_fail">
+<span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.base.</span></span><span class="sig-name descname"><span class="pre">dropbox_retry_fail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">err</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.dropbox_retry_fail" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>err</strong> (<em>Exception</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.remove_dir">
+<span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.base.</span></span><span class="sig-name descname"><span class="pre">remove_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.remove_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>Try very hard to delete a directory.</p>
+<p>Dropbox (on Windows, at least) seems to try to re-sync files if the parent directory
+is deleted soon after creation, which is the case on a failed workflow creation (e.g.
+missing inputs), so in addition to catching PermissionErrors generated when
+Dropbox has a lock on files, we repeatedly try deleting the directory tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dir_path</strong> (<em>Path</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.base.rename_dir">
+<span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.base.</span></span><span class="sig-name descname"><span class="pre">rename_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">replaced_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">original_dir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.base.rename_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-hpcflow.sdk.persistence.json">
+<span id="hpcflow-sdk-persistence-json-module"></span><h2>hpcflow.sdk.persistence.json module<a class="headerlink" href="#module-hpcflow.sdk.persistence.json" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.json.</span></span><span class="sig-name descname"><span class="pre">JSONPersistentStore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hpcflow.sdk.persistence.base.PersistentStore" title="hpcflow.sdk.persistence.base.PersistentStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">PersistentStore</span></code></a></p>
+<p>A verbose but inefficient storage backend, to help with understanding and
+debugging.</p>
+<p class="rubric">Notes</p>
+<p>We split the data across three JSON files to support submission to schedulers. During
+scheduler submission, if a task is quick, parameter data might be written at the
+same time as both submission metadata (jobscript submission time), and EAR metadata
+(EAR start/end time).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>workflow</strong> (<a class="reference internal" href="hpcflow.api_classes.Workflow.html#hpcflow.api.hpcflow.Workflow" title="hpcflow.api.hpcflow.Workflow"><em>Workflow</em></a>) – </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.cached_load">
+<span class="sig-name descname"><span class="pre">cached_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.cached_load" title="Permalink to this definition">#</a></dt>
+<dd><p>Context manager to cache the whole JSON document, allowing for multiple read
+operations with one disk read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Iterator</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.check_parameters_exist">
+<span class="sig-name descname"><span class="pre">check_parameters_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.check_parameters_exist" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indices</strong> (<em>int</em><em> | </em><em>List</em><em>[</em><em>int</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool | <em>List</em>[bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.commit_pending">
+<span class="sig-name descname"><span class="pre">commit_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.commit_pending" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.copy" title="Permalink to this definition">#</a></dt>
+<dd><p>Make a copy of the store.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>PathLike</em><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.exists" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_all_parameter_data">
+<span class="sig-name descname"><span class="pre">get_all_parameter_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_all_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em>[int, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_all_tasks_metadata">
+<span class="sig-name descname"><span class="pre">get_all_tasks_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_all_tasks_metadata" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_loops">
+<span class="sig-name descname"><span class="pre">get_loops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_loops" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_num_added_tasks">
+<span class="sig-name descname"><span class="pre">get_num_added_tasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_num_added_tasks" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the total number of tasks ever added to the workflow, regardless of whether
+any of those tasks were subsequently removed from the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_parameter_data">
+<span class="sig-name descname"><span class="pre">get_parameter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Tuple</em>[bool, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_parameter_source">
+<span class="sig-name descname"><span class="pre">get_parameter_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_parameter_source" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_submissions">
+<span class="sig-name descname"><span class="pre">get_submissions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_submissions" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_task_elements">
+<span class="sig-name descname"><span class="pre">get_task_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_iterations_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_task_elements" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>selection</strong> (<em>slice</em>) – </p></li>
+<li><p><strong>keep_iterations_idx</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_task_idx_from_insert_ID">
+<span class="sig-name descname"><span class="pre">get_task_idx_from_insert_ID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">insert_ID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_task_idx_from_insert_ID" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.get_template">
+<span class="sig-name descname"><span class="pre">get_template</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_template" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.is_modified_on_disk">
+<span class="sig-name descname"><span class="pre">is_modified_on_disk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.is_modified_on_disk" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if the workflow (metadata) has been modified on disk since initial
+load (this is bad).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool | <em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.is_parameter_set">
+<span class="sig-name descname"><span class="pre">is_parameter_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.is_parameter_set" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.load_metadata">
+<span class="sig-name descname"><span class="pre">load_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load_metadata" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.load_parameter_data">
+<span class="sig-name descname"><span class="pre">load_parameter_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.load_submissions">
+<span class="sig-name descname"><span class="pre">load_submissions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load_submissions" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.path_has_store">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path_has_store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.path_has_store" title="Permalink to this definition">#</a></dt>
+<dd><p>Is a given workflow path of this store type?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.reinstate_replaced_dir">
+<span class="sig-name descname"><span class="pre">reinstate_replaced_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.reinstate_replaced_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.remove_replaced_dir">
+<span class="sig-name descname"><span class="pre">remove_replaced_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.remove_replaced_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.set_parameter">
+<span class="sig-name descname"><span class="pre">set_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.set_parameter" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of a pre-allocated parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – </p></li>
+<li><p><strong>data</strong> (<em>Any</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.store_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_path</span></span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.store_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the store path, which may be the same as the workflow path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.json.JSONPersistentStore.write_empty_workflow">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_empty_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_components_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workflow_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replaced_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creation_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.write_empty_workflow" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>template_components_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>workflow_path</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>replaced_dir</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>creation_info</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-hpcflow.sdk.persistence.zarr">
+<span id="hpcflow-sdk-persistence-zarr-module"></span><h2>hpcflow.sdk.persistence.zarr module<a class="headerlink" href="#module-hpcflow.sdk.persistence.zarr" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.zarr.</span></span><span class="sig-name descname"><span class="pre">ZarrPersistentStore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hpcflow.sdk.persistence.base.PersistentStore" title="hpcflow.sdk.persistence.base.PersistentStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">PersistentStore</span></code></a></p>
+<p>An efficient storage backend using Zarr that supports parameter-setting from
+multiple processes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>workflow</strong> (<a class="reference internal" href="hpcflow.api_classes.Workflow.html#hpcflow.api.hpcflow.Workflow" title="hpcflow.api.hpcflow.Workflow"><em>Workflow</em></a>) – </p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_EARs">
+<span class="sig-name descname"><span class="pre">add_EARs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iter_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EARs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_src_updates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_EARs" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_iter_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>EARs</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>param_src_updates</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_element_iterations">
+<span class="sig-name descname"><span class="pre">add_element_iterations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iters_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_element_iterations" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>element_iterations</strong> (<em>List</em><em>[</em><em>Dict</em><em>]</em>) – </p></li>
+<li><p><strong>element_iters_idx</strong> (<em>Dict</em><em>[</em><em>int</em><em>, </em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_elements">
+<span class="sig-name descname"><span class="pre">add_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element_iterations</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_elements" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>elements</strong> (<em>List</em><em>[</em><em>Dict</em><em>]</em>) – </p></li>
+<li><p><strong>element_iterations</strong> (<em>List</em><em>[</em><em>Dict</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.cached_load">
+<span class="sig-name descname"><span class="pre">cached_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.cached_load" title="Permalink to this definition">#</a></dt>
+<dd><p>Context manager to cache the root attributes (i.e. metadata).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Iterator</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.check_parameters_exist">
+<span class="sig-name descname"><span class="pre">check_parameters_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.check_parameters_exist" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>indices</strong> (<em>int</em><em> | </em><em>List</em><em>[</em><em>int</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool | <em>List</em>[bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.commit_pending">
+<span class="sig-name descname"><span class="pre">commit_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.commit_pending" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.copy" title="Permalink to this definition">#</a></dt>
+<dd><p>Make a copy of the store.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>PathLike</em><em> | </em><em>None</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.exists" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_all_parameter_data">
+<span class="sig-name descname"><span class="pre">get_all_parameter_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_all_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em>[int, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_all_tasks_metadata">
+<span class="sig-name descname"><span class="pre">get_all_tasks_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_all_tasks_metadata" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_loops">
+<span class="sig-name descname"><span class="pre">get_loops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_loops" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_num_added_tasks">
+<span class="sig-name descname"><span class="pre">get_num_added_tasks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_num_added_tasks" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the total number of tasks ever added to the workflow, regardless of whether
+any of those tasks were subsequently removed from the workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_parameter_data">
+<span class="sig-name descname"><span class="pre">get_parameter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_parameter_data" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Tuple</em>[bool, <em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_parameter_source">
+<span class="sig-name descname"><span class="pre">get_parameter_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_parameter_source" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_submissions">
+<span class="sig-name descname"><span class="pre">get_submissions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_submissions" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>List</em>[<em>Dict</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_task_elements">
+<span class="sig-name descname"><span class="pre">get_task_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_insert_ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_iterations_idx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_task_elements" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_idx</strong> (<em>int</em>) – </p></li>
+<li><p><strong>task_insert_ID</strong> (<em>int</em>) – </p></li>
+<li><p><strong>selection</strong> (<em>slice</em>) – </p></li>
+<li><p><strong>keep_iterations_idx</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>List</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_template">
+<span class="sig-name descname"><span class="pre">get_template</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_template" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Dict</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.has_pending">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_pending</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.has_pending" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns True if there are pending changes that are not yet committed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.is_modified_on_disk">
+<span class="sig-name descname"><span class="pre">is_modified_on_disk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.is_modified_on_disk" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if the workflow (metadata) has been modified on disk since initial
+load (this is bad).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.is_parameter_set">
+<span class="sig-name descname"><span class="pre">is_parameter_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.is_parameter_set" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.load_metadata">
+<span class="sig-name descname"><span class="pre">load_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.load_metadata" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.path_has_store">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path_has_store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.path_has_store" title="Permalink to this definition">#</a></dt>
+<dd><p>Is a given workflow path of this store type?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.reinstate_replaced_dir">
+<span class="sig-name descname"><span class="pre">reinstate_replaced_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.reinstate_replaced_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.reject_pending">
+<span class="sig-name descname"><span class="pre">reject_pending</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.reject_pending" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.remove_replaced_dir">
+<span class="sig-name descname"><span class="pre">remove_replaced_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.remove_replaced_dir" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.set_parameter">
+<span class="sig-name descname"><span class="pre">set_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.set_parameter" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the value of a pre-allocated parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – </p></li>
+<li><p><strong>data</strong> (<em>Any</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.store_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_path</span></span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.store_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the store path, which may be the same as the workflow path.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.zarr.ZarrPersistentStore.write_empty_workflow">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_empty_workflow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template_components_js</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workflow_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replaced_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creation_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.write_empty_workflow" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>template_components_js</strong> (<em>Dict</em>) – </p></li>
+<li><p><strong>workflow_path</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>replaced_dir</strong> (<em>Path</em>) – </p></li>
+<li><p><strong>creation_info</strong> (<em>Dict</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-hpcflow.sdk.persistence">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hpcflow.sdk.persistence" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.store_cls_from_path">
+<span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.</span></span><span class="sig-name descname"><span class="pre">store_cls_from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.store_cls_from_path" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>workflow_path</strong> (<em>Path</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Type</em>[<a class="reference internal" href="#hpcflow.sdk.persistence.base.PersistentStore" title="hpcflow.sdk.persistence.base.PersistentStore"><em>PersistentStore</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.store_cls_from_str">
+<span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.</span></span><span class="sig-name descname"><span class="pre">store_cls_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">store_format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.store_cls_from_str" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>store_format</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>Type</em>[<a class="reference internal" href="#hpcflow.sdk.persistence.base.PersistentStore" title="hpcflow.sdk.persistence.base.PersistentStore"><em>PersistentStore</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hpcflow.sdk.persistence.temporary_workflow_rename">
+<span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.persistence.</span></span><span class="sig-name descname"><span class="pre">temporary_workflow_rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.persistence.temporary_workflow_rename" title="Permalink to this definition">#</a></dt>
+<dd><p>Rename an existing same-path workflow directory so we can restore it if workflow
+creation fails</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hpcflow.sdk.helper.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hpcflow.sdk.helper package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hpcflow.sdk.scripting.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hpcflow.sdk.scripting package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hpcflow.sdk.persistence.base">hpcflow.sdk.persistence.base module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore"><code class="docutils literal notranslate"><span class="pre">PersistentStore</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_EARs"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_EARs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_element_iterations"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_element_iterations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_element_set"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_element_set()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_elements"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_elements()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_empty_task"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_empty_task()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_loop"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_loop()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_parameter_data"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_submission"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_submission()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_template_components"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_template_components()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.add_unset_parameter_data"><code class="docutils literal notranslate"><span class="pre">PersistentStore.add_unset_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.append_submission_attempt"><code class="docutils literal notranslate"><span class="pre">PersistentStore.append_submission_attempt()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.cached_load"><code class="docutils literal notranslate"><span class="pre">PersistentStore.cached_load()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.check_parameters_exist"><code class="docutils literal notranslate"><span class="pre">PersistentStore.check_parameters_exist()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.clear_pending"><code class="docutils literal notranslate"><span class="pre">PersistentStore.clear_pending()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.commit_pending"><code class="docutils literal notranslate"><span class="pre">PersistentStore.commit_pending()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.copy"><code class="docutils literal notranslate"><span class="pre">PersistentStore.copy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.delete"><code class="docutils literal notranslate"><span class="pre">PersistentStore.delete()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.delete_no_confirm"><code class="docutils literal notranslate"><span class="pre">PersistentStore.delete_no_confirm()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.exists"><code class="docutils literal notranslate"><span class="pre">PersistentStore.exists()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.features"><code class="docutils literal notranslate"><span class="pre">PersistentStore.features</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_all_parameter_data"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_all_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_all_tasks_metadata"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_all_tasks_metadata()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_creation_info"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_creation_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_loops"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_loops()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_num_added_tasks"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_num_added_tasks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_parameter_data"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_parameter_source"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_parameter_source()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_submissions"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_submissions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_task_elements"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_task_elements()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_task_elements_islice"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_task_elements_islice()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_template"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_template()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.get_template_components"><code class="docutils literal notranslate"><span class="pre">PersistentStore.get_template_components()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.has_pending"><code class="docutils literal notranslate"><span class="pre">PersistentStore.has_pending</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.is_modified_on_disk"><code class="docutils literal notranslate"><span class="pre">PersistentStore.is_modified_on_disk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.is_parameter_set"><code class="docutils literal notranslate"><span class="pre">PersistentStore.is_parameter_set()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.path_has_store"><code class="docutils literal notranslate"><span class="pre">PersistentStore.path_has_store()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.reinstate_replaced_dir"><code class="docutils literal notranslate"><span class="pre">PersistentStore.reinstate_replaced_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.reject_pending"><code class="docutils literal notranslate"><span class="pre">PersistentStore.reject_pending()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.remove_replaced_dir"><code class="docutils literal notranslate"><span class="pre">PersistentStore.remove_replaced_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.save"><code class="docutils literal notranslate"><span class="pre">PersistentStore.save()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_EAR_end"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_EAR_end()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_EAR_start"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_EAR_start()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_EAR_submission_indices"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_EAR_submission_indices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_job_ID"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_jobscript_job_ID()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_submit_time"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_jobscript_submit_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_jobscript_version_info"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_jobscript_version_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.set_parameter"><code class="docutils literal notranslate"><span class="pre">PersistentStore.set_parameter()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.store_name"><code class="docutils literal notranslate"><span class="pre">PersistentStore.store_name</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.store_path"><code class="docutils literal notranslate"><span class="pre">PersistentStore.store_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.ts_fmt"><code class="docutils literal notranslate"><span class="pre">PersistentStore.ts_fmt</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.update_loop_num_added_iters"><code class="docutils literal notranslate"><span class="pre">PersistentStore.update_loop_num_added_iters()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.workflow"><code class="docutils literal notranslate"><span class="pre">PersistentStore.workflow</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.workflow_path"><code class="docutils literal notranslate"><span class="pre">PersistentStore.workflow_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStore.write_empty_workflow"><code class="docutils literal notranslate"><span class="pre">PersistentStore.write_empty_workflow()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures"><code class="docutils literal notranslate"><span class="pre">PersistentStoreFeatures</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.EAR_parallelism"><code class="docutils literal notranslate"><span class="pre">PersistentStoreFeatures.EAR_parallelism</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.jobscript_parallelism"><code class="docutils literal notranslate"><span class="pre">PersistentStoreFeatures.jobscript_parallelism</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.schedulers"><code class="docutils literal notranslate"><span class="pre">PersistentStoreFeatures.schedulers</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.PersistentStoreFeatures.submission"><code class="docutils literal notranslate"><span class="pre">PersistentStoreFeatures.submission</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.dropbox_retry_fail"><code class="docutils literal notranslate"><span class="pre">dropbox_retry_fail()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.remove_dir"><code class="docutils literal notranslate"><span class="pre">remove_dir()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.base.rename_dir"><code class="docutils literal notranslate"><span class="pre">rename_dir()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hpcflow.sdk.persistence.json">hpcflow.sdk.persistence.json module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.cached_load"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.cached_load()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.check_parameters_exist"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.check_parameters_exist()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.commit_pending"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.commit_pending()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.copy"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.copy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.exists"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.exists()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_all_parameter_data"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_all_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_all_tasks_metadata"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_all_tasks_metadata()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_loops"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_loops()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_num_added_tasks"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_num_added_tasks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_parameter_data"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_parameter_source"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_parameter_source()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_submissions"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_submissions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_task_elements"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_task_elements()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_task_idx_from_insert_ID"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_task_idx_from_insert_ID()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.get_template"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.get_template()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.is_modified_on_disk"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.is_modified_on_disk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.is_parameter_set"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.is_parameter_set()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.load()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load_metadata"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.load_metadata()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load_parameter_data"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.load_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.load_submissions"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.load_submissions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.path_has_store"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.path_has_store()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.reinstate_replaced_dir"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.reinstate_replaced_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.remove_replaced_dir"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.remove_replaced_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.set_parameter"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.set_parameter()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.store_path"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.store_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.json.JSONPersistentStore.write_empty_workflow"><code class="docutils literal notranslate"><span class="pre">JSONPersistentStore.write_empty_workflow()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hpcflow.sdk.persistence.zarr">hpcflow.sdk.persistence.zarr module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_EARs"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.add_EARs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_element_iterations"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.add_element_iterations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.add_elements"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.add_elements()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.cached_load"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.cached_load()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.check_parameters_exist"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.check_parameters_exist()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.commit_pending"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.commit_pending()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.copy"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.copy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.exists"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.exists()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_all_parameter_data"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_all_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_all_tasks_metadata"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_all_tasks_metadata()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_loops"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_loops()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_num_added_tasks"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_num_added_tasks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_parameter_data"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_parameter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_parameter_source"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_parameter_source()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_submissions"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_submissions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_task_elements"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_task_elements()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.get_template"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.get_template()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.has_pending"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.has_pending</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.is_modified_on_disk"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.is_modified_on_disk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.is_parameter_set"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.is_parameter_set()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.load_metadata"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.load_metadata()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.path_has_store"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.path_has_store()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.reinstate_replaced_dir"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.reinstate_replaced_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.reject_pending"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.reject_pending()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.remove_replaced_dir"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.remove_replaced_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.set_parameter"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.set_parameter()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.store_path"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.store_path</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.zarr.ZarrPersistentStore.write_empty_workflow"><code class="docutils literal notranslate"><span class="pre">ZarrPersistentStore.write_empty_workflow()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hpcflow.sdk.persistence">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.store_cls_from_path"><code class="docutils literal notranslate"><span class="pre">store_cls_from_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.store_cls_from_str"><code class="docutils literal notranslate"><span class="pre">store_cls_from_str()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.persistence.temporary_workflow_rename"><code class="docutils literal notranslate"><span class="pre">temporary_workflow_rename()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/hpcflow-new/edit/develop/docs/source/reference/hpcflow.sdk.persistence.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/reference/hpcflow.sdk.persistence.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2022, hpcflow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
