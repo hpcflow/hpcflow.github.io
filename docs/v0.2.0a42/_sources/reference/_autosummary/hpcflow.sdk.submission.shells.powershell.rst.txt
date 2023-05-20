@@ -1,0 +1,32 @@
+hpcflow.sdk.submission.shells.powershell
+========================================
+
+.. automodule:: hpcflow.sdk.submission.shells.powershell
+   
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      WindowsPowerShell
+   
+   
+
+   
+   
+   
+
+
+

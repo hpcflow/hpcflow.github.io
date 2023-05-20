@@ -1,0 +1,33 @@
+hpcflow.sdk.core.actions.IterationID
+====================================
+
+.. currentmodule:: hpcflow.sdk.core.actions
+
+.. autoclass:: IterationID
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~IterationID.get_element_ID
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IterationID.iteration_idx
+      ~IterationID.task_insert_ID
+      ~IterationID.element_idx
+   
+   

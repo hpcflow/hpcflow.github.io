@@ -1,0 +1,33 @@
+hpcflow.sdk.submission.shells.bash
+==================================
+
+.. automodule:: hpcflow.sdk.submission.shells.bash
+   
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      Bash
+      WSLBash
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,24 @@
+hpcflow.sdk.core.element.ElementInputFiles
+==========================================
+
+.. currentmodule:: hpcflow.sdk.core.element
+
+.. autoclass:: ElementInputFiles
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   

@@ -1,0 +1,31 @@
+hpcflow.sdk.demo.cli
+====================
+
+.. automodule:: hpcflow.sdk.demo.cli
+   
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_demo_software_CLI
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

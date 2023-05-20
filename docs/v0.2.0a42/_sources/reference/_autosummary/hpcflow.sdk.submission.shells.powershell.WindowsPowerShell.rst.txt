@@ -1,0 +1,47 @@
+hpcflow.sdk.submission.shells.powershell.WindowsPowerShell
+==========================================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells.powershell
+
+.. autoclass:: WindowsPowerShell
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WindowsPowerShell.format_save_parameter
+      ~WindowsPowerShell.format_stream_assignment
+      ~WindowsPowerShell.get_version_info
+      ~WindowsPowerShell.prepare_JS_path
+      ~WindowsPowerShell.prepare_element_run_dirs
+      ~WindowsPowerShell.process_JS_header_args
+      ~WindowsPowerShell.wrap_in_subshell
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WindowsPowerShell.DEFAULT_EXE
+      ~WindowsPowerShell.JS_DIRECT_HEADER
+      ~WindowsPowerShell.JS_ELEMENT_LOOP
+      ~WindowsPowerShell.JS_ENV_SETUP_INDENT
+      ~WindowsPowerShell.JS_EXT
+      ~WindowsPowerShell.JS_HEADER
+      ~WindowsPowerShell.JS_INDENT
+      ~WindowsPowerShell.JS_MAIN
+      ~WindowsPowerShell.JS_SHEBANG
+      ~WindowsPowerShell.executable
+      ~WindowsPowerShell.shebang_executable
+   
+   

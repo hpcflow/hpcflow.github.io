@@ -1,0 +1,27 @@
+hpcflow.sdk.core.json\_like.BaseJSONLike
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.json_like
+
+.. autoclass:: BaseJSONLike
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~BaseJSONLike.from_json_like
+      ~BaseJSONLike.to_dict
+      ~BaseJSONLike.to_json_like
+   
+   
+
+   
+   
+   

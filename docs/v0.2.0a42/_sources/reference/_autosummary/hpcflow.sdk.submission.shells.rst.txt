@@ -1,0 +1,42 @@
+hpcflow.sdk.submission.shells
+=============================
+
+.. automodule:: hpcflow.sdk.submission.shells
+   
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_shell
+      get_supported_shells
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   hpcflow.sdk.submission.shells.base
+   hpcflow.sdk.submission.shells.bash
+   hpcflow.sdk.submission.shells.os_version
+   hpcflow.sdk.submission.shells.powershell
+

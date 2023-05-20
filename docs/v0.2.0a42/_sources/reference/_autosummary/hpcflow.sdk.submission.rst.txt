@@ -1,0 +1,33 @@
+hpcflow.sdk.submission
+======================
+
+.. automodule:: hpcflow.sdk.submission
+   
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   hpcflow.sdk.submission.jobscript
+   hpcflow.sdk.submission.schedulers
+   hpcflow.sdk.submission.shells
+   hpcflow.sdk.submission.submission
+

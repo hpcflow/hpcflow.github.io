@@ -1,0 +1,24 @@
+hpcflow.sdk.core.element.ElementInputs
+======================================
+
+.. currentmodule:: hpcflow.sdk.core.element
+
+.. autoclass:: ElementInputs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   
