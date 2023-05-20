@@ -1,0 +1,25 @@
+hpcflow.sdk.core.utils.Singleton
+================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autoclass:: Singleton
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Singleton.mro
+   
+   
+
+   
+   
+   

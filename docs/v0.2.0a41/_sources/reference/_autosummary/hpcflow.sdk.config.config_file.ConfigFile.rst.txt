@@ -1,0 +1,33 @@
+hpcflow.sdk.config.config\_file.ConfigFile
+==========================================
+
+.. currentmodule:: hpcflow.sdk.config.config_file
+
+.. autoclass:: ConfigFile
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ConfigFile.get_config_item
+      ~ConfigFile.is_item_set
+      ~ConfigFile.save
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConfigFile.invoc_data
+   
+   

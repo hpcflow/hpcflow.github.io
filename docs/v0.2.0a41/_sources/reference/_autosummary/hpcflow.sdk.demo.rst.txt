@@ -1,0 +1,31 @@
+hpcflow.sdk.demo
+================
+
+.. automodule:: hpcflow.sdk.demo
+   
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   hpcflow.sdk.demo.cli
+   hpcflow.sdk.demo.scripts
+

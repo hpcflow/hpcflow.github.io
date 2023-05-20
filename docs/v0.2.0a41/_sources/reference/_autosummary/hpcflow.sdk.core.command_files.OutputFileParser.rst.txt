@@ -1,0 +1,40 @@
+hpcflow.sdk.core.command\_files.OutputFileParser
+================================================
+
+.. currentmodule:: hpcflow.sdk.core.command_files
+
+.. autoclass:: OutputFileParser
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~OutputFileParser.compose_source
+      ~OutputFileParser.from_json_like
+      ~OutputFileParser.to_dict
+      ~OutputFileParser.to_json_like
+      ~OutputFileParser.write_source
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OutputFileParser.environment
+      ~OutputFileParser.inputs
+      ~OutputFileParser.options
+      ~OutputFileParser.script
+      ~OutputFileParser.output
+      ~OutputFileParser.output_files
+   
+   

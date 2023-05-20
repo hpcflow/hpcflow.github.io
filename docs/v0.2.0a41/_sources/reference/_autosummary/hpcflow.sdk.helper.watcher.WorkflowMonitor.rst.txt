@@ -1,0 +1,27 @@
+hpcflow.sdk.helper.watcher.WorkflowMonitor
+==========================================
+
+.. currentmodule:: hpcflow.sdk.helper.watcher
+
+.. autoclass:: WorkflowMonitor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:
+   
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowMonitor.on_modified
+      ~WorkflowMonitor.stop
+      ~WorkflowMonitor.update_workflow_paths
+   
+   
+
+   
+   
+   
