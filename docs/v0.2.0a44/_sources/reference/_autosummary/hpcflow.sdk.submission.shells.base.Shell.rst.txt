@@ -1,0 +1,35 @@
+hpcflow.sdk.submission.shells.base.Shell
+========================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells.base
+
+.. autoclass:: Shell
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Shell.get_version_info
+      ~Shell.prepare_JS_path
+      ~Shell.prepare_element_run_dirs
+      ~Shell.process_JS_header_args
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Shell.executable
+      ~Shell.shebang_executable
+   
+   
