@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.base.remove\_dir
+========================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autofunction:: remove_dir

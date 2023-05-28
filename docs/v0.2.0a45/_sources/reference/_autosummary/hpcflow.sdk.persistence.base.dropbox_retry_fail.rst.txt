@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.base.dropbox\_retry\_fail
+=================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autofunction:: dropbox_retry_fail
