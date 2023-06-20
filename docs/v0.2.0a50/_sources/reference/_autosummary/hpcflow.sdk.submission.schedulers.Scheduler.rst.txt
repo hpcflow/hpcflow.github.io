@@ -1,0 +1,35 @@
+hpcflow.sdk.submission.schedulers.Scheduler
+===========================================
+
+.. currentmodule:: hpcflow.sdk.submission.schedulers
+
+.. autoclass:: Scheduler
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Scheduler.format_switch
+      ~Scheduler.get_submit_command
+      ~Scheduler.get_version_info
+      ~Scheduler.parse_submission_output
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Scheduler.DEFAULT_SHEBANG_ARGS
+      ~Scheduler.DEFAULT_SHELL_ARGS
+   
+   
