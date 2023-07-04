@@ -1,0 +1,80 @@
+hpcflow.sdk.persistence.base.PersistentStore
+============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autoclass:: PersistentStore
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~PersistentStore.add_EAR
+      ~PersistentStore.add_element
+      ~PersistentStore.add_element_iteration
+      ~PersistentStore.add_element_set
+      ~PersistentStore.add_file
+      ~PersistentStore.add_loop
+      ~PersistentStore.add_set_parameter
+      ~PersistentStore.add_submission
+      ~PersistentStore.add_submission_attempt
+      ~PersistentStore.add_task
+      ~PersistentStore.add_template_components
+      ~PersistentStore.add_unset_parameter
+      ~PersistentStore.check_parameters_exist
+      ~PersistentStore.copy
+      ~PersistentStore.delete
+      ~PersistentStore.delete_no_confirm
+      ~PersistentStore.get_EAR_skipped
+      ~PersistentStore.get_EARs
+      ~PersistentStore.get_element_iterations
+      ~PersistentStore.get_elements
+      ~PersistentStore.get_loops
+      ~PersistentStore.get_loops_by_IDs
+      ~PersistentStore.get_parameter_set_statuses
+      ~PersistentStore.get_parameter_sources
+      ~PersistentStore.get_parameters
+      ~PersistentStore.get_submissions
+      ~PersistentStore.get_submissions_by_ID
+      ~PersistentStore.get_task
+      ~PersistentStore.get_task_elements
+      ~PersistentStore.get_tasks
+      ~PersistentStore.get_tasks_by_IDs
+      ~PersistentStore.get_template
+      ~PersistentStore.get_template_components
+      ~PersistentStore.prepare_test_store_from_spec
+      ~PersistentStore.remove_path
+      ~PersistentStore.rename_path
+      ~PersistentStore.save
+      ~PersistentStore.set_EAR_end
+      ~PersistentStore.set_EAR_skip
+      ~PersistentStore.set_EAR_start
+      ~PersistentStore.set_EAR_submission_index
+      ~PersistentStore.set_file
+      ~PersistentStore.set_jobscript_metadata
+      ~PersistentStore.set_parameter_value
+      ~PersistentStore.update_loop_num_iters
+      ~PersistentStore.update_param_source
+      ~PersistentStore.using_resource
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PersistentStore.has_pending
+      ~PersistentStore.is_submittable
+      ~PersistentStore.logger
+      ~PersistentStore.ts_fmt
+   
+   
