@@ -1,0 +1,29 @@
+hpcflow.sdk.submission.jobscript_info.JobscriptElementState
+===========================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript_info
+
+.. autoclass:: JobscriptElementState
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobscriptElementState.pending
+      ~JobscriptElementState.waiting
+      ~JobscriptElementState.running
+      ~JobscriptElementState.finished
+      ~JobscriptElementState.cancelled
+      ~JobscriptElementState.errored
+   
+   
