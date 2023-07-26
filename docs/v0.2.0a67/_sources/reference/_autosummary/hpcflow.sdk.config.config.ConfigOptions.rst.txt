@@ -1,0 +1,36 @@
+hpcflow.sdk.config.config.ConfigOptions
+=======================================
+
+.. currentmodule:: hpcflow.sdk.config.config
+
+.. autoclass:: ConfigOptions
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConfigOptions.default_directory
+      ~ConfigOptions.directory_env_var
+      ~ConfigOptions.sentry_DSN
+      ~ConfigOptions.sentry_traces_sample_rate
+      ~ConfigOptions.sentry_env
+      ~ConfigOptions.default_config
+      ~ConfigOptions.extra_schemas
+   
+   
