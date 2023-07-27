@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.jobscript.jobscripts\_to\_list
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript
+
+.. autofunction:: jobscripts_to_list
