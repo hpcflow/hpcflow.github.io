@@ -1,0 +1,6 @@
+hpcflow.sdk.config.callbacks.callback\_bool
+===========================================
+
+.. currentmodule:: hpcflow.sdk.config.callbacks
+
+.. autofunction:: callback_bool
