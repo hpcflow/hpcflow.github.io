@@ -1,0 +1,27 @@
+hpcflow.app.InputSourceType
+===========================
+
+.. currentmodule:: hpcflow.app
+
+.. autoclass:: InputSourceType
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InputSourceType.IMPORT
+      ~InputSourceType.LOCAL
+      ~InputSourceType.DEFAULT
+      ~InputSourceType.TASK
+   
+   
