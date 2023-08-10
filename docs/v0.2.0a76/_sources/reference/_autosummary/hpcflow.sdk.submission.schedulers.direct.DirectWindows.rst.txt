@@ -1,0 +1,39 @@
+hpcflow.sdk.submission.schedulers.direct.DirectWindows
+======================================================
+
+.. currentmodule:: hpcflow.sdk.submission.schedulers.direct
+
+.. autoclass:: DirectWindows
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~DirectWindows.cancel_jobs
+      ~DirectWindows.get_job_state_info
+      ~DirectWindows.get_submit_command
+      ~DirectWindows.get_version_info
+      ~DirectWindows.is_jobscript_active
+      ~DirectWindows.parse_submission_output
+      ~DirectWindows.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DirectWindows.DEFAULT_SHEBANG_ARGS
+      ~DirectWindows.DEFAULT_SHELL_ARGS
+      ~DirectWindows.DEFAULT_SHELL_EXECUTABLE
+   
+   
