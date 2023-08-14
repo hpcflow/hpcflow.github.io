@@ -1,0 +1,63 @@
+hpcflow.sdk.app.App
+===================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autoclass:: App
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~App.clear_known_submissions_file
+      ~App.get_info
+      ~App.get_parameter_task_schema_map
+      ~App.get_user_data_dir
+      ~App.load_builtin_template_component_data
+      ~App.load_config
+      ~App.load_template_components
+      ~App.perm_error_retry
+      ~App.read_known_submissions_file
+      ~App.reload_config
+      ~App.reload_template_components
+      ~App.reset_config
+      ~App.set_inactive_in_known_subs_file
+      ~App.template_components_from_json_like
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~App.API_logger
+      ~App.CLI_logger
+      ~App.command_files
+      ~App.config
+      ~App.config_logger
+      ~App.envs
+      ~App.is_config_loaded
+      ~App.is_template_components_loaded
+      ~App.known_subs_file_name
+      ~App.known_subs_file_path
+      ~App.log
+      ~App.logger
+      ~App.parameters
+      ~App.persistence_logger
+      ~App.run_time_info
+      ~App.runtime_info_logger
+      ~App.scripts
+      ~App.submission_logger
+      ~App.task_schemas
+      ~App.template_components
+   
+   
