@@ -1,0 +1,53 @@
+hpcflow.sdk.submission.shells.bash.WSLBash
+==========================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells.bash
+
+.. autoclass:: WSLBash
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WSLBash.format_save_parameter
+      ~WSLBash.format_stream_assignment
+      ~WSLBash.get_direct_submit_command
+      ~WSLBash.get_version_info
+      ~WSLBash.get_wait_command
+      ~WSLBash.prepare_JS_path
+      ~WSLBash.prepare_element_run_dirs
+      ~WSLBash.process_JS_header_args
+      ~WSLBash.wrap_in_subshell
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WSLBash.DEFAULT_EXE
+      ~WSLBash.DEFAULT_WSL_EXE
+      ~WSLBash.JS_DIRECT_HEADER
+      ~WSLBash.JS_ELEMENT_ARRAY
+      ~WSLBash.JS_ELEMENT_LOOP
+      ~WSLBash.JS_ENV_SETUP_INDENT
+      ~WSLBash.JS_EXT
+      ~WSLBash.JS_HEADER
+      ~WSLBash.JS_INDENT
+      ~WSLBash.JS_MAIN
+      ~WSLBash.JS_SCHEDULER_HEADER
+      ~WSLBash.JS_SHEBANG
+      ~WSLBash.executable
+      ~WSLBash.linux_release_file
+      ~WSLBash.shebang_executable
+   
+   

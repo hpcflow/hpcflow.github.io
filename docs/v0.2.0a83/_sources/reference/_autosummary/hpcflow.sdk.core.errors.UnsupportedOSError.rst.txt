@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.UnsupportedOSError
+==========================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: UnsupportedOSError
