@@ -1,0 +1,24 @@
+hpcflow.sdk.core.utils.classproperty
+====================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autoclass:: classproperty
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   
