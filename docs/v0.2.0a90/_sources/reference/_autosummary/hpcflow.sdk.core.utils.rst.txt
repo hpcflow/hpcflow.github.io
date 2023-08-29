@@ -1,0 +1,78 @@
+hpcflow.sdk.core.utils
+======================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.core.utils
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      bisect_slice
+      capitalise_first_letter
+      check_in_object_list
+      check_valid_py_identifier
+      ensure_in
+      flatten
+      get_duplicate_items
+      get_enum_by_name_or_val
+      get_in_container
+      get_item_repeat_index
+      get_md5_hash
+      get_nested_indices
+      get_process_stamp
+      get_relative_path
+      get_time_stamp
+      group_by_dict_key_values
+      is_fsspec_url
+      list_to_dict
+      load_config
+      make_workflow_id
+      open_file
+      read_JSON_file
+      read_JSON_string
+      read_YAML
+      read_YAML_file
+      remove_ansi_escape_sequences
+      replace_items
+      reshape
+      search_dir_files_by_regex
+      sentry_wrap
+      set_in_container
+      write_JSON_file
+      write_YAML_file
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      JSONLikeDirSnapShot
+      PrettyPrinter
+      Singleton
+      classproperty
+   
+   
+
+   
+   
+   
+
+
+
