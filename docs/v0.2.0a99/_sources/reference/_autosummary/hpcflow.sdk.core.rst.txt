@@ -1,0 +1,86 @@
+hpcflow.sdk.core
+================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.core
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. autosummary::
+   :toctree:
+   :template: custom-module-template.rst
+   :recursive:
+
+   
+   hpcflow.sdk.core.actions
+   
+   
+   hpcflow.sdk.core.command_files
+   
+   
+   hpcflow.sdk.core.commands
+   
+   
+   hpcflow.sdk.core.element
+   
+   
+   hpcflow.sdk.core.environment
+   
+   
+   hpcflow.sdk.core.errors
+   
+   
+   hpcflow.sdk.core.json_like
+   
+   
+   hpcflow.sdk.core.loop
+   
+   
+   hpcflow.sdk.core.object_list
+   
+   
+   hpcflow.sdk.core.parameters
+   
+   
+   hpcflow.sdk.core.rule
+   
+   
+   hpcflow.sdk.core.task
+   
+   
+   hpcflow.sdk.core.task_schema
+   
+   
+   hpcflow.sdk.core.test_utils
+   
+   
+   hpcflow.sdk.core.utils
+   
+   
+   hpcflow.sdk.core.validation
+   
+   
+   hpcflow.sdk.core.workflow
+   
+   
+   hpcflow.sdk.core.zarr_io
+   
+
