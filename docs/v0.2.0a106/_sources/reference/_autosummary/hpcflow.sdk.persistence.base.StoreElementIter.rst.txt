@@ -1,0 +1,43 @@
+hpcflow.sdk.persistence.base.StoreElementIter
+=============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autoclass:: StoreElementIter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~StoreElementIter.append_EAR_IDs
+      ~StoreElementIter.decode
+      ~StoreElementIter.encode
+      ~StoreElementIter.set_EARs_initialised
+      ~StoreElementIter.to_dict
+      ~StoreElementIter.update_loop_idx
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StoreElementIter.id_
+      ~StoreElementIter.is_pending
+      ~StoreElementIter.element_ID
+      ~StoreElementIter.EARs_initialised
+      ~StoreElementIter.EAR_IDs
+      ~StoreElementIter.data_idx
+      ~StoreElementIter.schema_parameters
+      ~StoreElementIter.loop_idx
+   
+   
