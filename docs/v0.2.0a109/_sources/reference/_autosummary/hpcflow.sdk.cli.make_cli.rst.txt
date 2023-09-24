@@ -1,0 +1,6 @@
+hpcflow.sdk.cli.make\_cli
+=========================
+
+.. currentmodule:: hpcflow.sdk.cli
+
+.. autofunction:: make_cli
