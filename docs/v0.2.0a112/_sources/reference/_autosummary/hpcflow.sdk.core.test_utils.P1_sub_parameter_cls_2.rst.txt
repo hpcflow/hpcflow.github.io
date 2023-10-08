@@ -1,0 +1,31 @@
+hpcflow.sdk.core.test_utils.P1_sub_parameter_cls_2
+==================================================
+
+.. currentmodule:: hpcflow.sdk.core.test_utils
+
+.. autoclass:: P1_sub_parameter_cls_2
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~P1_sub_parameter_cls_2.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~P1_sub_parameter_cls_2.f
+   
+   
