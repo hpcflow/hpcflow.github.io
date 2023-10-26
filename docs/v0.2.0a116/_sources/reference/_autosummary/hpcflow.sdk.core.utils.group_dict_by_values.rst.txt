@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.group\_dict\_by\_values
+==============================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: group_dict_by_values
