@@ -1,0 +1,6 @@
+hpcflow.sdk.demo.scripts.main\_script\_test\_hdf5\_in\_obj.main\_script\_test\_hdf5\_in\_obj
+============================================================================================
+
+.. currentmodule:: hpcflow.sdk.demo.scripts.main_script_test_hdf5_in_obj
+
+.. autofunction:: main_script_test_hdf5_in_obj

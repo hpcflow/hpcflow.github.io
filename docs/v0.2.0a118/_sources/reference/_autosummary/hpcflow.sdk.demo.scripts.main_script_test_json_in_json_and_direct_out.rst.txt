@@ -1,0 +1,34 @@
+hpcflow.sdk.demo.scripts.main_script_test_json_in_json_and_direct_out
+=====================================================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.demo.scripts.main_script_test_json_in_json_and_direct_out
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      main_script_test_json_in_json_and_direct_out
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

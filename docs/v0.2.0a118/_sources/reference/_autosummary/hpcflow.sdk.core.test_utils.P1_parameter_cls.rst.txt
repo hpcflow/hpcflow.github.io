@@ -1,0 +1,46 @@
+hpcflow.sdk.core.test_utils.P1_parameter_cls
+============================================
+
+.. currentmodule:: hpcflow.sdk.core.test_utils
+
+.. autoclass:: P1_parameter_cls
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~P1_parameter_cls.CLI_format
+      ~P1_parameter_cls.CLI_format_group
+      ~P1_parameter_cls.CLI_parse
+      ~P1_parameter_cls.custom_CLI_format
+      ~P1_parameter_cls.custom_CLI_format_prep
+      ~P1_parameter_cls.dump_to_HDF5_group
+      ~P1_parameter_cls.from_data
+      ~P1_parameter_cls.prepare_JSON_dump
+      ~P1_parameter_cls.save_from_HDF5_group
+      ~P1_parameter_cls.save_from_JSON
+      ~P1_parameter_cls.sum
+      ~P1_parameter_cls.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~P1_parameter_cls.d
+      ~P1_parameter_cls.sub_param
+      ~P1_parameter_cls.sub_param_prop
+      ~P1_parameter_cls.twice_a
+      ~P1_parameter_cls.a
+   
+   

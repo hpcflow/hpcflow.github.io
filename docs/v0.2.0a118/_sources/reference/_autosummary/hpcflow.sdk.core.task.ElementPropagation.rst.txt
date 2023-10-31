@@ -1,0 +1,32 @@
+hpcflow.sdk.core.task.ElementPropagation
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.task
+
+.. autoclass:: ElementPropagation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementPropagation.element_set
+      ~ElementPropagation.nesting_order
+      ~ElementPropagation.task
+   
+   

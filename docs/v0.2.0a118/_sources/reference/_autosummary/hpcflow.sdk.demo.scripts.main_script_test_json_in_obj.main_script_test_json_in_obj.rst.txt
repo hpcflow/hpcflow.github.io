@@ -1,0 +1,6 @@
+hpcflow.sdk.demo.scripts.main\_script\_test\_json\_in\_obj.main\_script\_test\_json\_in\_obj
+============================================================================================
+
+.. currentmodule:: hpcflow.sdk.demo.scripts.main_script_test_json_in_obj
+
+.. autofunction:: main_script_test_json_in_obj
