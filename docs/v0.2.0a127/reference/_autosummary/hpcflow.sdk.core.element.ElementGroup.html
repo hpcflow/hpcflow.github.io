@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>hpcflow.sdk.core.element.ElementGroup &#8212; hpcflow 0.2.0a127 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/hpcflow.sdk.core.element.ElementGroup';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hpcflow.github.io/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.2.0a127';
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="hpcflow.sdk.core.element.ElementInputFiles" href="hpcflow.sdk.core.element.ElementInputFiles.html" />
+    <link rel="prev" title="hpcflow.sdk.core.element.ElementFilter" href="hpcflow.sdk.core.element.ElementFilter.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-v2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-v2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.2.0a127  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.2.0a127  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">Python API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.app.html">hpcflow.app</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.app.html">hpcflow.app.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.cancel.html">hpcflow.app.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_OS_info.html">hpcflow.app.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_known_submissions.html">hpcflow.app.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_shell_info.html">hpcflow.app.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_demo_workflow.html">hpcflow.app.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_workflow.html">hpcflow.app.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_demo_workflow.html">hpcflow.app.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_workflow.html">hpcflow.app.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_hpcflow_tests.html">hpcflow.app.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_tests.html">hpcflow.app.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show.html">hpcflow.app.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show_legend.html">hpcflow.app.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.submit_workflow.html">hpcflow.app.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Action.html">hpcflow.app.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionEnvironment.html">hpcflow.app.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionRule.html">hpcflow.app.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScope.html">hpcflow.app.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScopeType.html">hpcflow.app.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Command.html">hpcflow.app.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.CommandFilesList.html">hpcflow.app.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectPosix.html">hpcflow.app.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectWindows.html">hpcflow.app.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Element.html">hpcflow.app.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementAction.html">hpcflow.app.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementActionRun.html">hpcflow.app.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementFilter.html">hpcflow.app.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementGroup.html">hpcflow.app.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputFiles.html">hpcflow.app.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputs.html">hpcflow.app.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementIteration.html">hpcflow.app.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputFiles.html">hpcflow.app.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputs.html">hpcflow.app.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementParameter.html">hpcflow.app.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementPropagation.html">hpcflow.app.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementRepeats.html">hpcflow.app.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementResources.html">hpcflow.app.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementSet.html">hpcflow.app.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Elements.html">hpcflow.app.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Environment.html">hpcflow.app.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.EnvironmentsList.html">hpcflow.app.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executable.html">hpcflow.app.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutableInstance.html">hpcflow.app.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutablesList.html">hpcflow.app.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameExt.html">hpcflow.app.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameSpec.html">hpcflow.app.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameStem.html">hpcflow.app.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileSpec.html">hpcflow.app.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.GroupList.html">hpcflow.app.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFile.html">hpcflow.app.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGenerator.html">hpcflow.app.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGeneratorSource.html">hpcflow.app.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSource.html">hpcflow.app.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSourceType.html">hpcflow.app.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputValue.html">hpcflow.app.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Jobscript.html">hpcflow.app.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Loop.html">hpcflow.app.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.NumCores.html">hpcflow.app.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParser.html">hpcflow.app.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParserSource.html">hpcflow.app.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputLabel.html">hpcflow.app.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameter.html">hpcflow.app.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPath.html">hpcflow.app.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPropagationMode.html">hpcflow.app.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterValue.html">hpcflow.app.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameters.html">hpcflow.app.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParametersList.html">hpcflow.app.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceList.html">hpcflow.app.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceSpec.html">hpcflow.app.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Rule.html">hpcflow.app.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SGEPosix.html">hpcflow.app.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaInput.html">hpcflow.app.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaOutput.html">hpcflow.app.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaParameter.html">hpcflow.app.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SlurmPosix.html">hpcflow.app.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SubParameter.html">hpcflow.app.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Submission.html">hpcflow.app.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Task.html">hpcflow.app.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskInputParameters.html">hpcflow.app.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskList.html">hpcflow.app.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskObjective.html">hpcflow.app.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskOutputParameters.html">hpcflow.app.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchema.html">hpcflow.app.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchemasList.html">hpcflow.app.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSourceType.html">hpcflow.app.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskTemplateList.html">hpcflow.app.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValuePerturbation.html">hpcflow.app.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValueSequence.html">hpcflow.app.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Workflow.html">hpcflow.app.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowBlueprint.html">hpcflow.app.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoop.html">hpcflow.app.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoopList.html">hpcflow.app.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTask.html">hpcflow.app.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTaskList.html">hpcflow.app.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTemplate.html">hpcflow.app.WorkflowTemplate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../sdk.html">SDK</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="hpcflow.sdk.html">hpcflow.sdk</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.get_SDK_logger.html">hpcflow.sdk.get_SDK_logger</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.app.html">hpcflow.sdk.app</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.get_app_attribute.html">hpcflow.sdk.app.get_app_attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.get_app_module_all.html">hpcflow.sdk.app.get_app_module_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.get_app_module_dir.html">hpcflow.sdk.app.get_app_module_dir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.App.html">hpcflow.sdk.app.App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.BaseApp.html">hpcflow.sdk.app.BaseApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.Singleton.html">hpcflow.sdk.app.Singleton</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.cli.html">hpcflow.sdk.cli</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.make_cli.html">hpcflow.sdk.cli.make_cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.parse_jobscript_wait_spec.html">hpcflow.sdk.cli.parse_jobscript_wait_spec</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.cli_common.html">hpcflow.sdk.cli_common</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.sub_tasks_callback.html">hpcflow.sdk.cli_common.sub_tasks_callback</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.config.html">hpcflow.sdk.config</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.callbacks.html">hpcflow.sdk.config.callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.cli.html">hpcflow.sdk.config.cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.config.html">hpcflow.sdk.config.config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.config_file.html">hpcflow.sdk.config.config_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.errors.html">hpcflow.sdk.config.errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="hpcflow.sdk.core.html">hpcflow.sdk.core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.actions.html">hpcflow.sdk.core.actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.command_files.html">hpcflow.sdk.core.command_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.commands.html">hpcflow.sdk.core.commands</a></li>
+<li class="toctree-l4 current active"><a class="reference internal" href="hpcflow.sdk.core.element.html">hpcflow.sdk.core.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.environment.html">hpcflow.sdk.core.environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.errors.html">hpcflow.sdk.core.errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.json_like.html">hpcflow.sdk.core.json_like</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.loop.html">hpcflow.sdk.core.loop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.object_list.html">hpcflow.sdk.core.object_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.parallel.html">hpcflow.sdk.core.parallel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.parameters.html">hpcflow.sdk.core.parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.rule.html">hpcflow.sdk.core.rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.task.html">hpcflow.sdk.core.task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.task_schema.html">hpcflow.sdk.core.task_schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.test_utils.html">hpcflow.sdk.core.test_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.utils.html">hpcflow.sdk.core.utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.validation.html">hpcflow.sdk.core.validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.workflow.html">hpcflow.sdk.core.workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.zarr_io.html">hpcflow.sdk.core.zarr_io</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.data.html">hpcflow.sdk.data</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.demo.html">hpcflow.sdk.demo</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.demo.cli.html">hpcflow.sdk.demo.cli</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.helper.html">hpcflow.sdk.helper</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.helper.cli.html">hpcflow.sdk.helper.cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.helper.helper.html">hpcflow.sdk.helper.helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.helper.watcher.html">hpcflow.sdk.helper.watcher</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.log.html">hpcflow.sdk.log</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.log.AppLog.html">hpcflow.sdk.log.AppLog</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.persistence.html">hpcflow.sdk.persistence</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.store_cls_from_str.html">hpcflow.sdk.persistence.store_cls_from_str</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.base.html">hpcflow.sdk.persistence.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.json.html">hpcflow.sdk.persistence.json</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.pending.html">hpcflow.sdk.persistence.pending</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.store_resource.html">hpcflow.sdk.persistence.store_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.utils.html">hpcflow.sdk.persistence.utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.zarr.html">hpcflow.sdk.persistence.zarr</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.runtime.html">hpcflow.sdk.runtime</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.runtime.RunTimeInfo.html">hpcflow.sdk.runtime.RunTimeInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.scripting.html">hpcflow.sdk.scripting</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.scripting.register_input_file_writer.html">hpcflow.sdk.scripting.register_input_file_writer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.scripting.register_output_parser.html">hpcflow.sdk.scripting.register_output_parser</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.submission.html">hpcflow.sdk.submission</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.jobscript.html">hpcflow.sdk.submission.jobscript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.jobscript_info.html">hpcflow.sdk.submission.jobscript_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.schedulers.html">hpcflow.sdk.submission.schedulers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.shells.html">hpcflow.sdk.submission.shells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.submission.html">hpcflow.sdk.submission.submission</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.typing.html">hpcflow.sdk.typing</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="hpcflow.sdk.core.element.html" class="nav-link">hpcflow.sdk.core.element</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">hpcflow.sdk.core.element.ElementGroup</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="hpcflow-sdk-core-element-elementgroup">
+<h1>hpcflow.sdk.core.element.ElementGroup<a class="headerlink" href="#hpcflow-sdk-core-element-elementgroup" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.core.element.</span></span><span class="sig-name descname"><span class="pre">ElementGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'str'</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">where</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Optional[ElementFilter]'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by_distinct</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="s"><span class="pre">'Optional[app.ParameterPath]'</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hpcflow.sdk.core.json_like.JSONLike.html#hpcflow.sdk.core.json_like.JSONLike" title="hpcflow.sdk.core.json_like.JSONLike"><code class="xref py py-class docutils literal notranslate"><span class="pre">JSONLike</span></code></a></p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.core.element.ElementGroup.from_json_like" title="hpcflow.sdk.core.element.ElementGroup.from_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json_like</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.core.element.ElementGroup.to_dict" title="hpcflow.sdk.core.element.ElementGroup.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.core.element.ElementGroup.to_json_like" title="hpcflow.sdk.core.element.ElementGroup.to_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json_like</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.core.element.ElementGroup.group_by_distinct" title="hpcflow.sdk.core.element.ElementGroup.group_by_distinct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">group_by_distinct</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.core.element.ElementGroup.where" title="hpcflow.sdk.core.element.ElementGroup.where"><code class="xref py py-obj docutils literal notranslate"><span class="pre">where</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.core.element.ElementGroup.name" title="hpcflow.sdk.core.element.ElementGroup.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – </p></li>
+<li><p><strong>where</strong> (<a class="reference internal" href="hpcflow.sdk.core.element.ElementFilter.html#hpcflow.sdk.core.element.ElementFilter" title="hpcflow.sdk.core.element.ElementFilter"><em>ElementFilter</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>group_by_distinct</strong> (<a class="reference internal" href="hpcflow.app.ParameterPath.html#hpcflow.app.ParameterPath" title="hpcflow.app.ParameterPath"><em>ParameterPath</em></a><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup.from_json_like">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_like</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup.from_json_like" title="Permalink to this definition">#</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_like</strong> (<em>Union</em><em>[</em><em>Dict</em><em>, </em><em>List</em><em>]</em>) – </p></li>
+<li><p><strong>shared_data</strong> (<em>Optional</em><em>[</em><em>Dict</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a><em>, </em><a class="reference internal" href="hpcflow.sdk.core.object_list.ObjectList.html#hpcflow.sdk.core.object_list.ObjectList" title="hpcflow.sdk.core.object_list.ObjectList"><em>ObjectList</em></a><em>]</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup.group_by_distinct">
+<span class="sig-name descname"><span class="pre">group_by_distinct</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="hpcflow.app.ParameterPath.html#hpcflow.app.ParameterPath" title="hpcflow.app.ParameterPath"><span class="pre">ParameterPath</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup.group_by_distinct" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></em><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup.name" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup.to_dict" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup.to_json_like">
+<span class="sig-name descname"><span class="pre">to_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup.to_json_like" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.core.element.ElementGroup.where">
+<span class="sig-name descname"><span class="pre">where</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="hpcflow.sdk.core.element.ElementFilter.html#hpcflow.sdk.core.element.ElementFilter" title="hpcflow.sdk.core.element.ElementFilter"><span class="pre">ElementFilter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.sdk.core.element.ElementGroup.where" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hpcflow.sdk.core.element.ElementFilter.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hpcflow.sdk.core.element.ElementFilter</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hpcflow.sdk.core.element.ElementInputFiles.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hpcflow.sdk.core.element.ElementInputFiles</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup"><code class="docutils literal notranslate"><span class="pre">ElementGroup</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup.from_json_like"><code class="docutils literal notranslate"><span class="pre">ElementGroup.from_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup.group_by_distinct"><code class="docutils literal notranslate"><span class="pre">ElementGroup.group_by_distinct</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup.name"><code class="docutils literal notranslate"><span class="pre">ElementGroup.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup.to_dict"><code class="docutils literal notranslate"><span class="pre">ElementGroup.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup.to_json_like"><code class="docutils literal notranslate"><span class="pre">ElementGroup.to_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.core.element.ElementGroup.where"><code class="docutils literal notranslate"><span class="pre">ElementGroup.where</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/hpcflow-new/edit/develop/docs/source/reference/_autosummary/hpcflow.sdk.core.element.ElementGroup.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/_autosummary/hpcflow.sdk.core.element.ElementGroup.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, hpcflow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
