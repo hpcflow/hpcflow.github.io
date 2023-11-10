@@ -1,0 +1,52 @@
+hpcflow.sdk.config.errors
+=========================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.config.errors
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+      :toctree:
+   
+      ConfigChangeFileUpdateError
+      ConfigChangeInvalidError
+      ConfigChangeInvalidJSONError
+      ConfigChangePopIndexError
+      ConfigChangeTypeInvalidError
+      ConfigChangeValidationError
+      ConfigDefaultValidationError
+      ConfigError
+      ConfigFileInvocationIncompatibleError
+      ConfigFileInvocationUnknownMatchKey
+      ConfigFileValidationError
+      ConfigInvocationKeyNotFoundError
+      ConfigItemAlreadyUnsetError
+      ConfigItemCallbackError
+      ConfigNonConfigurableError
+      ConfigUnknownItemError
+      ConfigUnknownOverrideError
+      ConfigValidationError
+      MissingEnvironmentFileError
+      MissingTaskSchemaFileError
+   
+   
+
+
+
