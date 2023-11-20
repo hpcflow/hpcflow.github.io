@@ -1,0 +1,89 @@
+hpcflow.sdk.app.BaseApp
+=======================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autoclass:: BaseApp
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~BaseApp.cache_all_demo_data_files
+      ~BaseApp.cache_demo_data_file
+      ~BaseApp.clear_demo_data_cache_dir
+      ~BaseApp.clear_known_submissions_file
+      ~BaseApp.clear_user_cache_dir
+      ~BaseApp.clear_user_cache_hostname_dir
+      ~BaseApp.clear_user_runtime_dir
+      ~BaseApp.configure_env
+      ~BaseApp.copy_demo_data
+      ~BaseApp.copy_demo_workflow
+      ~BaseApp.get_OS_supported_schedulers
+      ~BaseApp.get_config_path
+      ~BaseApp.get_demo_data_file_path
+      ~BaseApp.get_demo_data_files_manifest
+      ~BaseApp.get_demo_workflow_template_file
+      ~BaseApp.get_info
+      ~BaseApp.get_parameter_task_schema_map
+      ~BaseApp.get_scheduler
+      ~BaseApp.list_demo_data_files
+      ~BaseApp.list_demo_workflows
+      ~BaseApp.load_builtin_template_component_data
+      ~BaseApp.load_config
+      ~BaseApp.load_demo_workflow
+      ~BaseApp.load_template_components
+      ~BaseApp.perm_error_retry
+      ~BaseApp.read_known_submissions_file
+      ~BaseApp.reload_config
+      ~BaseApp.reload_template_components
+      ~BaseApp.reset_config
+      ~BaseApp.set_inactive_in_known_subs_file
+      ~BaseApp.show_demo_workflow
+      ~BaseApp.template_components_from_json_like
+      ~BaseApp.unload_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BaseApp.API_logger
+      ~BaseApp.CLI_logger
+      ~BaseApp.command_files
+      ~BaseApp.config
+      ~BaseApp.config_logger
+      ~BaseApp.demo_data_cache_dir
+      ~BaseApp.envs
+      ~BaseApp.is_config_loaded
+      ~BaseApp.is_template_components_loaded
+      ~BaseApp.known_subs_file_name
+      ~BaseApp.known_subs_file_path
+      ~BaseApp.log
+      ~BaseApp.logger
+      ~BaseApp.parameters
+      ~BaseApp.persistence_logger
+      ~BaseApp.run_time_info
+      ~BaseApp.runtime_info_logger
+      ~BaseApp.scheduler_lookup
+      ~BaseApp.scripts
+      ~BaseApp.submission_logger
+      ~BaseApp.task_schemas
+      ~BaseApp.template_components
+      ~BaseApp.user_cache_dir
+      ~BaseApp.user_cache_hostname_dir
+      ~BaseApp.user_data_dir
+      ~BaseApp.user_data_hostname_dir
+      ~BaseApp.user_runtime_dir
+   
+   
