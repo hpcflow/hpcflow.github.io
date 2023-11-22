@@ -1,0 +1,27 @@
+hpcflow.sdk.core.environment.Environment
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.environment
+
+.. autoclass:: Environment
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Environment.from_json_like
+      ~Environment.to_dict
+      ~Environment.to_json_like
+   
+   
+
+   
+   
+   
