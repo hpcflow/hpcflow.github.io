@@ -1,0 +1,6 @@
+hpcflow.app.submit\_workflow
+============================
+
+.. currentmodule:: hpcflow.app
+
+.. autofunction:: submit_workflow
