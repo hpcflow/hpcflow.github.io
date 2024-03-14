@@ -1,0 +1,35 @@
+hpcflow.sdk.cli
+===============
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.cli
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      make_cli
+      parse_jobscript_wait_spec
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

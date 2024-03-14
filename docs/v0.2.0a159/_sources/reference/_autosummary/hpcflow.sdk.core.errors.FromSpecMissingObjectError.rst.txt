@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.FromSpecMissingObjectError
+==================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: FromSpecMissingObjectError
