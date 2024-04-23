@@ -1,0 +1,35 @@
+hpcflow.sdk.submission.schedulers.NullScheduler
+===============================================
+
+.. currentmodule:: hpcflow.sdk.submission.schedulers
+
+.. autoclass:: NullScheduler
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~NullScheduler.get_version_info
+      ~NullScheduler.is_num_cores_supported
+      ~NullScheduler.parse_submission_output
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NullScheduler.DEFAULT_SHEBANG_ARGS
+      ~NullScheduler.DEFAULT_SHELL_ARGS
+      ~NullScheduler.unique_properties
+   
+   
