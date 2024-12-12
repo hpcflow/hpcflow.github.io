@@ -1,0 +1,37 @@
+hpcflow.sdk.log.AppLog
+======================
+
+.. currentmodule:: hpcflow.sdk.log
+
+.. autoclass:: AppLog
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~AppLog.add_file_logger
+      ~AppLog.remove_file_handlers
+      ~AppLog.update_console_level
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AppLog.DEFAULT_LOG_CONSOLE_LEVEL
+      ~AppLog.DEFAULT_LOG_FILE_LEVEL
+      ~AppLog.app
+      ~AppLog.logger
+      ~AppLog.console_handler
+   
+   
