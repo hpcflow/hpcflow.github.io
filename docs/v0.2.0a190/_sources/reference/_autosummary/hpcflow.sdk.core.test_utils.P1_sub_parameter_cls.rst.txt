@@ -1,0 +1,37 @@
+hpcflow.sdk.core.test_utils.P1_sub_parameter_cls
+================================================
+
+.. currentmodule:: hpcflow.sdk.core.test_utils
+
+.. autoclass:: P1_sub_parameter_cls
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~P1_sub_parameter_cls.CLI_format
+      ~P1_sub_parameter_cls.dump_to_HDF5_group
+      ~P1_sub_parameter_cls.prepare_JSON_dump
+      ~P1_sub_parameter_cls.save_from_HDF5_group
+      ~P1_sub_parameter_cls.save_from_JSON
+      ~P1_sub_parameter_cls.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~P1_sub_parameter_cls.e
+      ~P1_sub_parameter_cls.twice_e
+   
+   

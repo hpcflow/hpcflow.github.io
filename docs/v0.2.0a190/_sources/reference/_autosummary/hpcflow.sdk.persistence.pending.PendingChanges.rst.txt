@@ -1,0 +1,82 @@
+hpcflow.sdk.persistence.pending.PendingChanges
+==============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.pending
+
+.. autoclass:: PendingChanges
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~PendingChanges.commit_EAR_ends
+      ~PendingChanges.commit_EAR_skips
+      ~PendingChanges.commit_EAR_starts
+      ~PendingChanges.commit_EAR_submission_indices
+      ~PendingChanges.commit_EARs
+      ~PendingChanges.commit_EARs_initialised
+      ~PendingChanges.commit_all
+      ~PendingChanges.commit_elem_IDs
+      ~PendingChanges.commit_elem_iter_EAR_IDs
+      ~PendingChanges.commit_elem_iter_IDs
+      ~PendingChanges.commit_elem_iters
+      ~PendingChanges.commit_element_sets
+      ~PendingChanges.commit_elements
+      ~PendingChanges.commit_files
+      ~PendingChanges.commit_js_metadata
+      ~PendingChanges.commit_loop_indices
+      ~PendingChanges.commit_loop_num_iters
+      ~PendingChanges.commit_loop_parents
+      ~PendingChanges.commit_loops
+      ~PendingChanges.commit_param_sources
+      ~PendingChanges.commit_parameters
+      ~PendingChanges.commit_submission_parts
+      ~PendingChanges.commit_submissions
+      ~PendingChanges.commit_tasks
+      ~PendingChanges.commit_template_components
+      ~PendingChanges.reset
+      ~PendingChanges.where_pending
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PendingChanges.logger
+      ~PendingChanges.add_tasks
+      ~PendingChanges.add_loops
+      ~PendingChanges.add_submissions
+      ~PendingChanges.add_elements
+      ~PendingChanges.add_elem_iters
+      ~PendingChanges.add_EARs
+      ~PendingChanges.add_parameters
+      ~PendingChanges.add_files
+      ~PendingChanges.add_template_components
+      ~PendingChanges.add_element_sets
+      ~PendingChanges.add_elem_IDs
+      ~PendingChanges.add_elem_iter_IDs
+      ~PendingChanges.add_elem_iter_EAR_IDs
+      ~PendingChanges.add_submission_parts
+      ~PendingChanges.set_EARs_initialised
+      ~PendingChanges.set_EAR_submission_indices
+      ~PendingChanges.set_EAR_skips
+      ~PendingChanges.set_EAR_starts
+      ~PendingChanges.set_EAR_ends
+      ~PendingChanges.set_js_metadata
+      ~PendingChanges.set_parameters
+      ~PendingChanges.update_param_sources
+      ~PendingChanges.update_loop_indices
+      ~PendingChanges.update_loop_num_iters
+      ~PendingChanges.update_loop_parents
+   
+   

@@ -1,0 +1,43 @@
+hpcflow.sdk.core.types.SchemaInputKwargs
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: SchemaInputKwargs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SchemaInputKwargs.clear
+      ~SchemaInputKwargs.copy
+      ~SchemaInputKwargs.fromkeys
+      ~SchemaInputKwargs.get
+      ~SchemaInputKwargs.items
+      ~SchemaInputKwargs.keys
+      ~SchemaInputKwargs.pop
+      ~SchemaInputKwargs.popitem
+      ~SchemaInputKwargs.setdefault
+      ~SchemaInputKwargs.update
+      ~SchemaInputKwargs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchemaInputKwargs.parameter
+      ~SchemaInputKwargs.multiple
+      ~SchemaInputKwargs.labels
+   
+   

@@ -1,0 +1,49 @@
+hpcflow.sdk.persistence.json.JsonStoreEAR
+=========================================
+
+.. currentmodule:: hpcflow.sdk.persistence.json
+
+.. autoclass:: JsonStoreEAR
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~JsonStoreEAR.decode
+      ~JsonStoreEAR.encode
+      ~JsonStoreEAR.to_dict
+      ~JsonStoreEAR.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JsonStoreEAR.end_time
+      ~JsonStoreEAR.exit_code
+      ~JsonStoreEAR.metadata
+      ~JsonStoreEAR.run_hostname
+      ~JsonStoreEAR.skip
+      ~JsonStoreEAR.snapshot_end
+      ~JsonStoreEAR.snapshot_start
+      ~JsonStoreEAR.start_time
+      ~JsonStoreEAR.submission_idx
+      ~JsonStoreEAR.success
+      ~JsonStoreEAR.id_
+      ~JsonStoreEAR.is_pending
+      ~JsonStoreEAR.elem_iter_ID
+      ~JsonStoreEAR.action_idx
+      ~JsonStoreEAR.commands_idx
+      ~JsonStoreEAR.data_idx
+   
+   

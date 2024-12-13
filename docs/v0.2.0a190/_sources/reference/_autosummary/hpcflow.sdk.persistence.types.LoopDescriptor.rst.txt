@@ -1,0 +1,44 @@
+hpcflow.sdk.persistence.types.LoopDescriptor
+============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autoclass:: LoopDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LoopDescriptor.clear
+      ~LoopDescriptor.copy
+      ~LoopDescriptor.fromkeys
+      ~LoopDescriptor.get
+      ~LoopDescriptor.items
+      ~LoopDescriptor.keys
+      ~LoopDescriptor.pop
+      ~LoopDescriptor.popitem
+      ~LoopDescriptor.setdefault
+      ~LoopDescriptor.update
+      ~LoopDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoopDescriptor.iterable_parameters
+      ~LoopDescriptor.loop_template
+      ~LoopDescriptor.num_added_iterations
+      ~LoopDescriptor.parents
+   
+   

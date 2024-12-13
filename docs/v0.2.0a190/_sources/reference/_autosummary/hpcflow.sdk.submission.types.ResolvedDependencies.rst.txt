@@ -1,0 +1,42 @@
+hpcflow.sdk.submission.types.ResolvedDependencies
+=================================================
+
+.. currentmodule:: hpcflow.sdk.submission.types
+
+.. autoclass:: ResolvedDependencies
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ResolvedDependencies.clear
+      ~ResolvedDependencies.copy
+      ~ResolvedDependencies.fromkeys
+      ~ResolvedDependencies.get
+      ~ResolvedDependencies.items
+      ~ResolvedDependencies.keys
+      ~ResolvedDependencies.pop
+      ~ResolvedDependencies.popitem
+      ~ResolvedDependencies.setdefault
+      ~ResolvedDependencies.update
+      ~ResolvedDependencies.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResolvedDependencies.js_element_mapping
+      ~ResolvedDependencies.is_array
+   
+   
