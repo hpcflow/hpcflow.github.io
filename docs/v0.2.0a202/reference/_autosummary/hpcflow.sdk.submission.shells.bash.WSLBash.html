@@ -1,0 +1,1493 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>hpcflow.sdk.submission.shells.bash.WSLBash &#8212; hpcflow 0.2.0a202 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/hpcflow.sdk.submission.shells.bash.WSLBash';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hpcflow.github.io/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.2.0a202';
+        </script>
+    <script src="../../_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="hpcflow.sdk.submission.shells.os_version" href="hpcflow.sdk.submission.shells.os_version.html" />
+    <link rel="prev" title="hpcflow.sdk.submission.shells.bash.Bash" href="hpcflow.sdk.submission.shells.bash.Bash.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-v2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo-v2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.2.0a202  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Install
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../user/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../development/index.html">
+                        Development
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-box"></i></span>
+            <label class="sr-only">PyPI</label></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      0.2.0a202  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">Python API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="hpcflow.app.html">hpcflow.app</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.app.html">hpcflow.app.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.cancel.html">hpcflow.app.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_OS_info.html">hpcflow.app.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_known_submissions.html">hpcflow.app.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_shell_info.html">hpcflow.app.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_demo_workflow.html">hpcflow.app.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_workflow.html">hpcflow.app.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_demo_workflow.html">hpcflow.app.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_workflow.html">hpcflow.app.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_hpcflow_tests.html">hpcflow.app.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_tests.html">hpcflow.app.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show.html">hpcflow.app.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show_legend.html">hpcflow.app.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.submit_workflow.html">hpcflow.app.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Action.html">hpcflow.app.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionEnvironment.html">hpcflow.app.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionRule.html">hpcflow.app.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScope.html">hpcflow.app.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScopeType.html">hpcflow.app.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Command.html">hpcflow.app.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.CommandFilesList.html">hpcflow.app.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectPosix.html">hpcflow.app.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectWindows.html">hpcflow.app.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Element.html">hpcflow.app.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementAction.html">hpcflow.app.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementActionRun.html">hpcflow.app.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementFilter.html">hpcflow.app.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementGroup.html">hpcflow.app.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputFiles.html">hpcflow.app.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputs.html">hpcflow.app.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementIteration.html">hpcflow.app.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputFiles.html">hpcflow.app.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputs.html">hpcflow.app.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementParameter.html">hpcflow.app.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementPropagation.html">hpcflow.app.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementRepeats.html">hpcflow.app.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementResources.html">hpcflow.app.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementSet.html">hpcflow.app.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Elements.html">hpcflow.app.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Environment.html">hpcflow.app.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.EnvironmentsList.html">hpcflow.app.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executable.html">hpcflow.app.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutableInstance.html">hpcflow.app.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutablesList.html">hpcflow.app.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executor.html">hpcflow.app.Executor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameExt.html">hpcflow.app.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameSpec.html">hpcflow.app.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameStem.html">hpcflow.app.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileSpec.html">hpcflow.app.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.GroupList.html">hpcflow.app.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFile.html">hpcflow.app.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGenerator.html">hpcflow.app.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGeneratorSource.html">hpcflow.app.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSource.html">hpcflow.app.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSourceType.html">hpcflow.app.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputValue.html">hpcflow.app.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Jobscript.html">hpcflow.app.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.JobscriptBlock.html">hpcflow.app.JobscriptBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Loop.html">hpcflow.app.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MetaTask.html">hpcflow.app.MetaTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MetaTaskSchema.html">hpcflow.app.MetaTaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MultiPathSequence.html">hpcflow.app.MultiPathSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.NumCores.html">hpcflow.app.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParser.html">hpcflow.app.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParserSource.html">hpcflow.app.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputLabel.html">hpcflow.app.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameter.html">hpcflow.app.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPath.html">hpcflow.app.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPropagationMode.html">hpcflow.app.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterValue.html">hpcflow.app.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameters.html">hpcflow.app.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParametersList.html">hpcflow.app.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.QueuedScheduler.html">hpcflow.app.QueuedScheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceList.html">hpcflow.app.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceSpec.html">hpcflow.app.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Rule.html">hpcflow.app.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.RunDirAppFiles.html">hpcflow.app.RunDirAppFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SGEPosix.html">hpcflow.app.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaInput.html">hpcflow.app.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaOutput.html">hpcflow.app.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaParameter.html">hpcflow.app.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SlurmPosix.html">hpcflow.app.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SubParameter.html">hpcflow.app.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Submission.html">hpcflow.app.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Task.html">hpcflow.app.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskInputParameters.html">hpcflow.app.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskList.html">hpcflow.app.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskObjective.html">hpcflow.app.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskOutputParameters.html">hpcflow.app.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchema.html">hpcflow.app.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchemasList.html">hpcflow.app.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSourceType.html">hpcflow.app.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskTemplateList.html">hpcflow.app.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValuePerturbation.html">hpcflow.app.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValueSequence.html">hpcflow.app.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Workflow.html">hpcflow.app.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowBlueprint.html">hpcflow.app.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoop.html">hpcflow.app.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoopList.html">hpcflow.app.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTask.html">hpcflow.app.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTaskList.html">hpcflow.app.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTemplate.html">hpcflow.app.WorkflowTemplate</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../sdk.html">SDK</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="hpcflow.sdk.html">hpcflow.sdk</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.sdk_classes.html">hpcflow.sdk.sdk_classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.sdk_funcs.html">hpcflow.sdk.sdk_funcs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.sdk.get_SDK_logger.html">hpcflow.sdk.get_SDK_logger</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.app.html">hpcflow.sdk.app</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.get_app_attribute.html">hpcflow.sdk.app.get_app_attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.get_app_module_all.html">hpcflow.sdk.app.get_app_module_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.get_app_module_dir.html">hpcflow.sdk.app.get_app_module_dir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.rate_limit_safe_url_to_fs.html">hpcflow.sdk.app.rate_limit_safe_url_to_fs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.App.html">hpcflow.sdk.app.App</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.BaseApp.html">hpcflow.sdk.app.BaseApp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.app.Singleton.html">hpcflow.sdk.app.Singleton</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.cli.html">hpcflow.sdk.cli</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.string_option.html">hpcflow.sdk.cli.string_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.workflow_ref_type_opt.html">hpcflow.sdk.cli.workflow_ref_type_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.make_cli.html">hpcflow.sdk.cli.make_cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.parse_jobscript_wait_spec.html">hpcflow.sdk.cli.parse_jobscript_wait_spec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.redirect_std_to_file_click.html">hpcflow.sdk.cli.redirect_std_to_file_click</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli.ErrorPropagatingClickContext.html">hpcflow.sdk.cli.ErrorPropagatingClickContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.cli_common.html">hpcflow.sdk.cli_common</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.format_option.html">hpcflow.sdk.cli_common.format_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.path_option.html">hpcflow.sdk.cli_common.path_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.name_option.html">hpcflow.sdk.cli_common.name_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.overwrite_option.html">hpcflow.sdk.cli_common.overwrite_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.store_option.html">hpcflow.sdk.cli_common.store_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.ts_fmt_option.html">hpcflow.sdk.cli_common.ts_fmt_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.ts_name_fmt_option.html">hpcflow.sdk.cli_common.ts_name_fmt_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.variables_option.html">hpcflow.sdk.cli_common.variables_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.js_parallelism_option.html">hpcflow.sdk.cli_common.js_parallelism_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.wait_option.html">hpcflow.sdk.cli_common.wait_option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.add_to_known_opt.html">hpcflow.sdk.cli_common.add_to_known_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.print_idx_opt.html">hpcflow.sdk.cli_common.print_idx_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.tasks_opt.html">hpcflow.sdk.cli_common.tasks_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.cancel_opt.html">hpcflow.sdk.cli_common.cancel_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.submit_status_opt.html">hpcflow.sdk.cli_common.submit_status_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.force_arr_opt.html">hpcflow.sdk.cli_common.force_arr_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.make_status_opt.html">hpcflow.sdk.cli_common.make_status_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.add_sub_opt.html">hpcflow.sdk.cli_common.add_sub_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.zip_path_opt.html">hpcflow.sdk.cli_common.zip_path_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.zip_overwrite_opt.html">hpcflow.sdk.cli_common.zip_overwrite_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.zip_log_opt.html">hpcflow.sdk.cli_common.zip_log_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.zip_include_execute_opt.html">hpcflow.sdk.cli_common.zip_include_execute_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.zip_include_rechunk_backups_opt.html">hpcflow.sdk.cli_common.zip_include_rechunk_backups_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.unzip_path_opt.html">hpcflow.sdk.cli_common.unzip_path_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.unzip_log_opt.html">hpcflow.sdk.cli_common.unzip_log_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.rechunk_backup_opt.html">hpcflow.sdk.cli_common.rechunk_backup_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.rechunk_chunk_size_opt.html">hpcflow.sdk.cli_common.rechunk_chunk_size_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.rechunk_status_opt.html">hpcflow.sdk.cli_common.rechunk_status_opt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.sub_tasks_callback.html">hpcflow.sdk.cli_common.sub_tasks_callback</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.cli_common.BoolOrString.html">hpcflow.sdk.cli_common.BoolOrString</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.config.html">hpcflow.sdk.config</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.callbacks.html">hpcflow.sdk.config.callbacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.cli.html">hpcflow.sdk.config.cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.config.html">hpcflow.sdk.config.config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.config_file.html">hpcflow.sdk.config.config_file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.errors.html">hpcflow.sdk.config.errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.config.types.html">hpcflow.sdk.config.types</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.core.html">hpcflow.sdk.core</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.ALL_TEMPLATE_FORMATS.html">hpcflow.sdk.core.ALL_TEMPLATE_FORMATS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.ABORT_EXIT_CODE.html">hpcflow.sdk.core.ABORT_EXIT_CODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.actions.html">hpcflow.sdk.core.actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.app_aware.html">hpcflow.sdk.core.app_aware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.cache.html">hpcflow.sdk.core.cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.command_files.html">hpcflow.sdk.core.command_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.commands.html">hpcflow.sdk.core.commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.element.html">hpcflow.sdk.core.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.enums.html">hpcflow.sdk.core.enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.environment.html">hpcflow.sdk.core.environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.errors.html">hpcflow.sdk.core.errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.execute.html">hpcflow.sdk.core.execute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.json_like.html">hpcflow.sdk.core.json_like</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.loop.html">hpcflow.sdk.core.loop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.loop_cache.html">hpcflow.sdk.core.loop_cache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.object_list.html">hpcflow.sdk.core.object_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.parameters.html">hpcflow.sdk.core.parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.rule.html">hpcflow.sdk.core.rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.run_dir_files.html">hpcflow.sdk.core.run_dir_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.skip_reason.html">hpcflow.sdk.core.skip_reason</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.task.html">hpcflow.sdk.core.task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.task_schema.html">hpcflow.sdk.core.task_schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.test_utils.html">hpcflow.sdk.core.test_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.types.html">hpcflow.sdk.core.types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.utils.html">hpcflow.sdk.core.utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.validation.html">hpcflow.sdk.core.validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.workflow.html">hpcflow.sdk.core.workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.core.zarr_io.html">hpcflow.sdk.core.zarr_io</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.data.html">hpcflow.sdk.data</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.demo.html">hpcflow.sdk.demo</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.demo.cli.html">hpcflow.sdk.demo.cli</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.helper.html">hpcflow.sdk.helper</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.helper.cli.html">hpcflow.sdk.helper.cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.helper.helper.html">hpcflow.sdk.helper.helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.helper.watcher.html">hpcflow.sdk.helper.watcher</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.log.html">hpcflow.sdk.log</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.log.AppLog.html">hpcflow.sdk.log.AppLog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.log.TimeIt.html">hpcflow.sdk.log.TimeIt</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.persistence.html">hpcflow.sdk.persistence</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.store_cls_from_str.html">hpcflow.sdk.persistence.store_cls_from_str</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.base.html">hpcflow.sdk.persistence.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.defaults.html">hpcflow.sdk.persistence.defaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.discovery.html">hpcflow.sdk.persistence.discovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.json.html">hpcflow.sdk.persistence.json</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.pending.html">hpcflow.sdk.persistence.pending</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.store_resource.html">hpcflow.sdk.persistence.store_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.types.html">hpcflow.sdk.persistence.types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.utils.html">hpcflow.sdk.persistence.utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.persistence.zarr.html">hpcflow.sdk.persistence.zarr</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.runtime.html">hpcflow.sdk.runtime</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.runtime.RunTimeInfo.html">hpcflow.sdk.runtime.RunTimeInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="hpcflow.sdk.submission.html">hpcflow.sdk.submission</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.enums.html">hpcflow.sdk.submission.enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.jobscript.html">hpcflow.sdk.submission.jobscript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.schedulers.html">hpcflow.sdk.submission.schedulers</a></li>
+<li class="toctree-l4 current active"><a class="reference internal" href="hpcflow.sdk.submission.shells.html">hpcflow.sdk.submission.shells</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.submission.html">hpcflow.sdk.submission.submission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.submission.types.html">hpcflow.sdk.submission.types</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="hpcflow.sdk.typing.html">hpcflow.sdk.typing</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.PathLike.html">hpcflow.sdk.typing.PathLike</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.BasicTemplateComponents.html">hpcflow.sdk.typing.BasicTemplateComponents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.DataIndex.html">hpcflow.sdk.typing.DataIndex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.hydrate.html">hpcflow.sdk.typing.hydrate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.KnownSubmission.html">hpcflow.sdk.typing.KnownSubmission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.KnownSubmissionItem.html">hpcflow.sdk.typing.KnownSubmissionItem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.MakeWorkflowCommonArgs.html">hpcflow.sdk.typing.MakeWorkflowCommonArgs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.ParamSource.html">hpcflow.sdk.typing.ParamSource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpcflow.sdk.typing.TemplateComponents.html">hpcflow.sdk.typing.TemplateComponents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="hpcflow.sdk.submission.shells.bash.html" class="nav-link">hpcflow.sdk.submission.shells.bash</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">hpcflow.sdk.submission.shells.bash.WSLBash</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="hpcflow-sdk-submission-shells-bash-wslbash">
+<h1>hpcflow.sdk.submission.shells.bash.WSLBash<a class="headerlink" href="#hpcflow-sdk-submission-shells-bash-wslbash" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.sdk.submission.shells.bash.</span></span><span class="sig-name descname"><span class="pre">WSLBash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">WSL_executable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">WSL_distribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">WSL_user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hpcflow.sdk.submission.shells.bash.Bash.html#hpcflow.sdk.submission.shells.bash.Bash" title="hpcflow.sdk.submission.shells.bash.Bash"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bash</span></code></a></p>
+<p>A variant of bash that handles running under WSL on Windows.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_array" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_array</span></code></a></p></td>
+<td><p>Format construction of a shell array.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_array_get_item" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_array_get_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_array_get_item</span></code></a></p></td>
+<td><p>Format retrieval of a shell array item at a specified index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_commands_file" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_commands_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_commands_file</span></code></a></p></td>
+<td><p>Format the commands file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_env_var_get" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_env_var_get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_env_var_get</span></code></a></p></td>
+<td><p>Format retrieval of a shell environment variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_save_parameter" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_save_parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_save_parameter</span></code></a></p></td>
+<td><p>Produce code to save a parameter's value into the workflow persistent store.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_source_functions_file" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_source_functions_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_source_functions_file</span></code></a></p></td>
+<td><p>Format sourcing (i.e.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_stream_assignment" title="hpcflow.sdk.submission.shells.bash.WSLBash.format_stream_assignment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_stream_assignment</span></code></a></p></td>
+<td><p>Produce code to assign the output of the command to a shell variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_command_file_launch_command" title="hpcflow.sdk.submission.shells.bash.WSLBash.get_command_file_launch_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_command_file_launch_command</span></code></a></p></td>
+<td><p>Get the command for launching the commands file for a given run.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_direct_submit_command" title="hpcflow.sdk.submission.shells.bash.WSLBash.get_direct_submit_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_direct_submit_command</span></code></a></p></td>
+<td><p>Get the command for submitting a non-scheduled jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_version_info" title="hpcflow.sdk.submission.shells.bash.WSLBash.get_version_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_version_info</span></code></a></p></td>
+<td><p>Get WSL and bash version information.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_wait_command" title="hpcflow.sdk.submission.shells.bash.WSLBash.get_wait_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_wait_command</span></code></a></p></td>
+<td><p>Get the command to wait for a workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.prepare_JS_path" title="hpcflow.sdk.submission.shells.bash.WSLBash.prepare_JS_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepare_JS_path</span></code></a></p></td>
+<td><p>Prepare the jobscript path for use.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.prepare_element_run_dirs" title="hpcflow.sdk.submission.shells.bash.WSLBash.prepare_element_run_dirs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepare_element_run_dirs</span></code></a></p></td>
+<td><p>Prepare the element run directory names for use.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.process_JS_header_args" title="hpcflow.sdk.submission.shells.bash.WSLBash.process_JS_header_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">process_JS_header_args</span></code></a></p></td>
+<td><p>Process the application invocation key in the jobscript header arguments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.process_app_invoc_executable" title="hpcflow.sdk.submission.shells.bash.WSLBash.process_app_invoc_executable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">process_app_invoc_executable</span></code></a></p></td>
+<td><p>Perform any post-processing of an application invocation command name.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.os_args" title="hpcflow.sdk.submission.shells.bash.WSLBash.os_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">os_args</span></code></a></p></td>
+<td><p>Arguments to pass to the shell.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_EXE" title="hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_EXE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_EXE</span></code></a></p></td>
+<td><p>Default for executable name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_WSL_EXE" title="hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_WSL_EXE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEFAULT_WSL_EXE</span></code></a></p></td>
+<td><p>Default name of the WSL interface executable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_MULTI" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_MULTI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_ACT_MULTI</span></code></a></p></td>
+<td><p>Template for the action-run processing loop in a jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_SINGLE" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_SINGLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_ACT_SINGLE</span></code></a></p></td>
+<td><p>Template for the single-action-run execution in a jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_HEADER" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_HEADER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_BLOCK_HEADER</span></code></a></p></td>
+<td><p>Template for a jobscript-block header.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_LOOP" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_LOOP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_BLOCK_LOOP</span></code></a></p></td>
+<td><p>Template for the jobscript block loop in a jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_DIRECT_HEADER" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_DIRECT_HEADER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_DIRECT_HEADER</span></code></a></p></td>
+<td><p>Template for the jobscript header when directly executed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_ARRAY" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_ARRAY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_ELEMENT_MULTI_ARRAY</span></code></a></p></td>
+<td><p>Template for the array handling code in a jobscript.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_LOOP" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_LOOP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_ELEMENT_MULTI_LOOP</span></code></a></p></td>
+<td><p>Template for the element processing loop in a jobscript.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_SINGLE" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_SINGLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_ELEMENT_SINGLE</span></code></a></p></td>
+<td><p>Template for single-element execution.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ENV_SETUP_INDENT" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ENV_SETUP_INDENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_ENV_SETUP_INDENT</span></code></a></p></td>
+<td><p>Indent for environment setup.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_EXT" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_EXT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_EXT</span></code></a></p></td>
+<td><p>File extension for jobscripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_FOOTER" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_FOOTER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_FOOTER</span></code></a></p></td>
+<td><p>Template for the jobscript footer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_FUNCS" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_FUNCS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_FUNCS</span></code></a></p></td>
+<td><p>Template for the jobscript functions file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_HEADER" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_HEADER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_HEADER</span></code></a></p></td>
+<td><p>Template for the common part of the jobscript header.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_INDENT" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_INDENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_INDENT</span></code></a></p></td>
+<td><p>Basic indent.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_MAIN" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_MAIN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_MAIN</span></code></a></p></td>
+<td><p>Template for setting up environment variables and running one or more action-runs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_RUN</span></code></a></p></td>
+<td><p>Template for setting up run environment variables and executing the run.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_RUN_CMD</span></code></a></p></td>
+<td><p>Template for the run execution command.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD_COMBINED" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD_COMBINED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_RUN_CMD_COMBINED</span></code></a></p></td>
+<td><p>Template for the execution command for multiple combined runs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_DISABLE" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_DISABLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_RUN_LOG_PATH_DISABLE</span></code></a></p></td>
+<td><p>Template for disabling writing of the app log.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_ENABLE" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_ENABLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_RUN_LOG_PATH_ENABLE</span></code></a></p></td>
+<td><p>Template for enabling writing of the app log.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_SCHEDULER_HEADER" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_SCHEDULER_HEADER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_SCHEDULER_HEADER</span></code></a></p></td>
+<td><p>Template for the jobscript header when scheduled.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_SHEBANG" title="hpcflow.sdk.submission.shells.bash.WSLBash.JS_SHEBANG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">JS_SHEBANG</span></code></a></p></td>
+<td><p>Template for the jobscript shebang line.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.executable" title="hpcflow.sdk.submission.shells.bash.WSLBash.executable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executable</span></code></a></p></td>
+<td><p>The executable to use plus any mandatory arguments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.linux_release_file" title="hpcflow.sdk.submission.shells.bash.WSLBash.linux_release_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linux_release_file</span></code></a></p></td>
+<td><p>The name of the file describing the Linux version.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.shebang_executable" title="hpcflow.sdk.submission.shells.bash.WSLBash.shebang_executable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shebang_executable</span></code></a></p></td>
+<td><p>The executable to use in a shebang line.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_executable" title="hpcflow.sdk.submission.shells.bash.WSLBash.WSL_executable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WSL_executable</span></code></a></p></td>
+<td><p>The WSL executable wrapper.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_distribution" title="hpcflow.sdk.submission.shells.bash.WSLBash.WSL_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WSL_distribution</span></code></a></p></td>
+<td><p>The WSL distribution to use, if any.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_user" title="hpcflow.sdk.submission.shells.bash.WSLBash.WSL_user"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WSL_user</span></code></a></p></td>
+<td><p>The WSL user to use, if any.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>WSL_executable</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>WSL_distribution</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>WSL_user</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em> | </em><em>None</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_EXE">
+<span class="sig-name descname"><span class="pre">DEFAULT_EXE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/bin/bash'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_EXE" title="Permalink to this definition">#</a></dt>
+<dd><p>Default for executable name.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_WSL_EXE">
+<span class="sig-name descname"><span class="pre">DEFAULT_WSL_EXE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'wsl'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_WSL_EXE" title="Permalink to this definition">#</a></dt>
+<dd><p>Default name of the WSL interface executable.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_MULTI">
+<span class="sig-name descname"><span class="pre">JS_ACT_MULTI</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'for</span> <span class="pre">((block_act_idx=0;block_act_idx&lt;{num_actions};block_act_idx++))\ndo</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">\n{run_block}\ndone</span>&#160; <span class="pre">\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_MULTI" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the action-run processing loop in a jobscript.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_SINGLE">
+<span class="sig-name descname"><span class="pre">JS_ACT_SINGLE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'block_act_idx=0</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">\n{run_block}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_SINGLE" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the single-action-run execution in a jobscript.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_HEADER">
+<span class="sig-name descname"><span class="pre">JS_BLOCK_HEADER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'block_idx=0\nexport</span> <span class="pre">{app_caps}_BLOCK_IDX=0\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_HEADER" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for a jobscript-block header.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_LOOP">
+<span class="sig-name descname"><span class="pre">JS_BLOCK_LOOP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'num_elements={num_elements}\nnum_actions={num_actions}\nblock_start_elem_idx=0\nfor</span> <span class="pre">((block_idx=0;block_idx&lt;{num_blocks};block_idx++))\ndo\n</span>&#160;&#160;&#160; <span class="pre">export</span> <span class="pre">{app_caps}_BLOCK_IDX=$block_idx\n{element_loop}\n</span>&#160;&#160;&#160; <span class="pre">block_start_elem_idx=$(($block_start_elem_idx</span> <span class="pre">+</span> <span class="pre">${{num_elements[$block_idx]}}))\ndone\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_LOOP" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the jobscript block loop in a jobscript.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_DIRECT_HEADER">
+<span class="sig-name descname"><span class="pre">JS_DIRECT_HEADER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'{shebang}\n{header}\n{wait_command}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_DIRECT_HEADER" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the jobscript header when directly executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_ARRAY">
+<span class="sig-name descname"><span class="pre">JS_ELEMENT_MULTI_ARRAY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'JS_elem_idx=$(({scheduler_array_item_var}</span> <span class="pre">-</span> <span class="pre">1))\n{main}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_ARRAY" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the array handling code in a jobscript.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_LOOP">
+<span class="sig-name descname"><span class="pre">JS_ELEMENT_MULTI_LOOP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'for</span> <span class="pre">((JS_elem_idx={block_start_elem_idx};JS_elem_idx&lt;$(({block_start_elem_idx}</span> <span class="pre">+</span> <span class="pre">{num_elements}));JS_elem_idx++))\ndo\n{main}\ndone\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_LOOP" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the element processing loop in a jobscript.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_SINGLE">
+<span class="sig-name descname"><span class="pre">JS_ELEMENT_SINGLE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'JS_elem_idx={block_start_elem_idx}\n{main}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_SINGLE" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for single-element execution.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_ENV_SETUP_INDENT">
+<span class="sig-name descname"><span class="pre">JS_ENV_SETUP_INDENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'</span>&#160;&#160;&#160; <span class="pre">'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ENV_SETUP_INDENT" title="Permalink to this definition">#</a></dt>
+<dd><p>Indent for environment setup.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_EXT">
+<span class="sig-name descname"><span class="pre">JS_EXT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'.sh'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_EXT" title="Permalink to this definition">#</a></dt>
+<dd><p>File extension for jobscripts.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_FOOTER">
+<span class="sig-name descname"><span class="pre">JS_FOOTER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cd</span> <span class="pre">$WK_PATH\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_FOOTER" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the jobscript footer.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_FUNCS">
+<span class="sig-name descname"><span class="pre">JS_FUNCS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'{workflow_app_alias}</span> <span class="pre">()</span> <span class="pre">{{\n(\n</span>&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">[</span> <span class="pre">-z</span> <span class="pre">&quot;${app_caps}_LOG_PATH&quot;</span> <span class="pre">]</span> <span class="pre">||</span> <span class="pre">[</span> <span class="pre">&quot;${app_caps}_LOG_PATH&quot;</span> <span class="pre">=</span> <span class="pre">&quot;</span> <span class="pre">&quot;</span> <span class="pre">];</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">LOG_FILE_PATH=&quot;</span> <span class="pre">&quot;\n</span>&#160;&#160;&#160; <span class="pre">else\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">LOG_FILE_PATH=&quot;$(wslpath</span> <span class="pre">-m</span> <span class="pre">${app_caps}_LOG_PATH)&quot;\n</span>&#160;&#160;&#160; <span class="pre">fi</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">\n\n{env_setup}{app_invoc}\\\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">--with-config</span> <span class="pre">log_file_path</span> <span class="pre">&quot;$LOG_FILE_PATH&quot;\\\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">--config-dir</span> <span class="pre">&quot;{config_dir}&quot;\\\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">--config-key</span> <span class="pre">&quot;{config_invoc_key}&quot;\\\n</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;$&#64;&quot;\n)\n}}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_FUNCS" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the jobscript functions file.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_HEADER">
+<span class="sig-name descname"><span class="pre">JS_HEADER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WK_PATH=`pwd`\nWK_PATH_ARG=`wslpath</span> <span class="pre">-m</span> <span class="pre">&quot;$WK_PATH&quot;`\nSUB_IDX={sub_idx}\nJS_IDX={js_idx}\nAPP_CAPS={app_caps}\n\nSUB_DIR=&quot;$WK_PATH/artifacts/submissions/${{SUB_IDX}}&quot;\nJS_FUNCS_PATH=&quot;$SUB_DIR/{jobscript_functions_dir}/{jobscript_functions_name}&quot;\n.</span> <span class="pre">&quot;$JS_FUNCS_PATH&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">\n\nEAR_ID_FILE=&quot;$WK_PATH/artifacts/submissions/${{SUB_IDX}}/{run_IDs_file_dir}/{run_IDs_file_name}&quot;\nSUB_TMP_DIR=&quot;$SUB_DIR/{tmp_dir_name}&quot;\nSUB_LOG_DIR=&quot;$SUB_DIR/{log_dir_name}&quot;\nSUB_STD_DIR=&quot;$SUB_DIR/{app_std_dir_name}&quot;\nSUB_SCRIPTS_DIR=&quot;$SUB_DIR/{scripts_dir_name}&quot;\n\nexport</span> <span class="pre">{app_caps}_WK_PATH=$WK_PATH\nexport</span> <span class="pre">{app_caps}_WK_PATH_ARG=$WK_PATH_ARG\nexport</span> <span class="pre">{app_caps}_SUB_IDX={sub_idx}\nexport</span> <span class="pre">{app_caps}_SUB_SCRIPTS_DIR=$SUB_SCRIPTS_DIR\nexport</span> <span class="pre">{app_caps}_SUB_TMP_DIR=$SUB_TMP_DIR\nexport</span> <span class="pre">{app_caps}_SUB_LOG_DIR=$SUB_LOG_DIR\nexport</span> <span class="pre">{app_caps}_SUB_STD_DIR=$SUB_STD_DIR\nexport</span> <span class="pre">{app_caps}_LOG_PATH=&quot;$SUB_LOG_DIR/js_${{JS_IDX}}.log&quot;\nexport</span> <span class="pre">{app_caps}_JS_FUNCS_PATH=$JS_FUNCS_PATH\nexport</span> <span class="pre">{app_caps}_JS_IDX={js_idx}\nexport</span> <span class="pre">{app_caps}_RUN_ID_FILE=$EAR_ID_FILE\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_HEADER" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the common part of the jobscript header.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_INDENT">
+<span class="sig-name descname"><span class="pre">JS_INDENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'</span>&#160; <span class="pre">'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_INDENT" title="Permalink to this definition">#</a></dt>
+<dd><p>Basic indent.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_MAIN">
+<span class="sig-name descname"><span class="pre">JS_MAIN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'block_elem_idx=$((</span> <span class="pre">$JS_elem_idx</span> <span class="pre">-</span> <span class="pre">{block_start_elem_idx}</span> <span class="pre">))\nelem_EAR_IDs=`sed</span> <span class="pre">&quot;$((${{JS_elem_idx}}</span> <span class="pre">+</span> <span class="pre">1))q;d&quot;</span> <span class="pre">&quot;$EAR_ID_FILE&quot;`\nexport</span> <span class="pre">{app_caps}_JS_ELEM_IDX=$JS_elem_idx\nexport</span> <span class="pre">{app_caps}_BLOCK_ELEM_IDX=$block_elem_idx\n\n{action}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_MAIN" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for setting up environment variables and running one or more action-runs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN">
+<span class="sig-name descname"><span class="pre">JS_RUN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EAR_ID=&quot;$(cut</span> <span class="pre">-d\'{EAR_files_delimiter}\'</span> <span class="pre">-f</span> <span class="pre">$(($block_act_idx</span> <span class="pre">+</span> <span class="pre">1))</span> <span class="pre">&lt;&lt;&lt;</span> <span class="pre">$elem_EAR_IDs)&quot;\nif</span> <span class="pre">[</span> <span class="pre">&quot;$EAR_ID&quot;</span> <span class="pre">=</span> <span class="pre">&quot;-1&quot;</span> <span class="pre">];</span> <span class="pre">then\n</span>&#160;&#160;&#160; <span class="pre">continue\nfi\n\nexport</span> <span class="pre">{app_caps}_RUN_ID=$EAR_ID\nexport</span> <span class="pre">{app_caps}_RUN_LOG_PATH={run_log_enable_disable}\nexport</span> <span class="pre">{app_caps}_LOG_PATH=&quot;${app_caps}_RUN_LOG_PATH&quot;\nexport</span> <span class="pre">{app_caps}_RUN_STD_PATH=&quot;$SUB_STD_DIR/${app_caps}_RUN_ID.txt&quot;\nexport</span> <span class="pre">{app_caps}_BLOCK_ACT_IDX=$block_act_idx\n\ncd</span> <span class="pre">&quot;$SUB_TMP_DIR&quot;\n\n{run_cmd}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for setting up run environment variables and executing the run.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD">
+<span class="sig-name descname"><span class="pre">JS_RUN_CMD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'WSLENV=$WSLENV:${{APP_CAPS}}_WK_PATH\nWSLENV=$WSLENV:${{APP_CAPS}}_WK_PATH_ARG\nWSLENV=$WSLENV:${{APP_CAPS}}_JS_FUNCS_PATH\nWSLENV=$WSLENV:${{APP_CAPS}}_STD_STREAM_FILE\nWSLENV=$WSLENV:${{APP_CAPS}}_SUB_IDX\nWSLENV=$WSLENV:${{APP_CAPS}}_JS_IDX\nWSLENV=$WSLENV:${{APP_CAPS}}_RUN_ID\nWSLENV=$WSLENV:${{APP_CAPS}}_BLOCK_ACT_IDX\nWSLENV=$WSLENV:${{APP_CAPS}}_JS_ELEM_IDX\nWSLENV=$WSLENV:${{APP_CAPS}}_BLOCK_ELEM_IDX\nWSLENV=$WSLENV:${{APP_CAPS}}_BLOCK_IDX\nWSLENV=$WSLENV:${{APP_CAPS}}_LOG_PATH/p\n\n{workflow_app_alias}</span> <span class="pre">internal</span> <span class="pre">workflow</span> <span class="pre">&quot;$WK_PATH_ARG&quot;</span> <span class="pre">execute-run</span> <span class="pre">$SUB_IDX</span> <span class="pre">$JS_IDX</span> <span class="pre">$block_idx</span> <span class="pre">$block_act_idx</span> <span class="pre">$EAR_ID\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the run execution command.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD_COMBINED">
+<span class="sig-name descname"><span class="pre">JS_RUN_CMD_COMBINED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'{workflow_app_alias}</span> <span class="pre">internal</span> <span class="pre">workflow</span> <span class="pre">&quot;$WK_PATH_ARG&quot;</span> <span class="pre">execute-combined-runs</span> <span class="pre">$SUB_IDX</span> <span class="pre">$JS_IDX\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD_COMBINED" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the execution command for multiple combined runs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_DISABLE">
+<span class="sig-name descname"><span class="pre">JS_RUN_LOG_PATH_DISABLE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&quot;</span> <span class="pre">&quot;'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_DISABLE" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for disabling writing of the app log.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_ENABLE">
+<span class="sig-name descname"><span class="pre">JS_RUN_LOG_PATH_ENABLE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&quot;$SUB_LOG_DIR/{run_log_file_name}&quot;'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_ENABLE" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for enabling writing of the app log.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_SCHEDULER_HEADER">
+<span class="sig-name descname"><span class="pre">JS_SCHEDULER_HEADER</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'{shebang}\n\n{scheduler_options}\n{header}\n'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_SCHEDULER_HEADER" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the jobscript header when scheduled.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.JS_SHEBANG">
+<span class="sig-name descname"><span class="pre">JS_SHEBANG</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#!{shebang_executable}</span> <span class="pre">{shebang_args}'</span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_SHEBANG" title="Permalink to this definition">#</a></dt>
+<dd><p>Template for the jobscript shebang line.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.WSL_distribution">
+<span class="sig-name descname"><span class="pre">WSL_distribution</span></span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_distribution" title="Permalink to this definition">#</a></dt>
+<dd><p>The WSL distribution to use, if any.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.WSL_executable">
+<span class="sig-name descname"><span class="pre">WSL_executable</span></span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_executable" title="Permalink to this definition">#</a></dt>
+<dd><p>The WSL executable wrapper.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.WSL_user">
+<span class="sig-name descname"><span class="pre">WSL_user</span></span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_user" title="Permalink to this definition">#</a></dt>
+<dd><p>The WSL user to use, if any.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.executable">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">executable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.executable" title="Permalink to this definition">#</a></dt>
+<dd><p>The executable to use plus any mandatory arguments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_array">
+<span class="sig-name descname"><span class="pre">format_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lst</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_array" title="Permalink to this definition">#</a></dt>
+<dd><p>Format construction of a shell array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lst</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_array_get_item">
+<span class="sig-name descname"><span class="pre">format_array_get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_array_get_item" title="Permalink to this definition">#</a></dt>
+<dd><p>Format retrieval of a shell array item at a specified index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_commands_file">
+<span class="sig-name descname"><span class="pre">format_commands_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_commands_file" title="Permalink to this definition">#</a></dt>
+<dd><p>Format the commands file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>app_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_env_var_get">
+<span class="sig-name descname"><span class="pre">format_env_var_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_env_var_get" title="Permalink to this definition">#</a></dt>
+<dd><p>Format retrieval of a shell environment variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>var</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_save_parameter">
+<span class="sig-name descname"><span class="pre">format_save_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow_app_alias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stderr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_save_parameter" title="Permalink to this definition">#</a></dt>
+<dd><p>Produce code to save a parameter’s value into the workflow persistent store.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workflow_app_alias</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>param_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>shell_var_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>cmd_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – </p></li>
+<li><p><strong>stderr</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – </p></li>
+<li><p><strong>app_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_source_functions_file">
+<span class="sig-name descname"><span class="pre">format_source_functions_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">commands</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_source_functions_file" title="Permalink to this definition">#</a></dt>
+<dd><p>Format sourcing (i.e. invocation) of the jobscript functions file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>app_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.format_stream_assignment">
+<span class="sig-name descname"><span class="pre">format_stream_assignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shell_var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_stream_assignment" title="Permalink to this definition">#</a></dt>
+<dd><p>Produce code to assign the output of the command to a shell variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shell_var_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>command</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.get_command_file_launch_command">
+<span class="sig-name descname"><span class="pre">get_command_file_launch_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_command_file_launch_command" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the command for launching the commands file for a given run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cmd_file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.get_direct_submit_command">
+<span class="sig-name descname"><span class="pre">get_direct_submit_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">js_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_direct_submit_command" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the command for submitting a non-scheduled jobscript.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>js_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.get_version_info">
+<span class="sig-name descname"><span class="pre">get_version_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exclude_os</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_version_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Get WSL and bash version information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>exclude_os</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – If True, exclude operating system information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>VersionInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.get_wait_command">
+<span class="sig-name descname"><span class="pre">get_wait_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow_app_alias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_wait_command" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the command to wait for a workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workflow_app_alias</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p></li>
+<li><p><strong>sub_idx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – </p></li>
+<li><p><strong>deps</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>Any</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.linux_release_file">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linux_release_file</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.linux_release_file" title="Permalink to this definition">#</a></dt>
+<dd><p>The name of the file describing the Linux version.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.os_args">
+<span class="sig-name descname"><span class="pre">os_args</span></span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.os_args" title="Permalink to this definition">#</a></dt>
+<dd><p>Arguments to pass to the shell.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.prepare_JS_path">
+<span class="sig-name descname"><span class="pre">prepare_JS_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">js_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.prepare_JS_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepare the jobscript path for use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>js_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.13)"><em>Path</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.prepare_element_run_dirs">
+<span class="sig-name descname"><span class="pre">prepare_element_run_dirs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_dirs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.prepare_element_run_dirs" title="Permalink to this definition">#</a></dt>
+<dd><p>Prepare the element run directory names for use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>run_dirs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.13)"><em>pathlib.Path</em></a><em>]</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.process_JS_header_args">
+<span class="sig-name descname"><span class="pre">process_JS_header_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.process_JS_header_args" title="Permalink to this definition">#</a></dt>
+<dd><p>Process the application invocation key in the jobscript header arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>header_args</strong> (<a class="reference internal" href="hpcflow.sdk.submission.types.JobscriptHeaderArgs.html#hpcflow.sdk.submission.types.JobscriptHeaderArgs" title="hpcflow.sdk.submission.types.JobscriptHeaderArgs"><em>JobscriptHeaderArgs</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="hpcflow.sdk.submission.types.JobscriptHeaderArgs.html#hpcflow.sdk.submission.types.JobscriptHeaderArgs" title="hpcflow.sdk.submission.types.JobscriptHeaderArgs">JobscriptHeaderArgs</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.process_app_invoc_executable">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_app_invoc_executable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_invoc_exe</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.process_app_invoc_executable" title="Permalink to this definition">#</a></dt>
+<dd><p>Perform any post-processing of an application invocation command name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>app_invoc_exe</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.sdk.submission.shells.bash.WSLBash.shebang_executable">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shebang_executable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hpcflow.sdk.submission.shells.bash.WSLBash.shebang_executable" title="Permalink to this definition">#</a></dt>
+<dd><p>The executable to use in a shebang line.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hpcflow.sdk.submission.shells.bash.Bash.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hpcflow.sdk.submission.shells.bash.Bash</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hpcflow.sdk.submission.shells.os_version.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hpcflow.sdk.submission.shells.os_version</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash"><code class="docutils literal notranslate"><span class="pre">WSLBash</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_EXE"><code class="docutils literal notranslate"><span class="pre">WSLBash.DEFAULT_EXE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.DEFAULT_WSL_EXE"><code class="docutils literal notranslate"><span class="pre">WSLBash.DEFAULT_WSL_EXE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_MULTI"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_ACT_MULTI</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ACT_SINGLE"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_ACT_SINGLE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_HEADER"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_BLOCK_HEADER</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_BLOCK_LOOP"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_BLOCK_LOOP</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_DIRECT_HEADER"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_DIRECT_HEADER</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_ARRAY"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_ELEMENT_MULTI_ARRAY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_MULTI_LOOP"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_ELEMENT_MULTI_LOOP</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ELEMENT_SINGLE"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_ELEMENT_SINGLE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_ENV_SETUP_INDENT"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_ENV_SETUP_INDENT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_EXT"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_EXT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_FOOTER"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_FOOTER</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_FUNCS"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_FUNCS</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_HEADER"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_HEADER</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_INDENT"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_INDENT</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_MAIN"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_MAIN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_RUN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_RUN_CMD</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_CMD_COMBINED"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_RUN_CMD_COMBINED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_DISABLE"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_RUN_LOG_PATH_DISABLE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_RUN_LOG_PATH_ENABLE"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_RUN_LOG_PATH_ENABLE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_SCHEDULER_HEADER"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_SCHEDULER_HEADER</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.JS_SHEBANG"><code class="docutils literal notranslate"><span class="pre">WSLBash.JS_SHEBANG</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_distribution"><code class="docutils literal notranslate"><span class="pre">WSLBash.WSL_distribution</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_executable"><code class="docutils literal notranslate"><span class="pre">WSLBash.WSL_executable</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.WSL_user"><code class="docutils literal notranslate"><span class="pre">WSLBash.WSL_user</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.executable"><code class="docutils literal notranslate"><span class="pre">WSLBash.executable</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_array"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_array()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_array_get_item"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_array_get_item()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_commands_file"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_commands_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_env_var_get"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_env_var_get()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_save_parameter"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_save_parameter()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_source_functions_file"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_source_functions_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.format_stream_assignment"><code class="docutils literal notranslate"><span class="pre">WSLBash.format_stream_assignment()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_command_file_launch_command"><code class="docutils literal notranslate"><span class="pre">WSLBash.get_command_file_launch_command()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_direct_submit_command"><code class="docutils literal notranslate"><span class="pre">WSLBash.get_direct_submit_command()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_version_info"><code class="docutils literal notranslate"><span class="pre">WSLBash.get_version_info()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.get_wait_command"><code class="docutils literal notranslate"><span class="pre">WSLBash.get_wait_command()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.linux_release_file"><code class="docutils literal notranslate"><span class="pre">WSLBash.linux_release_file</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.os_args"><code class="docutils literal notranslate"><span class="pre">WSLBash.os_args</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.prepare_JS_path"><code class="docutils literal notranslate"><span class="pre">WSLBash.prepare_JS_path()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.prepare_element_run_dirs"><code class="docutils literal notranslate"><span class="pre">WSLBash.prepare_element_run_dirs()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.process_JS_header_args"><code class="docutils literal notranslate"><span class="pre">WSLBash.process_JS_header_args()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.process_app_invoc_executable"><code class="docutils literal notranslate"><span class="pre">WSLBash.process_app_invoc_executable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.sdk.submission.shells.bash.WSLBash.shebang_executable"><code class="docutils literal notranslate"><span class="pre">WSLBash.shebang_executable</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/hpcflow-new/edit/develop/docs/source/reference/_autosummary/hpcflow.sdk.submission.shells.bash.WSLBash.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/reference/_autosummary/hpcflow.sdk.submission.shells.bash.WSLBash.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, hpcflow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
