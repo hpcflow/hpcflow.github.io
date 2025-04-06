@@ -1,0 +1,42 @@
+hpcflow.sdk.core.types.ScriptData
+=================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: ScriptData
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ScriptData.clear
+      ~ScriptData.copy
+      ~ScriptData.fromkeys
+      ~ScriptData.get
+      ~ScriptData.items
+      ~ScriptData.keys
+      ~ScriptData.pop
+      ~ScriptData.popitem
+      ~ScriptData.setdefault
+      ~ScriptData.update
+      ~ScriptData.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ScriptData.format
+      ~ScriptData.all_iterations
+   
+   
