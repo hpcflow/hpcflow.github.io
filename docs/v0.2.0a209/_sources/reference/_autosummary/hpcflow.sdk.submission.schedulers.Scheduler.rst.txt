@@ -1,0 +1,43 @@
+hpcflow.sdk.submission.schedulers.Scheduler
+===========================================
+
+.. currentmodule:: hpcflow.sdk.submission.schedulers
+
+.. autoclass:: Scheduler
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Scheduler.cancel_jobs
+      ~Scheduler.get_job_state_info
+      ~Scheduler.get_std_out_err_filename
+      ~Scheduler.get_stderr_filename
+      ~Scheduler.get_stdout_filename
+      ~Scheduler.get_submit_command
+      ~Scheduler.get_version_info
+      ~Scheduler.is_num_cores_supported
+      ~Scheduler.parse_submission_output
+      ~Scheduler.process_resources
+      ~Scheduler.wait_for_jobscripts
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Scheduler.DEFAULT_SHEBANG_ARGS
+      ~Scheduler.DEFAULT_SHELL_ARGS
+      ~Scheduler.unique_properties
+   
+   
