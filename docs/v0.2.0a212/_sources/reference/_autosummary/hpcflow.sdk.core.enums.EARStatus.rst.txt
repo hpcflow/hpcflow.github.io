@@ -1,0 +1,42 @@
+hpcflow.sdk.core.enums.EARStatus
+================================
+
+.. currentmodule:: hpcflow.sdk.core.enums
+
+.. autoclass:: EARStatus
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~EARStatus.get_non_running_submitted_states
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EARStatus.pending
+      ~EARStatus.prepared
+      ~EARStatus.submitted
+      ~EARStatus.running
+      ~EARStatus.skipped
+      ~EARStatus.aborted
+      ~EARStatus.success
+      ~EARStatus.error
+      ~EARStatus.value
+      ~EARStatus.rich_repr
+      ~EARStatus.symbol
+      ~EARStatus.colour
+   
+   
