@@ -1,0 +1,39 @@
+hpcflow.sdk.submission.enums.JobscriptElementState
+==================================================
+
+.. currentmodule:: hpcflow.sdk.submission.enums
+
+.. autoclass:: JobscriptElementState
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobscriptElementState.rich_repr
+      ~JobscriptElementState.pending
+      ~JobscriptElementState.waiting
+      ~JobscriptElementState.running
+      ~JobscriptElementState.finished
+      ~JobscriptElementState.cancelled
+      ~JobscriptElementState.errored
+      ~JobscriptElementState.value
+      ~JobscriptElementState.symbol
+      ~JobscriptElementState.colour
+   
+   
