@@ -1,0 +1,49 @@
+hpcflow.sdk.typing.MakeWorkflowCommonArgs
+=========================================
+
+.. currentmodule:: hpcflow.sdk.typing
+
+.. autoclass:: MakeWorkflowCommonArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MakeWorkflowCommonArgs.clear
+      ~MakeWorkflowCommonArgs.copy
+      ~MakeWorkflowCommonArgs.fromkeys
+      ~MakeWorkflowCommonArgs.get
+      ~MakeWorkflowCommonArgs.items
+      ~MakeWorkflowCommonArgs.keys
+      ~MakeWorkflowCommonArgs.pop
+      ~MakeWorkflowCommonArgs.popitem
+      ~MakeWorkflowCommonArgs.setdefault
+      ~MakeWorkflowCommonArgs.update
+      ~MakeWorkflowCommonArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MakeWorkflowCommonArgs.path
+      ~MakeWorkflowCommonArgs.name
+      ~MakeWorkflowCommonArgs.overwrite
+      ~MakeWorkflowCommonArgs.store
+      ~MakeWorkflowCommonArgs.ts_fmt
+      ~MakeWorkflowCommonArgs.ts_name_fmt
+      ~MakeWorkflowCommonArgs.store_kwargs
+      ~MakeWorkflowCommonArgs.variables
+      ~MakeWorkflowCommonArgs.status
+   
+   
