@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.ParameterSpecValidationError
+====================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: ParameterSpecValidationError

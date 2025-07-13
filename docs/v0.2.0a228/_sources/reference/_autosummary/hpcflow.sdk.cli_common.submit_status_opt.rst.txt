@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.submit\_status\_opt
+===========================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: submit_status_opt
