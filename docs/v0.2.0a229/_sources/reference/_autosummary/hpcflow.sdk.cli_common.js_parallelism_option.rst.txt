@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.js\_parallelism\_option
+===============================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: js_parallelism_option
