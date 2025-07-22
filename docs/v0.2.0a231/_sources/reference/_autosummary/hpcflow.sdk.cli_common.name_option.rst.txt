@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.name\_option
+====================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: name_option
