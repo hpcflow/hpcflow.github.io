@@ -1,0 +1,44 @@
+hpcflow.sdk.core.types.RelevantData
+===================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: RelevantData
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RelevantData.clear
+      ~RelevantData.copy
+      ~RelevantData.fromkeys
+      ~RelevantData.get
+      ~RelevantData.items
+      ~RelevantData.keys
+      ~RelevantData.pop
+      ~RelevantData.popitem
+      ~RelevantData.setdefault
+      ~RelevantData.update
+      ~RelevantData.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RelevantData.data
+      ~RelevantData.value_class_method
+      ~RelevantData.is_set
+      ~RelevantData.is_multi
+   
+   
