@@ -1,0 +1,6 @@
+hpcflow.sdk.core.types.RelevantPath
+===================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autodata:: RelevantPath
