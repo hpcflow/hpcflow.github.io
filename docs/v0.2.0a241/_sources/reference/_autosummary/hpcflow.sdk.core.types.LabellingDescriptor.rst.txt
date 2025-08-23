@@ -1,0 +1,44 @@
+hpcflow.sdk.core.types.LabellingDescriptor
+==========================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: LabellingDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LabellingDescriptor.clear
+      ~LabellingDescriptor.copy
+      ~LabellingDescriptor.fromkeys
+      ~LabellingDescriptor.get
+      ~LabellingDescriptor.items
+      ~LabellingDescriptor.keys
+      ~LabellingDescriptor.pop
+      ~LabellingDescriptor.popitem
+      ~LabellingDescriptor.setdefault
+      ~LabellingDescriptor.update
+      ~LabellingDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LabellingDescriptor.labelled_type
+      ~LabellingDescriptor.propagation_mode
+      ~LabellingDescriptor.group
+      ~LabellingDescriptor.default_value
+   
+   
