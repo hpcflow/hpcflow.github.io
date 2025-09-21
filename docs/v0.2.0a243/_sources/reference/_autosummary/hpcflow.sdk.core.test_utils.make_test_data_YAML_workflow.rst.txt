@@ -1,0 +1,6 @@
+hpcflow.sdk.core.test\_utils.make\_test\_data\_YAML\_workflow
+=============================================================
+
+.. currentmodule:: hpcflow.sdk.core.test_utils
+
+.. autofunction:: make_test_data_YAML_workflow
