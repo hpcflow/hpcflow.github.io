@@ -1,0 +1,6 @@
+hpcflow.sdk.config.callbacks.callback\_supported\_schedulers
+============================================================
+
+.. currentmodule:: hpcflow.sdk.config.callbacks
+
+.. autofunction:: callback_supported_schedulers
