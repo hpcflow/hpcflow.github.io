@@ -1,0 +1,47 @@
+hpcflow.sdk.typing.TemplateComponents
+=====================================
+
+.. currentmodule:: hpcflow.sdk.typing
+
+.. autoclass:: TemplateComponents
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TemplateComponents.clear
+      ~TemplateComponents.copy
+      ~TemplateComponents.fromkeys
+      ~TemplateComponents.get
+      ~TemplateComponents.items
+      ~TemplateComponents.keys
+      ~TemplateComponents.pop
+      ~TemplateComponents.popitem
+      ~TemplateComponents.setdefault
+      ~TemplateComponents.update
+      ~TemplateComponents.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TemplateComponents.parameters
+      ~TemplateComponents.command_files
+      ~TemplateComponents.environments
+      ~TemplateComponents.task_schemas
+      ~TemplateComponents.scripts
+      ~TemplateComponents.programs
+      ~TemplateComponents.jinja_templates
+   
+   
