@@ -1,0 +1,44 @@
+hpcflow.sdk.config.types.SLURMPartitionsDescriptor
+==================================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autoclass:: SLURMPartitionsDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SLURMPartitionsDescriptor.clear
+      ~SLURMPartitionsDescriptor.copy
+      ~SLURMPartitionsDescriptor.fromkeys
+      ~SLURMPartitionsDescriptor.get
+      ~SLURMPartitionsDescriptor.items
+      ~SLURMPartitionsDescriptor.keys
+      ~SLURMPartitionsDescriptor.pop
+      ~SLURMPartitionsDescriptor.popitem
+      ~SLURMPartitionsDescriptor.setdefault
+      ~SLURMPartitionsDescriptor.update
+      ~SLURMPartitionsDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SLURMPartitionsDescriptor.num_cores
+      ~SLURMPartitionsDescriptor.num_cores_per_node
+      ~SLURMPartitionsDescriptor.num_nodes
+      ~SLURMPartitionsDescriptor.parallel_modes
+   
+   

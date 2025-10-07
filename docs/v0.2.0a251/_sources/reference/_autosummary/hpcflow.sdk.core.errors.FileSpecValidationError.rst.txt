@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.FileSpecValidationError
+===============================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: FileSpecValidationError
