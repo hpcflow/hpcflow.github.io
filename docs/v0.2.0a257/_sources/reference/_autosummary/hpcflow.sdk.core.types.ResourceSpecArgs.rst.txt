@@ -1,0 +1,62 @@
+hpcflow.sdk.core.types.ResourceSpecArgs
+=======================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: ResourceSpecArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ResourceSpecArgs.clear
+      ~ResourceSpecArgs.copy
+      ~ResourceSpecArgs.fromkeys
+      ~ResourceSpecArgs.get
+      ~ResourceSpecArgs.items
+      ~ResourceSpecArgs.keys
+      ~ResourceSpecArgs.pop
+      ~ResourceSpecArgs.popitem
+      ~ResourceSpecArgs.setdefault
+      ~ResourceSpecArgs.update
+      ~ResourceSpecArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResourceSpecArgs.scope
+      ~ResourceSpecArgs.scratch
+      ~ResourceSpecArgs.parallel_mode
+      ~ResourceSpecArgs.num_cores
+      ~ResourceSpecArgs.num_cores_per_node
+      ~ResourceSpecArgs.num_threads
+      ~ResourceSpecArgs.num_nodes
+      ~ResourceSpecArgs.scheduler
+      ~ResourceSpecArgs.shell
+      ~ResourceSpecArgs.use_job_array
+      ~ResourceSpecArgs.max_array_items
+      ~ResourceSpecArgs.time_limit
+      ~ResourceSpecArgs.scheduler_args
+      ~ResourceSpecArgs.shell_args
+      ~ResourceSpecArgs.os_name
+      ~ResourceSpecArgs.environments
+      ~ResourceSpecArgs.SGE_parallel_env
+      ~ResourceSpecArgs.SLURM_partition
+      ~ResourceSpecArgs.SLURM_num_tasks
+      ~ResourceSpecArgs.SLURM_num_tasks_per_node
+      ~ResourceSpecArgs.SLURM_num_nodes
+      ~ResourceSpecArgs.SLURM_num_cpus_per_task
+   
+   
