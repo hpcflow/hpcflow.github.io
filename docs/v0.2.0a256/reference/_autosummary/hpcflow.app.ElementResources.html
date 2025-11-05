@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hpcflow.app.ElementResources &#8212; hpcflow 0.2.0a256 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=57b3f318" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9d2d55fa"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/hpcflow.app.ElementResources';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hpcflow.github.io/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.2.0a256';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <script src="../../_static/js/custom.js?v=0e67ee37"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="hpcflow.app.ElementSet" href="hpcflow.app.ElementSet.html" />
+    <link rel="prev" title="hpcflow.app.ElementRepeats" href="hpcflow.app.ElementRepeats.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-v2.png" class="logo__image only-light" alt="hpcflow 0.2.0a256 documentation - Home"/>
+    <img src="../../_static/logo-v2.png" class="logo__image only-dark pst-js-only" alt="hpcflow 0.2.0a256 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../development/index.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-box fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../development/index.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow-new" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow-new2" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-box fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">Python API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="hpcflow.app.html">hpcflow.app</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.app.html">hpcflow.app.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.cancel.html">hpcflow.app.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_OS_info.html">hpcflow.app.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_known_submissions.html">hpcflow.app.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_shell_info.html">hpcflow.app.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_demo_workflow.html">hpcflow.app.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_workflow.html">hpcflow.app.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_demo_workflow.html">hpcflow.app.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_workflow.html">hpcflow.app.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_hpcflow_tests.html">hpcflow.app.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_tests.html">hpcflow.app.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show.html">hpcflow.app.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show_legend.html">hpcflow.app.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.submit_workflow.html">hpcflow.app.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Action.html">hpcflow.app.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionEnvironment.html">hpcflow.app.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionRule.html">hpcflow.app.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScope.html">hpcflow.app.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScopeType.html">hpcflow.app.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Command.html">hpcflow.app.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.CommandFilesList.html">hpcflow.app.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectPosix.html">hpcflow.app.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectWindows.html">hpcflow.app.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Element.html">hpcflow.app.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementAction.html">hpcflow.app.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementActionRun.html">hpcflow.app.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementFilter.html">hpcflow.app.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementGroup.html">hpcflow.app.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputFiles.html">hpcflow.app.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputs.html">hpcflow.app.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementIteration.html">hpcflow.app.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputFiles.html">hpcflow.app.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputs.html">hpcflow.app.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementParameter.html">hpcflow.app.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementPropagation.html">hpcflow.app.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementRepeats.html">hpcflow.app.ElementRepeats</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">hpcflow.app.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementSet.html">hpcflow.app.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Elements.html">hpcflow.app.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Environment.html">hpcflow.app.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.EnvironmentsList.html">hpcflow.app.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executable.html">hpcflow.app.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutableInstance.html">hpcflow.app.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutablesList.html">hpcflow.app.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executor.html">hpcflow.app.Executor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameExt.html">hpcflow.app.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameSpec.html">hpcflow.app.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameStem.html">hpcflow.app.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileSpec.html">hpcflow.app.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.GroupList.html">hpcflow.app.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFile.html">hpcflow.app.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGenerator.html">hpcflow.app.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGeneratorSource.html">hpcflow.app.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSource.html">hpcflow.app.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSourceType.html">hpcflow.app.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputValue.html">hpcflow.app.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Jobscript.html">hpcflow.app.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.JobscriptBlock.html">hpcflow.app.JobscriptBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Loop.html">hpcflow.app.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MetaTask.html">hpcflow.app.MetaTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MetaTaskSchema.html">hpcflow.app.MetaTaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MultiPathSequence.html">hpcflow.app.MultiPathSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.NumCores.html">hpcflow.app.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParser.html">hpcflow.app.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParserSource.html">hpcflow.app.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputLabel.html">hpcflow.app.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameter.html">hpcflow.app.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPath.html">hpcflow.app.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPropagationMode.html">hpcflow.app.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterValue.html">hpcflow.app.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameters.html">hpcflow.app.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParametersList.html">hpcflow.app.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.QueuedScheduler.html">hpcflow.app.QueuedScheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceList.html">hpcflow.app.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceSpec.html">hpcflow.app.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Rule.html">hpcflow.app.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.RunDirAppFiles.html">hpcflow.app.RunDirAppFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SGEPosix.html">hpcflow.app.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaInput.html">hpcflow.app.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaOutput.html">hpcflow.app.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaParameter.html">hpcflow.app.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SlurmPosix.html">hpcflow.app.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SubParameter.html">hpcflow.app.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Submission.html">hpcflow.app.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Task.html">hpcflow.app.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskInputParameters.html">hpcflow.app.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskList.html">hpcflow.app.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskObjective.html">hpcflow.app.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskOutputParameters.html">hpcflow.app.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchema.html">hpcflow.app.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchemasList.html">hpcflow.app.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSourceType.html">hpcflow.app.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskTemplateList.html">hpcflow.app.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValuePerturbation.html">hpcflow.app.ValuePerturbation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValueSequence.html">hpcflow.app.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Workflow.html">hpcflow.app.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowBlueprint.html">hpcflow.app.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoop.html">hpcflow.app.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoopList.html">hpcflow.app.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTask.html">hpcflow.app.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTaskList.html">hpcflow.app.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTemplate.html">hpcflow.app.WorkflowTemplate</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../api.html" class="nav-link">Python API</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="hpcflow.app.html" class="nav-link">hpcflow.app</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">hpcflow.app.ElementResources</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hpcflow-app-elementresources">
+<h1>hpcflow.app.ElementResources<a class="headerlink" href="#hpcflow-app-elementresources" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.app.</span></span><span class="sig-name descname"><span class="pre">ElementResources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scratch=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel_mode=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cores=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cores_per_node=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_threads=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_nodes=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_job_array=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_array_items=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_app_logs=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combine_jobscript_std=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combine_scripts=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_limit=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduler_args=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_args=&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">os_name=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CPU_arch=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executable_extension=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environments=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources_id=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_downstream_on_failure=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_failed_dependencies=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SGE_parallel_env=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SLURM_partition=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SLURM_num_tasks=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SLURM_num_tasks_per_node=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SLURM_num_nodes=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SLURM_num_cpus_per_task=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hpcflow.sdk.core.element.ElementResources.html#hpcflow.sdk.core.element.ElementResources" title="hpcflow.sdk.core.element.ElementResources"><code class="xref py py-class docutils literal notranslate"><span class="pre">ElementResources</span></code></a></p>
+<p>The resources an element requires.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not typically instantiated by the user. It is instantiated when the
+<cite>ElementActionRun.resources</cite> and <cite>Jobscript.resources</cite> attributes are accessed, and
+when the <cite>ElementIteration.get_resources_obj</cite> method is called. It is common for most
+of these attributes to be unspecified. Many of them have complex interactions with
+each other.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scratch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Which scratch space to use.</p></li>
+<li><p><strong>parallel_mode</strong> (<a class="reference internal" href="hpcflow.sdk.core.enums.ParallelMode.html#hpcflow.sdk.core.enums.ParallelMode" title="hpcflow.sdk.core.enums.ParallelMode"><em>ParallelMode</em></a>) – Which parallel mode to use.</p></li>
+<li><p><strong>num_cores</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – How many cores to request.</p></li>
+<li><p><strong>num_cores_per_node</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – How many cores per compute node to request.</p></li>
+<li><p><strong>num_threads</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – How many threads to request.</p></li>
+<li><p><strong>num_nodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – How many compute nodes to request.</p></li>
+<li><p><strong>scheduler</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Which scheduler to use.</p></li>
+<li><p><strong>shell</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Which system shell to use.</p></li>
+<li><p><strong>use_job_array</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to use array jobs.</p></li>
+<li><p><strong>max_array_items</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – If using array jobs, up to how many items should be in the job array.</p></li>
+<li><p><strong>write_app_logs</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether an app log file should be written.</p></li>
+<li><p><strong>combine_jobscript_std</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether jobscript standard output and error streams should be combined.</p></li>
+<li><p><strong>combine_scripts</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether Python scripts should be combined.</p></li>
+<li><p><strong>time_limit</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – How long to run for.</p></li>
+<li><p><strong>scheduler_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – Additional arguments to pass to the scheduler.</p></li>
+<li><p><strong>shell_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>Any</em><em>]</em>) – Additional arguments to pass to the shell.</p></li>
+<li><p><strong>os_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Which OS to use.</p></li>
+<li><p><strong>platform</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – System platform name, like “win”, “linux”, or “macos”.</p></li>
+<li><p><strong>CPU_arch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – CPU architecture, like “x86_64”, “AMD64”, or “arm64”.</p></li>
+<li><p><strong>executable_extension</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – “.exe” on Windows, empty otherwise.</p></li>
+<li><p><strong>environments</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a>) – Environment specifiers keyed by names.</p></li>
+<li><p><strong>resources_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – An arbitrary integer that can be used to force multiple jobscripts.</p></li>
+<li><p><strong>skip_downstream_on_failure</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a>) – Whether to skip downstream dependents on failure.</p></li>
+<li><p><strong>allow_failed_dependencies</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em> | </em><em>None</em>) – The failure tolerance with respect to dependencies, specified as a number or
+proportion.</p></li>
+<li><p><strong>SGE_parallel_env</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Which SGE parallel environment to request.</p></li>
+<li><p><strong>SLURM_partition</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Which SLURM partition to request.</p></li>
+<li><p><strong>SLURM_num_tasks</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – How many SLURM tasks to request.</p></li>
+<li><p><strong>SLURM_num_tasks_per_node</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – How many SLURM tasks per compute node to request.</p></li>
+<li><p><strong>SLURM_num_nodes</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – How many compute nodes to request.</p></li>
+<li><p><strong>SLURM_num_cpus_per_task</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – How many CPU cores to ask for per SLURM task.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.from_json_like" title="hpcflow.app.ElementResources.from_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json_like</span></code></a></p></td>
+<td><p>Make an instance of this class from JSON (or YAML) data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_default_CPU_arch" title="hpcflow.app.ElementResources.get_default_CPU_arch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_CPU_arch</span></code></a></p></td>
+<td><p>Get the default value for the CPU architecture.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_default_executable_extension" title="hpcflow.app.ElementResources.get_default_executable_extension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_executable_extension</span></code></a></p></td>
+<td><p>Get the default value for the executable extension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_default_os_name" title="hpcflow.app.ElementResources.get_default_os_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_os_name</span></code></a></p></td>
+<td><p>Get the default value for OS name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_default_platform" title="hpcflow.app.ElementResources.get_default_platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_platform</span></code></a></p></td>
+<td><p>Get the default value for platform.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_default_scheduler" title="hpcflow.app.ElementResources.get_default_scheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_scheduler</span></code></a></p></td>
+<td><p>Get the default value for scheduler.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_default_shell" title="hpcflow.app.ElementResources.get_default_shell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_shell</span></code></a></p></td>
+<td><p>Get the default value for name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_env_instance_filterable_attributes" title="hpcflow.app.ElementResources.get_env_instance_filterable_attributes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_env_instance_filterable_attributes</span></code></a></p></td>
+<td><p>Get a tuple of resource attributes that are used to filter environment executable instances at submit- and run-time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.get_jobscript_hash" title="hpcflow.app.ElementResources.get_jobscript_hash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_jobscript_hash</span></code></a></p></td>
+<td><p>Get hash from all arguments that distinguish jobscripts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.set_defaults" title="hpcflow.app.ElementResources.set_defaults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_defaults</span></code></a></p></td>
+<td><p>Set defaults for unspecified values that need defaults.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.to_dict" title="hpcflow.app.ElementResources.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p>Serialize this object as a dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.to_json_like" title="hpcflow.app.ElementResources.to_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json_like</span></code></a></p></td>
+<td><p>Serialize this object as an object structure that can be trivially converted to JSON.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.validate_against_machine" title="hpcflow.app.ElementResources.validate_against_machine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_against_machine</span></code></a></p></td>
+<td><p>Validate the values for <cite>os_name</cite>, <cite>shell</cite> and <cite>scheduler</cite> against those supported on this machine (as specified by the app configuration).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.CPU_arch" title="hpcflow.app.ElementResources.CPU_arch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CPU_arch</span></code></a></p></td>
+<td><p>CPU architecture, like &quot;x86_64&quot;, &quot;AMD64&quot;, or &quot;arm64&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SGE_parallel_env" title="hpcflow.app.ElementResources.SGE_parallel_env"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SGE_parallel_env</span></code></a></p></td>
+<td><p>Which SGE parallel environment to request.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SLURM_is_parallel" title="hpcflow.app.ElementResources.SLURM_is_parallel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SLURM_is_parallel</span></code></a></p></td>
+<td><p>Returns True if any SLURM-specific arguments indicate a parallel job.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SLURM_num_cpus_per_task" title="hpcflow.app.ElementResources.SLURM_num_cpus_per_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SLURM_num_cpus_per_task</span></code></a></p></td>
+<td><p>How many CPU cores to ask for per SLURM task.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SLURM_num_nodes" title="hpcflow.app.ElementResources.SLURM_num_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SLURM_num_nodes</span></code></a></p></td>
+<td><p>How many compute nodes to request.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SLURM_num_tasks" title="hpcflow.app.ElementResources.SLURM_num_tasks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SLURM_num_tasks</span></code></a></p></td>
+<td><p>How many SLURM tasks to request.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SLURM_num_tasks_per_node" title="hpcflow.app.ElementResources.SLURM_num_tasks_per_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SLURM_num_tasks_per_node</span></code></a></p></td>
+<td><p>How many SLURM tasks per compute node to request.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.SLURM_partition" title="hpcflow.app.ElementResources.SLURM_partition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SLURM_partition</span></code></a></p></td>
+<td><p>Which SLURM partition to request.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.allow_failed_dependencies" title="hpcflow.app.ElementResources.allow_failed_dependencies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allow_failed_dependencies</span></code></a></p></td>
+<td><p>The failure tolerance with respect to dependencies, specified as a number or proportion.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.combine_scripts" title="hpcflow.app.ElementResources.combine_scripts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_scripts</span></code></a></p></td>
+<td><p>Whether Python scripts should be combined.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.environments" title="hpcflow.app.ElementResources.environments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">environments</span></code></a></p></td>
+<td><p>Environment specifiers keyed by names.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.executable_extension" title="hpcflow.app.ElementResources.executable_extension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">executable_extension</span></code></a></p></td>
+<td><p>Typical extension used to indicate an executable file; &quot;.exe&quot; on Windows, empty on all other platforms.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.is_parallel" title="hpcflow.app.ElementResources.is_parallel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_parallel</span></code></a></p></td>
+<td><p>Returns True if any scheduler-agnostic arguments indicate a parallel job.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.max_array_items" title="hpcflow.app.ElementResources.max_array_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_array_items</span></code></a></p></td>
+<td><p>If using array jobs, up to how many items should be in the job array.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.num_cores" title="hpcflow.app.ElementResources.num_cores"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_cores</span></code></a></p></td>
+<td><p>How many cores to request.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.num_cores_per_node" title="hpcflow.app.ElementResources.num_cores_per_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_cores_per_node</span></code></a></p></td>
+<td><p>How many cores per compute node to request.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.num_nodes" title="hpcflow.app.ElementResources.num_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_nodes</span></code></a></p></td>
+<td><p>How many compute nodes to request.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.num_threads" title="hpcflow.app.ElementResources.num_threads"><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_threads</span></code></a></p></td>
+<td><p>How many threads to request.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.os_name" title="hpcflow.app.ElementResources.os_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">os_name</span></code></a></p></td>
+<td><p>Which OS to use.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.parallel_mode" title="hpcflow.app.ElementResources.parallel_mode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parallel_mode</span></code></a></p></td>
+<td><p>Which parallel mode to use.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.platform" title="hpcflow.app.ElementResources.platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">platform</span></code></a></p></td>
+<td><p>System platform name, like &quot;win&quot;, &quot;linux&quot;, or &quot;macos&quot;</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.resources_id" title="hpcflow.app.ElementResources.resources_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resources_id</span></code></a></p></td>
+<td><p>An arbitrary integer that can be used to force multiple jobscripts.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.scheduler" title="hpcflow.app.ElementResources.scheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler</span></code></a></p></td>
+<td><p>Which scheduler to use.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.scratch" title="hpcflow.app.ElementResources.scratch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scratch</span></code></a></p></td>
+<td><p>Which scratch space to use.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.shell" title="hpcflow.app.ElementResources.shell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shell</span></code></a></p></td>
+<td><p>Which system shell to use.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.skip_downstream_on_failure" title="hpcflow.app.ElementResources.skip_downstream_on_failure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skip_downstream_on_failure</span></code></a></p></td>
+<td><p>Whether to skip downstream dependents on failure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.time_limit" title="hpcflow.app.ElementResources.time_limit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_limit</span></code></a></p></td>
+<td><p>How long to run for.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.use_job_array" title="hpcflow.app.ElementResources.use_job_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">use_job_array</span></code></a></p></td>
+<td><p>Whether to use array jobs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.write_app_logs" title="hpcflow.app.ElementResources.write_app_logs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_app_logs</span></code></a></p></td>
+<td><p>Whether an app log file should be written.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.combine_jobscript_std" title="hpcflow.app.ElementResources.combine_jobscript_std"><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine_jobscript_std</span></code></a></p></td>
+<td><p>Whether jobscript standard output and error streams should be combined.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.scheduler_args" title="hpcflow.app.ElementResources.scheduler_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler_args</span></code></a></p></td>
+<td><p>Additional arguments to pass to the scheduler.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ElementResources.shell_args" title="hpcflow.app.ElementResources.shell_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shell_args</span></code></a></p></td>
+<td><p>Additional arguments to pass to the shell.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.CPU_arch">
+<span class="sig-name descname"><span class="pre">CPU_arch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.CPU_arch" title="Link to this definition">#</a></dt>
+<dd><p>CPU architecture, like “x86_64”, “AMD64”, or “arm64”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SGE_parallel_env">
+<span class="sig-name descname"><span class="pre">SGE_parallel_env</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.SGE_parallel_env" title="Link to this definition">#</a></dt>
+<dd><p>Which SGE parallel environment to request.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SLURM_is_parallel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SLURM_is_parallel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#hpcflow.app.ElementResources.SLURM_is_parallel" title="Link to this definition">#</a></dt>
+<dd><p>Returns True if any SLURM-specific arguments indicate a parallel job.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SLURM_num_cpus_per_task">
+<span class="sig-name descname"><span class="pre">SLURM_num_cpus_per_task</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.SLURM_num_cpus_per_task" title="Link to this definition">#</a></dt>
+<dd><p>How many CPU cores to ask for per SLURM task.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SLURM_num_nodes">
+<span class="sig-name descname"><span class="pre">SLURM_num_nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.SLURM_num_nodes" title="Link to this definition">#</a></dt>
+<dd><p>How many compute nodes to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SLURM_num_tasks">
+<span class="sig-name descname"><span class="pre">SLURM_num_tasks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.SLURM_num_tasks" title="Link to this definition">#</a></dt>
+<dd><p>How many SLURM tasks to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SLURM_num_tasks_per_node">
+<span class="sig-name descname"><span class="pre">SLURM_num_tasks_per_node</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.SLURM_num_tasks_per_node" title="Link to this definition">#</a></dt>
+<dd><p>How many SLURM tasks per compute node to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.SLURM_partition">
+<span class="sig-name descname"><span class="pre">SLURM_partition</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.SLURM_partition" title="Link to this definition">#</a></dt>
+<dd><p>Which SLURM partition to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.allow_failed_dependencies">
+<span class="sig-name descname"><span class="pre">allow_failed_dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.allow_failed_dependencies" title="Link to this definition">#</a></dt>
+<dd><p>The failure tolerance with respect to dependencies, specified as a number or
+proportion.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.combine_jobscript_std">
+<span class="sig-name descname"><span class="pre">combine_jobscript_std</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#hpcflow.app.ElementResources.combine_jobscript_std" title="Link to this definition">#</a></dt>
+<dd><p>Whether jobscript standard output and error streams should be combined.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.combine_scripts">
+<span class="sig-name descname"><span class="pre">combine_scripts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.combine_scripts" title="Link to this definition">#</a></dt>
+<dd><p>Whether Python scripts should be combined.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.environments">
+<span class="sig-name descname"><span class="pre">environments</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.environments" title="Link to this definition">#</a></dt>
+<dd><p>Environment specifiers keyed by names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.executable_extension">
+<span class="sig-name descname"><span class="pre">executable_extension</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.executable_extension" title="Link to this definition">#</a></dt>
+<dd><p>Typical extension used to indicate an executable file; “.exe” on Windows, empty on
+all other platforms.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.from_json_like">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_like</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.from_json_like" title="Link to this definition">#</a></dt>
+<dd><p>Make an instance of this class from JSON (or YAML) data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_like</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>JSONed</em><em>] </em><em>| </em><em>Sequence</em><em>[</em><em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>JSONed</em><em>]</em><em>] </em><em>| </em><em>None</em>) – The data to deserialise.</p></li>
+<li><p><strong>shared_data</strong> (<em>Mapping</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><a class="reference internal" href="hpcflow.sdk.core.object_list.ObjectList.html#hpcflow.sdk.core.object_list.ObjectList" title="hpcflow.sdk.core.object_list.ObjectList"><em>ObjectList</em></a><em>[</em><em>JSONable</em><em>]</em><em>] </em><em>| </em><em>None</em>) – Shared context data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialised object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_default_CPU_arch">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_CPU_arch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_default_CPU_arch" title="Link to this definition">#</a></dt>
+<dd><p>Get the default value for the CPU architecture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_default_executable_extension">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_executable_extension</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_default_executable_extension" title="Link to this definition">#</a></dt>
+<dd><p>Get the default value for the executable extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_default_os_name">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_os_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_default_os_name" title="Link to this definition">#</a></dt>
+<dd><p>Get the default value for OS name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_default_platform">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_platform</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_default_platform" title="Link to this definition">#</a></dt>
+<dd><p>Get the default value for platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_default_scheduler">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">os_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_default_scheduler" title="Link to this definition">#</a></dt>
+<dd><p>Get the default value for scheduler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>os_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>shell_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_default_shell">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default_shell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_default_shell" title="Link to this definition">#</a></dt>
+<dd><p>Get the default value for name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_env_instance_filterable_attributes">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_env_instance_filterable_attributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_env_instance_filterable_attributes" title="Link to this definition">#</a></dt>
+<dd><p>Get a tuple of resource attributes that are used to filter environment
+executable instances at submit- and run-time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, …]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.get_jobscript_hash">
+<span class="sig-name descname"><span class="pre">get_jobscript_hash</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.get_jobscript_hash" title="Link to this definition">#</a></dt>
+<dd><p>Get hash from all arguments that distinguish jobscripts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.is_parallel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_parallel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#hpcflow.app.ElementResources.is_parallel" title="Link to this definition">#</a></dt>
+<dd><p>Returns True if any scheduler-agnostic arguments indicate a parallel job.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.max_array_items">
+<span class="sig-name descname"><span class="pre">max_array_items</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.max_array_items" title="Link to this definition">#</a></dt>
+<dd><p>If using array jobs, up to how many items should be in the job array.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.num_cores">
+<span class="sig-name descname"><span class="pre">num_cores</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.num_cores" title="Link to this definition">#</a></dt>
+<dd><p>How many cores to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.num_cores_per_node">
+<span class="sig-name descname"><span class="pre">num_cores_per_node</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.num_cores_per_node" title="Link to this definition">#</a></dt>
+<dd><p>How many cores per compute node to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.num_nodes">
+<span class="sig-name descname"><span class="pre">num_nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.num_nodes" title="Link to this definition">#</a></dt>
+<dd><p>How many compute nodes to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.num_threads">
+<span class="sig-name descname"><span class="pre">num_threads</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.num_threads" title="Link to this definition">#</a></dt>
+<dd><p>How many threads to request.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.os_name">
+<span class="sig-name descname"><span class="pre">os_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.os_name" title="Link to this definition">#</a></dt>
+<dd><p>Which OS to use.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.parallel_mode">
+<span class="sig-name descname"><span class="pre">parallel_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="hpcflow.sdk.core.enums.ParallelMode.html#hpcflow.sdk.core.enums.ParallelMode" title="hpcflow.sdk.core.enums.ParallelMode"><span class="pre">ParallelMode</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.parallel_mode" title="Link to this definition">#</a></dt>
+<dd><p>Which parallel mode to use.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.platform">
+<span class="sig-name descname"><span class="pre">platform</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.platform" title="Link to this definition">#</a></dt>
+<dd><p>System platform name, like “win”, “linux”, or “macos”</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.resources_id">
+<span class="sig-name descname"><span class="pre">resources_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.resources_id" title="Link to this definition">#</a></dt>
+<dd><p>An arbitrary integer that can be used to force multiple jobscripts.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.scheduler">
+<span class="sig-name descname"><span class="pre">scheduler</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.scheduler" title="Link to this definition">#</a></dt>
+<dd><p>Which scheduler to use.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.scheduler_args">
+<span class="sig-name descname"><span class="pre">scheduler_args</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hpcflow.app.ElementResources.scheduler_args" title="Link to this definition">#</a></dt>
+<dd><p>Additional arguments to pass to the scheduler.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.scratch">
+<span class="sig-name descname"><span class="pre">scratch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.scratch" title="Link to this definition">#</a></dt>
+<dd><p>Which scratch space to use.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.set_defaults">
+<span class="sig-name descname"><span class="pre">set_defaults</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.set_defaults" title="Link to this definition">#</a></dt>
+<dd><p>Set defaults for unspecified values that need defaults.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.shell">
+<span class="sig-name descname"><span class="pre">shell</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.shell" title="Link to this definition">#</a></dt>
+<dd><p>Which system shell to use.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.shell_args">
+<span class="sig-name descname"><span class="pre">shell_args</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hpcflow.app.ElementResources.shell_args" title="Link to this definition">#</a></dt>
+<dd><p>Additional arguments to pass to the shell.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.skip_downstream_on_failure">
+<span class="sig-name descname"><span class="pre">skip_downstream_on_failure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.skip_downstream_on_failure" title="Link to this definition">#</a></dt>
+<dd><p>Whether to skip downstream dependents on failure.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.time_limit">
+<span class="sig-name descname"><span class="pre">time_limit</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.time_limit" title="Link to this definition">#</a></dt>
+<dd><p>How long to run for.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.to_dict" title="Link to this definition">#</a></dt>
+<dd><p>Serialize this object as a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.to_json_like">
+<span class="sig-name descname"><span class="pre">to_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.to_json_like" title="Link to this definition">#</a></dt>
+<dd><p>Serialize this object as an object structure that can be trivially converted
+to JSON. Note that YAML can also be produced from the result of this method;
+it just requires a different final serialization step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dct</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>JSONable</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>shared_data</strong> (<em>_JSONDeserState</em>)</p></li>
+<li><p><strong>exclude</strong> (<em>Container</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em><em>]</em>)</p></li>
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[JSONDocument, _JSONDeserState]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.use_job_array">
+<span class="sig-name descname"><span class="pre">use_job_array</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.use_job_array" title="Link to this definition">#</a></dt>
+<dd><p>Whether to use array jobs.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.validate_against_machine">
+<span class="sig-name descname"><span class="pre">validate_against_machine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ElementResources.validate_against_machine" title="Link to this definition">#</a></dt>
+<dd><p>Validate the values for <cite>os_name</cite>, <cite>shell</cite> and <cite>scheduler</cite> against those
+supported on this machine (as specified by the app configuration).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ElementResources.write_app_logs">
+<span class="sig-name descname"><span class="pre">write_app_logs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#hpcflow.app.ElementResources.write_app_logs" title="Link to this definition">#</a></dt>
+<dd><p>Whether an app log file should be written.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hpcflow.app.ElementRepeats.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hpcflow.app.ElementRepeats</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hpcflow.app.ElementSet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hpcflow.app.ElementSet</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources"><code class="docutils literal notranslate"><span class="pre">ElementResources</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.CPU_arch"><code class="docutils literal notranslate"><span class="pre">ElementResources.CPU_arch</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SGE_parallel_env"><code class="docutils literal notranslate"><span class="pre">ElementResources.SGE_parallel_env</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SLURM_is_parallel"><code class="docutils literal notranslate"><span class="pre">ElementResources.SLURM_is_parallel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SLURM_num_cpus_per_task"><code class="docutils literal notranslate"><span class="pre">ElementResources.SLURM_num_cpus_per_task</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SLURM_num_nodes"><code class="docutils literal notranslate"><span class="pre">ElementResources.SLURM_num_nodes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SLURM_num_tasks"><code class="docutils literal notranslate"><span class="pre">ElementResources.SLURM_num_tasks</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SLURM_num_tasks_per_node"><code class="docutils literal notranslate"><span class="pre">ElementResources.SLURM_num_tasks_per_node</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.SLURM_partition"><code class="docutils literal notranslate"><span class="pre">ElementResources.SLURM_partition</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.allow_failed_dependencies"><code class="docutils literal notranslate"><span class="pre">ElementResources.allow_failed_dependencies</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.combine_jobscript_std"><code class="docutils literal notranslate"><span class="pre">ElementResources.combine_jobscript_std</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.combine_scripts"><code class="docutils literal notranslate"><span class="pre">ElementResources.combine_scripts</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.environments"><code class="docutils literal notranslate"><span class="pre">ElementResources.environments</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.executable_extension"><code class="docutils literal notranslate"><span class="pre">ElementResources.executable_extension</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.from_json_like"><code class="docutils literal notranslate"><span class="pre">ElementResources.from_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_default_CPU_arch"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_default_CPU_arch()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_default_executable_extension"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_default_executable_extension()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_default_os_name"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_default_os_name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_default_platform"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_default_platform()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_default_scheduler"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_default_scheduler()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_default_shell"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_default_shell()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_env_instance_filterable_attributes"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_env_instance_filterable_attributes()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.get_jobscript_hash"><code class="docutils literal notranslate"><span class="pre">ElementResources.get_jobscript_hash()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.is_parallel"><code class="docutils literal notranslate"><span class="pre">ElementResources.is_parallel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.max_array_items"><code class="docutils literal notranslate"><span class="pre">ElementResources.max_array_items</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.num_cores"><code class="docutils literal notranslate"><span class="pre">ElementResources.num_cores</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.num_cores_per_node"><code class="docutils literal notranslate"><span class="pre">ElementResources.num_cores_per_node</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.num_nodes"><code class="docutils literal notranslate"><span class="pre">ElementResources.num_nodes</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.num_threads"><code class="docutils literal notranslate"><span class="pre">ElementResources.num_threads</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.os_name"><code class="docutils literal notranslate"><span class="pre">ElementResources.os_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.parallel_mode"><code class="docutils literal notranslate"><span class="pre">ElementResources.parallel_mode</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.platform"><code class="docutils literal notranslate"><span class="pre">ElementResources.platform</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.resources_id"><code class="docutils literal notranslate"><span class="pre">ElementResources.resources_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.scheduler"><code class="docutils literal notranslate"><span class="pre">ElementResources.scheduler</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.scheduler_args"><code class="docutils literal notranslate"><span class="pre">ElementResources.scheduler_args</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.scratch"><code class="docutils literal notranslate"><span class="pre">ElementResources.scratch</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.set_defaults"><code class="docutils literal notranslate"><span class="pre">ElementResources.set_defaults()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.shell"><code class="docutils literal notranslate"><span class="pre">ElementResources.shell</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.shell_args"><code class="docutils literal notranslate"><span class="pre">ElementResources.shell_args</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.skip_downstream_on_failure"><code class="docutils literal notranslate"><span class="pre">ElementResources.skip_downstream_on_failure</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.time_limit"><code class="docutils literal notranslate"><span class="pre">ElementResources.time_limit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.to_dict"><code class="docutils literal notranslate"><span class="pre">ElementResources.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.to_json_like"><code class="docutils literal notranslate"><span class="pre">ElementResources.to_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.use_job_array"><code class="docutils literal notranslate"><span class="pre">ElementResources.use_job_array</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.validate_against_machine"><code class="docutils literal notranslate"><span class="pre">ElementResources.validate_against_machine()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ElementResources.write_app_logs"><code class="docutils literal notranslate"><span class="pre">ElementResources.write_app_logs</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/hpcflow-new/edit/develop/docs/source/reference/_autosummary/hpcflow.app.ElementResources.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/reference/_autosummary/hpcflow.app.ElementResources.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, hpcflow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
