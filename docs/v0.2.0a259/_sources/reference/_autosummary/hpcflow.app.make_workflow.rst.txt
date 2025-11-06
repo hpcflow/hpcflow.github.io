@@ -1,0 +1,6 @@
+hpcflow.app.make\_workflow
+==========================
+
+.. currentmodule:: hpcflow.app
+
+.. autofunction:: make_workflow
