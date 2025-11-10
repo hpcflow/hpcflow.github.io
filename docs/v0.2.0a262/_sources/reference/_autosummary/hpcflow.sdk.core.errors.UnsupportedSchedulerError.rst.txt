@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.UnsupportedSchedulerError
+=================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: UnsupportedSchedulerError
