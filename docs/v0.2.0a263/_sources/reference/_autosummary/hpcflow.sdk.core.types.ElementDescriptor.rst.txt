@@ -1,0 +1,43 @@
+hpcflow.sdk.core.types.ElementDescriptor
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: ElementDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementDescriptor.clear
+      ~ElementDescriptor.copy
+      ~ElementDescriptor.fromkeys
+      ~ElementDescriptor.get
+      ~ElementDescriptor.items
+      ~ElementDescriptor.keys
+      ~ElementDescriptor.pop
+      ~ElementDescriptor.popitem
+      ~ElementDescriptor.setdefault
+      ~ElementDescriptor.update
+      ~ElementDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementDescriptor.input_statuses
+      ~ElementDescriptor.input_sources
+      ~ElementDescriptor.task_insert_ID
+   
+   
