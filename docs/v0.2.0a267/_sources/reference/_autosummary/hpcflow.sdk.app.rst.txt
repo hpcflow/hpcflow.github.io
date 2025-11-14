@@ -1,0 +1,48 @@
+hpcflow.sdk.app
+===============
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.app
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      get_app_attribute
+      get_app_module_all
+      get_app_module_dir
+      rate_limit_safe_url_to_fs
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      App
+      BaseApp
+      Singleton
+   
+   
+
+   
+   
+   
+
+
+
