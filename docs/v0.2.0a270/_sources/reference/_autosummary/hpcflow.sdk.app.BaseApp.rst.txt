@@ -1,0 +1,198 @@
+hpcflow.sdk.app.BaseApp
+=======================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autoclass:: BaseApp
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~BaseApp.cache_all_demo_data_files
+      ~BaseApp.cache_demo_data_file
+      ~BaseApp.clear_demo_data_cache_dir
+      ~BaseApp.clear_known_submissions_file
+      ~BaseApp.clear_user_cache_dir
+      ~BaseApp.clear_user_cache_hostname_dir
+      ~BaseApp.clear_user_runtime_dir
+      ~BaseApp.configure_env
+      ~BaseApp.copy_demo_data
+      ~BaseApp.copy_demo_workflow
+      ~BaseApp.get_OS_supported_schedulers
+      ~BaseApp.get_config_path
+      ~BaseApp.get_demo_data_file_path
+      ~BaseApp.get_demo_data_files_manifest
+      ~BaseApp.get_demo_workflow_template_file
+      ~BaseApp.get_info
+      ~BaseApp.get_parameter_task_schema_map
+      ~BaseApp.get_scheduler
+      ~BaseApp.list_demo_data_files
+      ~BaseApp.list_demo_workflows
+      ~BaseApp.load_builtin_template_component_data
+      ~BaseApp.load_config
+      ~BaseApp.load_demo_workflow
+      ~BaseApp.load_template_components
+      ~BaseApp.perm_error_retry
+      ~BaseApp.read_known_submissions_file
+      ~BaseApp.redirect_std_to_file
+      ~BaseApp.reload_config
+      ~BaseApp.reload_template_components
+      ~BaseApp.reset_config
+      ~BaseApp.show_demo_workflow
+      ~BaseApp.template_components_from_json_like
+      ~BaseApp.unload_config
+      ~BaseApp.update_known_subs_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BaseApp.API_logger
+      ~BaseApp.Action
+      ~BaseApp.ActionEnvironment
+      ~BaseApp.ActionRule
+      ~BaseApp.ActionScope
+      ~BaseApp.ActionScopeType
+      ~BaseApp.CLI_logger
+      ~BaseApp.Command
+      ~BaseApp.CommandFilesList
+      ~BaseApp.DirectPosix
+      ~BaseApp.DirectWindows
+      ~BaseApp.Element
+      ~BaseApp.ElementAction
+      ~BaseApp.ElementActionRun
+      ~BaseApp.ElementFilter
+      ~BaseApp.ElementGroup
+      ~BaseApp.ElementInputFiles
+      ~BaseApp.ElementInputs
+      ~BaseApp.ElementIteration
+      ~BaseApp.ElementOutputFiles
+      ~BaseApp.ElementOutputs
+      ~BaseApp.ElementParameter
+      ~BaseApp.ElementPropagation
+      ~BaseApp.ElementResources
+      ~BaseApp.ElementSet
+      ~BaseApp.Environment
+      ~BaseApp.EnvironmentsList
+      ~BaseApp.Executable
+      ~BaseApp.ExecutableInstance
+      ~BaseApp.ExecutablesList
+      ~BaseApp.FileNameExt
+      ~BaseApp.FileNameSpec
+      ~BaseApp.FileNameStem
+      ~BaseApp.FileSpec
+      ~BaseApp.GroupList
+      ~BaseApp.InputFileGenerator
+      ~BaseApp.InputSource
+      ~BaseApp.InputSourceType
+      ~BaseApp.InputValue
+      ~BaseApp.Jobscript
+      ~BaseApp.Loop
+      ~BaseApp.MultiPathSequence
+      ~BaseApp.NumCores
+      ~BaseApp.OutputFileParser
+      ~BaseApp.Parameter
+      ~BaseApp.ParameterValue
+      ~BaseApp.Parameters
+      ~BaseApp.ParametersList
+      ~BaseApp.QueuedScheduler
+      ~BaseApp.ResourceList
+      ~BaseApp.ResourceSpec
+      ~BaseApp.Rule
+      ~BaseApp.RunDirAppFiles
+      ~BaseApp.SGEPosix
+      ~BaseApp.SchemaInput
+      ~BaseApp.SchemaOutput
+      ~BaseApp.SchemaParameter
+      ~BaseApp.SlurmPosix
+      ~BaseApp.Submission
+      ~BaseApp.Task
+      ~BaseApp.TaskInputParameters
+      ~BaseApp.TaskList
+      ~BaseApp.TaskObjective
+      ~BaseApp.TaskOutputParameters
+      ~BaseApp.TaskSchema
+      ~BaseApp.TaskSchemasList
+      ~BaseApp.TaskSourceType
+      ~BaseApp.TaskTemplateList
+      ~BaseApp.ValueSequence
+      ~BaseApp.Workflow
+      ~BaseApp.WorkflowLoop
+      ~BaseApp.WorkflowLoopList
+      ~BaseApp.WorkflowTask
+      ~BaseApp.WorkflowTaskList
+      ~BaseApp.WorkflowTemplate
+      ~BaseApp.cancel
+      ~BaseApp.command_files
+      ~BaseApp.config
+      ~BaseApp.config_logger
+      ~BaseApp.demo_data_cache_dir
+      ~BaseApp.envs
+      ~BaseApp.get_OS_info
+      ~BaseApp.get_known_submissions
+      ~BaseApp.get_shell_info
+      ~BaseApp.is_config_loaded
+      ~BaseApp.is_template_components_loaded
+      ~BaseApp.jinja_templates
+      ~BaseApp.known_subs_file_path
+      ~BaseApp.log
+      ~BaseApp.logger
+      ~BaseApp.make_and_submit_demo_workflow
+      ~BaseApp.make_and_submit_workflow
+      ~BaseApp.make_demo_workflow
+      ~BaseApp.make_workflow
+      ~BaseApp.parameters
+      ~BaseApp.persistence_logger
+      ~BaseApp.programs
+      ~BaseApp.run_hpcflow_tests
+      ~BaseApp.run_tests
+      ~BaseApp.run_time_info
+      ~BaseApp.runtime_info_logger
+      ~BaseApp.scheduler_lookup
+      ~BaseApp.scripts
+      ~BaseApp.show
+      ~BaseApp.show_legend
+      ~BaseApp.submission_logger
+      ~BaseApp.submit_workflow
+      ~BaseApp.task_schemas
+      ~BaseApp.template_components
+      ~BaseApp.timeit
+      ~BaseApp.user_cache_dir
+      ~BaseApp.user_cache_hostname_dir
+      ~BaseApp.user_data_dir
+      ~BaseApp.user_data_hostname_dir
+      ~BaseApp.user_runtime_dir
+      ~BaseApp.name
+      ~BaseApp.package_name
+      ~BaseApp.version
+      ~BaseApp.module
+      ~BaseApp.description
+      ~BaseApp.gh_org
+      ~BaseApp.gh_repo
+      ~BaseApp.config_options
+      ~BaseApp.pytest_args
+      ~BaseApp.scripts_dir
+      ~BaseApp.jinja_templates_dir
+      ~BaseApp.programs_dir
+      ~BaseApp.workflows_dir
+      ~BaseApp.demo_data_dir
+      ~BaseApp.demo_data_manifest_dir
+      ~BaseApp.docs_import_conv
+      ~BaseApp.docs_url
+      ~BaseApp.encoders
+      ~BaseApp.decoders
+      ~BaseApp.cli
+   
+   
