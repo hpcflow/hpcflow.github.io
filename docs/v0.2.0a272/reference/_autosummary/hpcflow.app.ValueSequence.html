@@ -1,0 +1,1293 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>hpcflow.app.ValueSequence &#8212; hpcflow 0.2.0a272 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=57b3f318" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=a8c3efd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reference/_autosummary/hpcflow.app.ValueSequence';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hpcflow.github.io/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.2.0a272';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <script src="../../_static/js/custom.js?v=0e67ee37"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="hpcflow.app.Workflow" href="hpcflow.app.Workflow.html" />
+    <link rel="prev" title="hpcflow.app.ValuePerturbation" href="hpcflow.app.ValuePerturbation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-v2.png" class="logo__image only-light" alt="hpcflow 0.2.0a272 documentation - Home"/>
+    <img src="../../_static/logo-v2.png" class="logo__image only-dark pst-js-only" alt="hpcflow 0.2.0a272 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../development/index.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-box fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../development/index.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-box fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPI</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">Python API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="hpcflow.app.html">hpcflow.app</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.app.html">hpcflow.app.app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.cancel.html">hpcflow.app.cancel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_OS_info.html">hpcflow.app.get_OS_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_known_submissions.html">hpcflow.app.get_known_submissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.get_shell_info.html">hpcflow.app.get_shell_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_demo_workflow.html">hpcflow.app.make_and_submit_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_and_submit_workflow.html">hpcflow.app.make_and_submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_demo_workflow.html">hpcflow.app.make_demo_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.make_workflow.html">hpcflow.app.make_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_hpcflow_tests.html">hpcflow.app.run_hpcflow_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.run_tests.html">hpcflow.app.run_tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show.html">hpcflow.app.show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.show_legend.html">hpcflow.app.show_legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.submit_workflow.html">hpcflow.app.submit_workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Action.html">hpcflow.app.Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionEnvironment.html">hpcflow.app.ActionEnvironment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionRule.html">hpcflow.app.ActionRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScope.html">hpcflow.app.ActionScope</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ActionScopeType.html">hpcflow.app.ActionScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Command.html">hpcflow.app.Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.CommandFilesList.html">hpcflow.app.CommandFilesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectPosix.html">hpcflow.app.DirectPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.DirectWindows.html">hpcflow.app.DirectWindows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Element.html">hpcflow.app.Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementAction.html">hpcflow.app.ElementAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementActionRun.html">hpcflow.app.ElementActionRun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementFilter.html">hpcflow.app.ElementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementGroup.html">hpcflow.app.ElementGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputFiles.html">hpcflow.app.ElementInputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementInputs.html">hpcflow.app.ElementInputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementIteration.html">hpcflow.app.ElementIteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputFiles.html">hpcflow.app.ElementOutputFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementOutputs.html">hpcflow.app.ElementOutputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementParameter.html">hpcflow.app.ElementParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementPropagation.html">hpcflow.app.ElementPropagation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementRepeats.html">hpcflow.app.ElementRepeats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementResources.html">hpcflow.app.ElementResources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ElementSet.html">hpcflow.app.ElementSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Elements.html">hpcflow.app.Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Environment.html">hpcflow.app.Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.EnvironmentsList.html">hpcflow.app.EnvironmentsList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executable.html">hpcflow.app.Executable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutableInstance.html">hpcflow.app.ExecutableInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ExecutablesList.html">hpcflow.app.ExecutablesList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Executor.html">hpcflow.app.Executor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameExt.html">hpcflow.app.FileNameExt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameSpec.html">hpcflow.app.FileNameSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileNameStem.html">hpcflow.app.FileNameStem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.FileSpec.html">hpcflow.app.FileSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.GroupList.html">hpcflow.app.GroupList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFile.html">hpcflow.app.InputFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGenerator.html">hpcflow.app.InputFileGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputFileGeneratorSource.html">hpcflow.app.InputFileGeneratorSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSource.html">hpcflow.app.InputSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputSourceType.html">hpcflow.app.InputSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.InputValue.html">hpcflow.app.InputValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Jobscript.html">hpcflow.app.Jobscript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.JobscriptBlock.html">hpcflow.app.JobscriptBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Loop.html">hpcflow.app.Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MetaTask.html">hpcflow.app.MetaTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MetaTaskSchema.html">hpcflow.app.MetaTaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.MultiPathSequence.html">hpcflow.app.MultiPathSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.NumCores.html">hpcflow.app.NumCores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParser.html">hpcflow.app.OutputFileParser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputFileParserSource.html">hpcflow.app.OutputFileParserSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.OutputLabel.html">hpcflow.app.OutputLabel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameter.html">hpcflow.app.Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPath.html">hpcflow.app.ParameterPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterPropagationMode.html">hpcflow.app.ParameterPropagationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParameterValue.html">hpcflow.app.ParameterValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Parameters.html">hpcflow.app.Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ParametersList.html">hpcflow.app.ParametersList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.QueuedScheduler.html">hpcflow.app.QueuedScheduler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceList.html">hpcflow.app.ResourceList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ResourceSpec.html">hpcflow.app.ResourceSpec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Rule.html">hpcflow.app.Rule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.RunDirAppFiles.html">hpcflow.app.RunDirAppFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SGEPosix.html">hpcflow.app.SGEPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaInput.html">hpcflow.app.SchemaInput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaOutput.html">hpcflow.app.SchemaOutput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SchemaParameter.html">hpcflow.app.SchemaParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SlurmPosix.html">hpcflow.app.SlurmPosix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.SubParameter.html">hpcflow.app.SubParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Submission.html">hpcflow.app.Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Task.html">hpcflow.app.Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskInputParameters.html">hpcflow.app.TaskInputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskList.html">hpcflow.app.TaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskObjective.html">hpcflow.app.TaskObjective</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskOutputParameters.html">hpcflow.app.TaskOutputParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchema.html">hpcflow.app.TaskSchema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSchemasList.html">hpcflow.app.TaskSchemasList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskSourceType.html">hpcflow.app.TaskSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.TaskTemplateList.html">hpcflow.app.TaskTemplateList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.ValuePerturbation.html">hpcflow.app.ValuePerturbation</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">hpcflow.app.ValueSequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.Workflow.html">hpcflow.app.Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowBlueprint.html">hpcflow.app.WorkflowBlueprint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoop.html">hpcflow.app.WorkflowLoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowLoopList.html">hpcflow.app.WorkflowLoopList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTask.html">hpcflow.app.WorkflowTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTaskList.html">hpcflow.app.WorkflowTaskList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpcflow.app.WorkflowTemplate.html">hpcflow.app.WorkflowTemplate</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command-line interface</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../template_components.html">Template components</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/command_files.html">Command files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../template_components/task_schemas.html">Task schemas</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows.html">Demo workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config_file.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../api.html" class="nav-link">Python API</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="hpcflow.app.html" class="nav-link">hpcflow.app</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">hpcflow.app.ValueSequence</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hpcflow-app-valuesequence">
+<h1>hpcflow.app.ValueSequence<a class="headerlink" href="#hpcflow-app-valuesequence" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hpcflow.app.</span></span><span class="sig-name descname"><span class="pre">ValueSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hpcflow.sdk.core.parameters.ValueSequence.html#hpcflow.sdk.core.parameters.ValueSequence" title="hpcflow.sdk.core.parameters.ValueSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueSequence</span></code></a></p>
+<p>A sequence of values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – The path to this sequence.</p></li>
+<li><p><strong>values</strong> (<em>Sequence</em><em>[</em><em>Any</em><em>] </em><em>| </em><em>None</em>) – The values in this sequence.</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – A nesting order for this sequence. Can be used to compose sequences together.</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – A label for this sequence.</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – Name of a method used to generate sequence values. Not normally used directly.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_file" title="hpcflow.app.ValueSequence.from_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_file</span></code></a></p></td>
+<td><p>Build a sequence from data within a simple file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_geometric_space" title="hpcflow.app.ValueSequence.from_geometric_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_geometric_space</span></code></a></p></td>
+<td><p>Build a sequence from a NumPy geometric space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_json_like" title="hpcflow.app.ValueSequence.from_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json_like</span></code></a></p></td>
+<td><p>Make an instance of this class from JSON (or YAML) data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_linear_space" title="hpcflow.app.ValueSequence.from_linear_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_linear_space</span></code></a></p></td>
+<td><p>Build a sequence from a NumPy linear space.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_load_txt" title="hpcflow.app.ValueSequence.from_load_txt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_load_txt</span></code></a></p></td>
+<td><p>Build a sequence from data within a text file using Numpy's <cite>loadtxt</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_log_normal" title="hpcflow.app.ValueSequence.from_log_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_log_normal</span></code></a></p></td>
+<td><p>Build a sequence from a log-normal random number generator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_log_space" title="hpcflow.app.ValueSequence.from_log_space"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_log_space</span></code></a></p></td>
+<td><p>Build a sequence from a NumPy geometric space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_normal" title="hpcflow.app.ValueSequence.from_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_normal</span></code></a></p></td>
+<td><p>Build a sequence from a normal (Gaussian) random number generator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_random_uniform" title="hpcflow.app.ValueSequence.from_random_uniform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_random_uniform</span></code></a></p></td>
+<td><p>Build a sequence from a uniform random number generator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_range" title="hpcflow.app.ValueSequence.from_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_range</span></code></a></p></td>
+<td><p>Build a sequence from a NumPy range.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_rectangle" title="hpcflow.app.ValueSequence.from_rectangle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_rectangle</span></code></a></p></td>
+<td><p>Build a sequence from coordinates that cover the perimeter of a rectangle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.from_uniform" title="hpcflow.app.ValueSequence.from_uniform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_uniform</span></code></a></p></td>
+<td><p>Build a sequence from a uniform random number generator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.make_persistent" title="hpcflow.app.ValueSequence.make_persistent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_persistent</span></code></a></p></td>
+<td><p>Save value to a persistent workflow.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.to_dict" title="hpcflow.app.ValueSequence.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p>Serialize this object as a dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.to_json_like" title="hpcflow.app.ValueSequence.to_json_like"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json_like</span></code></a></p></td>
+<td><p>Serialize this object as an object structure that can be trivially converted to JSON.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.input_path" title="hpcflow.app.ValueSequence.input_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">input_path</span></code></a></p></td>
+<td><p>The path of the input sequence this is, if it is one.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.input_type" title="hpcflow.app.ValueSequence.input_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">input_type</span></code></a></p></td>
+<td><p>The type of input sequence this is, if it is one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.is_sub_value" title="hpcflow.app.ValueSequence.is_sub_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_sub_value</span></code></a></p></td>
+<td><p>True if the values are for a sub part of the parameter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.labelled_type" title="hpcflow.app.ValueSequence.labelled_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">labelled_type</span></code></a></p></td>
+<td><p>The labelled type of input sequence this is, if it is one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.normalised_inputs_path" title="hpcflow.app.ValueSequence.normalised_inputs_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalised_inputs_path</span></code></a></p></td>
+<td><p>The normalised path without the &quot;inputs&quot; prefix, if the sequence is an inputs sequence, else return None.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.normalised_path" title="hpcflow.app.ValueSequence.normalised_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalised_path</span></code></a></p></td>
+<td><p>The path to this sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.parameter" title="hpcflow.app.ValueSequence.parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameter</span></code></a></p></td>
+<td><p>The parameter this sequence supplies.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.path_split" title="hpcflow.app.ValueSequence.path_split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path_split</span></code></a></p></td>
+<td><p>The components of this path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.path_type" title="hpcflow.app.ValueSequence.path_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path_type</span></code></a></p></td>
+<td><p>The type of path this is.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.resource_scope" title="hpcflow.app.ValueSequence.resource_scope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resource_scope</span></code></a></p></td>
+<td><p>The scope of the resources this is, if it is one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.values" title="hpcflow.app.ValueSequence.values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values</span></code></a></p></td>
+<td><p>The values in this sequence.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.workflow" title="hpcflow.app.ValueSequence.workflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workflow</span></code></a></p></td>
+<td><p>The workflow containing this sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.path" title="hpcflow.app.ValueSequence.path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></a></p></td>
+<td><p>The path to this sequence.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.label" title="hpcflow.app.ValueSequence.label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">label</span></code></a></p></td>
+<td><p>The label of this sequence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.nesting_order" title="hpcflow.app.ValueSequence.nesting_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nesting_order</span></code></a></p></td>
+<td><p>The nesting order for this sequence.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hpcflow.app.ValueSequence.value_class_method" title="hpcflow.app.ValueSequence.value_class_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value_class_method</span></code></a></p></td>
+<td><p>Name of a method used to generate sequence values.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_file" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from data within a simple file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>Path</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_geometric_space">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_geometric_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endpoint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_geometric_space" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a NumPy geometric space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_json_like">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_like</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_json_like" title="Link to this definition">#</a></dt>
+<dd><p>Make an instance of this class from JSON (or YAML) data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_like</strong> – The data to deserialise.</p></li>
+<li><p><strong>shared_data</strong> – Shared context data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialised object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_linear_space">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_linear_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_linear_space" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a NumPy linear space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_load_txt">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_load_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_load_txt" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from data within a text file using Numpy’s <cite>loadtxt</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>Path</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_log_normal">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_log_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_log_normal" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a log-normal random number generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>)</p></li>
+<li><p><strong>mean</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>sigma</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_log_space">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_log_space</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endpoint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_log_space" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a NumPy geometric space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_normal">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_normal" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a normal (Gaussian) random number generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>)</p></li>
+<li><p><strong>loc</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>scale</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_random_uniform">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_random_uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_random_uniform" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a uniform random number generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>)</p></li>
+<li><p><strong>low</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>high</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_range">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_range" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a NumPy range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_rectangle">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_rectangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_rectangle" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from coordinates that cover the perimeter of a rectangle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coord</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>) – Which coordinate to use. Either 0, 1, or <cite>None</cite>, meaning each value will be
+both coordinates.</p></li>
+<li><p><strong>include</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – If specified, include only the specified edges. Choose from “top”, “right”,
+“bottom”, “left”.</p></li>
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>start</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>]</em>)</p></li>
+<li><p><strong>stop</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>]</em>)</p></li>
+<li><p><strong>num</strong> (<em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.from_uniform">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nesting_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_class_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.from_uniform" title="Link to this definition">#</a></dt>
+<dd><p>Build a sequence from a uniform random number generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>)</p></li>
+<li><p><strong>shape</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>Sequence</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>]</em>)</p></li>
+<li><p><strong>low</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>high</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a><em> | </em><em>None</em>)</p></li>
+<li><p><strong>nesting_order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>)</p></li>
+<li><p><strong>value_class_method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.input_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.input_path" title="Link to this definition">#</a></dt>
+<dd><p>The path of the input sequence this is, if it is one.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.input_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">input_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.input_type" title="Link to this definition">#</a></dt>
+<dd><p>The type of input sequence this is, if it is one.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.is_sub_value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_sub_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.is_sub_value" title="Link to this definition">#</a></dt>
+<dd><p>True if the values are for a sub part of the parameter.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.label">
+<span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#hpcflow.app.ValueSequence.label" title="Link to this definition">#</a></dt>
+<dd><p>The label of this sequence.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.labelled_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labelled_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.labelled_type" title="Link to this definition">#</a></dt>
+<dd><p>The labelled type of input sequence this is, if it is one.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.make_persistent">
+<span class="sig-name descname"><span class="pre">make_persistent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workflow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.make_persistent" title="Link to this definition">#</a></dt>
+<dd><p>Save value to a persistent workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workflow</strong> (<a class="reference internal" href="hpcflow.app.Workflow.html#hpcflow.app.Workflow" title="hpcflow.app.Workflow"><em>Workflow</em></a>)</p></li>
+<li><p><strong>source</strong> (<a class="reference internal" href="hpcflow.sdk.typing.ParamSource.html#hpcflow.sdk.typing.ParamSource" title="hpcflow.sdk.typing.ParamSource"><em>ParamSource</em></a>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)">int</a>], <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)">bool</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.nesting_order">
+<span class="sig-name descname"><span class="pre">nesting_order</span></span><a class="headerlink" href="#hpcflow.app.ValueSequence.nesting_order" title="Link to this definition">#</a></dt>
+<dd><p>The nesting order for this sequence.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.normalised_inputs_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normalised_inputs_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.normalised_inputs_path" title="Link to this definition">#</a></dt>
+<dd><p>The normalised path without the “inputs” prefix, if the sequence is an
+inputs sequence, else return None.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.normalised_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">normalised_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.normalised_path" title="Link to this definition">#</a></dt>
+<dd><p>The path to this sequence.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.parameter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="hpcflow.sdk.core.parameters.Parameter.html#hpcflow.sdk.core.parameters.Parameter" title="hpcflow.sdk.core.parameters.Parameter"><span class="pre">Parameter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.parameter" title="Link to this definition">#</a></dt>
+<dd><p>The parameter this sequence supplies.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.path">
+<span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#hpcflow.app.ValueSequence.path" title="Link to this definition">#</a></dt>
+<dd><p>The path to this sequence.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.path_split">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path_split</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#hpcflow.app.ValueSequence.path_split" title="Link to this definition">#</a></dt>
+<dd><p>The components of this path.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.path_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.path_type" title="Link to this definition">#</a></dt>
+<dd><p>The type of path this is.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.resource_scope">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resource_scope</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.resource_scope" title="Link to this definition">#</a></dt>
+<dd><p>The scope of the resources this is, if it is one.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.to_dict" title="Link to this definition">#</a></dt>
+<dd><p>Serialize this object as a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.to_json_like">
+<span class="sig-name descname"><span class="pre">to_json_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shared_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hpcflow.app.ValueSequence.to_json_like" title="Link to this definition">#</a></dt>
+<dd><p>Serialize this object as an object structure that can be trivially converted
+to JSON. Note that YAML can also be produced from the result of this method;
+it just requires a different final serialization step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dct</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em>, </em><em>JSONable</em><em>] </em><em>| </em><em>None</em>)</p></li>
+<li><p><strong>shared_data</strong> (<em>_JSONDeserState</em>)</p></li>
+<li><p><strong>exclude</strong> (<em>Container</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a><em> | </em><em>None</em><em>]</em>)</p></li>
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><em>list</em></a><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)">tuple</a>[JSONDocument, _JSONDeserState]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.value_class_method">
+<span class="sig-name descname"><span class="pre">value_class_method</span></span><a class="headerlink" href="#hpcflow.app.ValueSequence.value_class_method" title="Link to this definition">#</a></dt>
+<dd><p>Name of a method used to generate sequence values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.values">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">values</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.values" title="Link to this definition">#</a></dt>
+<dd><p>The values in this sequence.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hpcflow.app.ValueSequence.workflow">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">workflow</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="hpcflow.app.Workflow.html#hpcflow.app.Workflow" title="hpcflow.app.Workflow"><span class="pre">Workflow</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#hpcflow.app.ValueSequence.workflow" title="Link to this definition">#</a></dt>
+<dd><p>The workflow containing this sequence.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hpcflow.app.ValuePerturbation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hpcflow.app.ValuePerturbation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hpcflow.app.Workflow.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">hpcflow.app.Workflow</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence"><code class="docutils literal notranslate"><span class="pre">ValueSequence</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_file"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_geometric_space"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_geometric_space()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_json_like"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_linear_space"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_linear_space()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_load_txt"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_load_txt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_log_normal"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_log_normal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_log_space"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_log_space()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_normal"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_normal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_random_uniform"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_random_uniform()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_range"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_range()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_rectangle"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_rectangle()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.from_uniform"><code class="docutils literal notranslate"><span class="pre">ValueSequence.from_uniform()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.input_path"><code class="docutils literal notranslate"><span class="pre">ValueSequence.input_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.input_type"><code class="docutils literal notranslate"><span class="pre">ValueSequence.input_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.is_sub_value"><code class="docutils literal notranslate"><span class="pre">ValueSequence.is_sub_value</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.label"><code class="docutils literal notranslate"><span class="pre">ValueSequence.label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.labelled_type"><code class="docutils literal notranslate"><span class="pre">ValueSequence.labelled_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.make_persistent"><code class="docutils literal notranslate"><span class="pre">ValueSequence.make_persistent()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.nesting_order"><code class="docutils literal notranslate"><span class="pre">ValueSequence.nesting_order</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.normalised_inputs_path"><code class="docutils literal notranslate"><span class="pre">ValueSequence.normalised_inputs_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.normalised_path"><code class="docutils literal notranslate"><span class="pre">ValueSequence.normalised_path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.parameter"><code class="docutils literal notranslate"><span class="pre">ValueSequence.parameter</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.path"><code class="docutils literal notranslate"><span class="pre">ValueSequence.path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.path_split"><code class="docutils literal notranslate"><span class="pre">ValueSequence.path_split</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.path_type"><code class="docutils literal notranslate"><span class="pre">ValueSequence.path_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.resource_scope"><code class="docutils literal notranslate"><span class="pre">ValueSequence.resource_scope</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.to_dict"><code class="docutils literal notranslate"><span class="pre">ValueSequence.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.to_json_like"><code class="docutils literal notranslate"><span class="pre">ValueSequence.to_json_like()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.value_class_method"><code class="docutils literal notranslate"><span class="pre">ValueSequence.value_class_method</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.values"><code class="docutils literal notranslate"><span class="pre">ValueSequence.values</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hpcflow.app.ValueSequence.workflow"><code class="docutils literal notranslate"><span class="pre">ValueSequence.workflow</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/hpcflow/edit/develop/docs/source/reference/_autosummary/hpcflow.app.ValueSequence.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/reference/_autosummary/hpcflow.app.ValueSequence.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, hpcflow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

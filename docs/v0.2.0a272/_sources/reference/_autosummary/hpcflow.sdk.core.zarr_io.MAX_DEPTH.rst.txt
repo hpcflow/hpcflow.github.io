@@ -1,0 +1,6 @@
+hpcflow.sdk.core.zarr\_io.MAX\_DEPTH
+====================================
+
+.. currentmodule:: hpcflow.sdk.core.zarr_io
+
+.. autodata:: MAX_DEPTH
