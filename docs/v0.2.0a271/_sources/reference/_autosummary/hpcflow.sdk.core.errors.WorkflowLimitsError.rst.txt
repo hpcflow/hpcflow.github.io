@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.WorkflowLimitsError
+===========================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: WorkflowLimitsError

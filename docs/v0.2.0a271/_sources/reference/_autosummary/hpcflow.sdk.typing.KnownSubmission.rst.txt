@@ -1,0 +1,48 @@
+hpcflow.sdk.typing.KnownSubmission
+==================================
+
+.. currentmodule:: hpcflow.sdk.typing
+
+.. autoclass:: KnownSubmission
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~KnownSubmission.clear
+      ~KnownSubmission.copy
+      ~KnownSubmission.fromkeys
+      ~KnownSubmission.get
+      ~KnownSubmission.items
+      ~KnownSubmission.keys
+      ~KnownSubmission.pop
+      ~KnownSubmission.popitem
+      ~KnownSubmission.setdefault
+      ~KnownSubmission.update
+      ~KnownSubmission.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KnownSubmission.local_id
+      ~KnownSubmission.workflow_id
+      ~KnownSubmission.is_active
+      ~KnownSubmission.sub_idx
+      ~KnownSubmission.submit_time
+      ~KnownSubmission.path
+      ~KnownSubmission.start_time
+      ~KnownSubmission.end_time
+   
+   

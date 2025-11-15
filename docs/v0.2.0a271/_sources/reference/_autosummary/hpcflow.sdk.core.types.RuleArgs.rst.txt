@@ -1,0 +1,47 @@
+hpcflow.sdk.core.types.RuleArgs
+===============================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: RuleArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RuleArgs.clear
+      ~RuleArgs.copy
+      ~RuleArgs.fromkeys
+      ~RuleArgs.get
+      ~RuleArgs.items
+      ~RuleArgs.keys
+      ~RuleArgs.pop
+      ~RuleArgs.popitem
+      ~RuleArgs.setdefault
+      ~RuleArgs.update
+      ~RuleArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RuleArgs.check_exists
+      ~RuleArgs.check_missing
+      ~RuleArgs.path
+      ~RuleArgs.condition
+      ~RuleArgs.cast
+      ~RuleArgs.doc
+      ~RuleArgs.default
+   
+   
