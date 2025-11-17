@@ -1,0 +1,210 @@
+hpcflow.sdk.app.App
+===================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autoclass:: App
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~App.cache_all_data_files
+      ~App.cache_all_programs
+      ~App.cache_data_file
+      ~App.cache_file
+      ~App.cache_program
+      ~App.clear_data_cache_dir
+      ~App.clear_known_submissions_file
+      ~App.clear_program_cache_dir
+      ~App.clear_user_cache_dir
+      ~App.clear_user_cache_hostname_dir
+      ~App.clear_user_runtime_dir
+      ~App.configure_env
+      ~App.copy_cacheable_file
+      ~App.copy_data_file
+      ~App.copy_demo_workflow
+      ~App.copy_program
+      ~App.get_OS_supported_schedulers
+      ~App.get_config_path
+      ~App.get_data_file_path
+      ~App.get_data_files_manifest
+      ~App.get_data_manifest
+      ~App.get_demo_data_file_path
+      ~App.get_demo_workflow_template_file
+      ~App.get_info
+      ~App.get_parameter_task_schema_map
+      ~App.get_program_path
+      ~App.get_programs_manifest
+      ~App.get_scheduler
+      ~App.list_data_files
+      ~App.list_demo_workflows
+      ~App.list_programs
+      ~App.load_builtin_template_component_data
+      ~App.load_config
+      ~App.load_demo_workflow
+      ~App.load_template_components
+      ~App.perm_error_retry
+      ~App.read_known_submissions_file
+      ~App.redirect_std_to_file
+      ~App.reload_config
+      ~App.reload_template_components
+      ~App.reset_config
+      ~App.show_demo_workflow
+      ~App.template_components_from_json_like
+      ~App.unload_config
+      ~App.update_known_subs_file
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~App.API_logger
+      ~App.Action
+      ~App.ActionEnvironment
+      ~App.ActionRule
+      ~App.ActionScope
+      ~App.ActionScopeType
+      ~App.CLI_logger
+      ~App.Command
+      ~App.CommandFilesList
+      ~App.DirectPosix
+      ~App.DirectWindows
+      ~App.Element
+      ~App.ElementAction
+      ~App.ElementActionRun
+      ~App.ElementFilter
+      ~App.ElementGroup
+      ~App.ElementInputFiles
+      ~App.ElementInputs
+      ~App.ElementIteration
+      ~App.ElementOutputFiles
+      ~App.ElementOutputs
+      ~App.ElementParameter
+      ~App.ElementPropagation
+      ~App.ElementResources
+      ~App.ElementSet
+      ~App.Environment
+      ~App.EnvironmentsList
+      ~App.Executable
+      ~App.ExecutableInstance
+      ~App.ExecutablesList
+      ~App.FileNameExt
+      ~App.FileNameSpec
+      ~App.FileNameStem
+      ~App.FileSpec
+      ~App.GroupList
+      ~App.InputFileGenerator
+      ~App.InputSource
+      ~App.InputSourceType
+      ~App.InputValue
+      ~App.Jobscript
+      ~App.Loop
+      ~App.MultiPathSequence
+      ~App.NumCores
+      ~App.OutputFileParser
+      ~App.Parameter
+      ~App.ParameterValue
+      ~App.Parameters
+      ~App.ParametersList
+      ~App.QueuedScheduler
+      ~App.ResourceList
+      ~App.ResourceSpec
+      ~App.Rule
+      ~App.RunDirAppFiles
+      ~App.SGEPosix
+      ~App.SchemaInput
+      ~App.SchemaOutput
+      ~App.SchemaParameter
+      ~App.SlurmPosix
+      ~App.Submission
+      ~App.Task
+      ~App.TaskInputParameters
+      ~App.TaskList
+      ~App.TaskObjective
+      ~App.TaskOutputParameters
+      ~App.TaskSchema
+      ~App.TaskSchemasList
+      ~App.TaskSourceType
+      ~App.TaskTemplateList
+      ~App.ValueSequence
+      ~App.Workflow
+      ~App.WorkflowLoop
+      ~App.WorkflowLoopList
+      ~App.WorkflowTask
+      ~App.WorkflowTaskList
+      ~App.WorkflowTemplate
+      ~App.cancel
+      ~App.command_files
+      ~App.config
+      ~App.config_logger
+      ~App.data_cache_dir
+      ~App.envs
+      ~App.get_OS_info
+      ~App.get_known_submissions
+      ~App.get_shell_info
+      ~App.is_config_loaded
+      ~App.is_template_components_loaded
+      ~App.jinja_templates
+      ~App.known_subs_file_path
+      ~App.log
+      ~App.logger
+      ~App.make_and_submit_demo_workflow
+      ~App.make_and_submit_workflow
+      ~App.make_demo_workflow
+      ~App.make_workflow
+      ~App.parameters
+      ~App.persistence_logger
+      ~App.program_cache_dir
+      ~App.programs
+      ~App.run_hpcflow_tests
+      ~App.run_tests
+      ~App.run_time_info
+      ~App.runtime_info_logger
+      ~App.scheduler_lookup
+      ~App.scripts
+      ~App.show
+      ~App.show_legend
+      ~App.submission_logger
+      ~App.submit_workflow
+      ~App.task_schemas
+      ~App.template_components
+      ~App.timeit
+      ~App.user_cache_dir
+      ~App.user_cache_hostname_dir
+      ~App.user_data_dir
+      ~App.user_data_hostname_dir
+      ~App.user_runtime_dir
+      ~App.name
+      ~App.package_name
+      ~App.version
+      ~App.module
+      ~App.description
+      ~App.gh_org
+      ~App.gh_repo
+      ~App.config_options
+      ~App.pytest_args
+      ~App.scripts_dir
+      ~App.jinja_templates_dir
+      ~App.workflows_dir
+      ~App.data_manifest_dir
+      ~App.data_dir
+      ~App.program_dir
+      ~App.docs_import_conv
+      ~App.docs_url
+      ~App.encoders
+      ~App.decoders
+      ~App.cli
+   
+   

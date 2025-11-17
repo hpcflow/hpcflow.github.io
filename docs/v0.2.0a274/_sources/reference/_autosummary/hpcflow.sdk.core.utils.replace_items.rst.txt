@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.replace\_items
+=====================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: replace_items
