@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.write\_YAML\_file
-========================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: write_YAML_file

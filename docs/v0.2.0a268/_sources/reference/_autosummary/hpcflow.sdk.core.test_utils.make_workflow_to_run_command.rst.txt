@@ -1,6 +1,0 @@
-hpcflow.sdk.core.test\_utils.make\_workflow\_to\_run\_command
-=============================================================
-
-.. currentmodule:: hpcflow.sdk.core.test_utils
-
-.. autofunction:: make_workflow_to_run_command

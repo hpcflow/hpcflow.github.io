@@ -1,6 +1,0 @@
-hpcflow.sdk.config.types.ConfigDict
-===================================
-
-.. currentmodule:: hpcflow.sdk.config.types
-
-.. autodata:: ConfigDict

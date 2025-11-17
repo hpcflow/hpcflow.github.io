@@ -1,6 +1,0 @@
-hpcflow.sdk.scripting.register\_output\_parser
-==============================================
-
-.. currentmodule:: hpcflow.sdk.scripting
-
-.. autofunction:: register_output_parser

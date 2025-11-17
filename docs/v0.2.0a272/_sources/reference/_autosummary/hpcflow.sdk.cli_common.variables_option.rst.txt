@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.variables\_option
-=========================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: variables_option

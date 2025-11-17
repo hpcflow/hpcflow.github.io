@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.base.rename\_dir
-========================================
-
-.. currentmodule:: hpcflow.sdk.persistence.base
-
-.. autofunction:: rename_dir

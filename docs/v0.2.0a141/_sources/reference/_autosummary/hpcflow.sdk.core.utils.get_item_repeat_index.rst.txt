@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.get\_item\_repeat\_index
-===============================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: get_item_repeat_index

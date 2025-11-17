@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.ParametersMetadataReadOnlyError
-=======================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: ParametersMetadataReadOnlyError

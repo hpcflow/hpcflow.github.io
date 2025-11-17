@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.cli.get\_helper\_CLI
-=======================================
-
-.. currentmodule:: hpcflow.sdk.helper.cli
-
-.. autofunction:: get_helper_CLI

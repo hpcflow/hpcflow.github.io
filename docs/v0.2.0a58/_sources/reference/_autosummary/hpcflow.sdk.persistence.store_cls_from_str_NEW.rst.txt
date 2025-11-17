@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.store\_cls\_from\_str\_NEW
-==================================================
-
-.. currentmodule:: hpcflow.sdk.persistence
-
-.. autofunction:: store_cls_from_str_NEW

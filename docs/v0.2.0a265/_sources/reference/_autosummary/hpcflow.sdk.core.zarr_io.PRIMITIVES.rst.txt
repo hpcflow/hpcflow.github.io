@@ -1,6 +1,0 @@
-hpcflow.sdk.core.zarr\_io.PRIMITIVES
-====================================
-
-.. currentmodule:: hpcflow.sdk.core.zarr_io
-
-.. autodata:: PRIMITIVES

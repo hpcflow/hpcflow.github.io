@@ -1,6 +1,0 @@
-hpcflow.sdk.core.zarr\_io.zarr\_decode
-======================================
-
-.. currentmodule:: hpcflow.sdk.core.zarr_io
-
-.. autofunction:: zarr_decode

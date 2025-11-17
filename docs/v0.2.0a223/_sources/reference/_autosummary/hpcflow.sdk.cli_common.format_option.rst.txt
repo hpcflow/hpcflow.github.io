@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.format\_option
-======================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: format_option

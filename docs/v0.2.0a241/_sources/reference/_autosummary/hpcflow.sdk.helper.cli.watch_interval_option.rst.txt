@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.cli.watch\_interval\_option
-==============================================
-
-.. currentmodule:: hpcflow.sdk.helper.cli
-
-.. autofunction:: watch_interval_option

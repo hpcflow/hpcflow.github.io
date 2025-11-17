@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.helper.get\_helper\_watch\_list
-==================================================
-
-.. currentmodule:: hpcflow.sdk.helper.helper
-
-.. autofunction:: get_helper_watch_list

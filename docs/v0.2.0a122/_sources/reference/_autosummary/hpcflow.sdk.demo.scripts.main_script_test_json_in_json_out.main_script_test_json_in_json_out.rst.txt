@@ -1,6 +1,0 @@
-hpcflow.sdk.demo.scripts.main\_script\_test\_json\_in\_json\_out.main\_script\_test\_json\_in\_json\_out
-========================================================================================================
-
-.. currentmodule:: hpcflow.sdk.demo.scripts.main_script_test_json_in_json_out
-
-.. autofunction:: main_script_test_json_in_json_out

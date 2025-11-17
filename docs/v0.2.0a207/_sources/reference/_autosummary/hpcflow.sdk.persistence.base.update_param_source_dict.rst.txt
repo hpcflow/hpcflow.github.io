@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.base.update\_param\_source\_dict
-========================================================
-
-.. currentmodule:: hpcflow.sdk.persistence.base
-
-.. autofunction:: update_param_source_dict

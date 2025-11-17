@@ -1,6 +1,0 @@
-hpcflow.app.make\_demo\_workflow
-================================
-
-.. currentmodule:: hpcflow.app
-
-.. autofunction:: make_demo_workflow

@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.types.AnySParameter
-===========================================
-
-.. currentmodule:: hpcflow.sdk.persistence.types
-
-.. autodata:: AnySParameter

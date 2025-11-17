@@ -1,6 +1,0 @@
-hpcflow.sdk.submission.schedulers.utils.run\_cmd
-================================================
-
-.. currentmodule:: hpcflow.sdk.submission.schedulers.utils
-
-.. autofunction:: run_cmd

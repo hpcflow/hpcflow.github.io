@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.NotSubmitMachineError
-=============================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: NotSubmitMachineError

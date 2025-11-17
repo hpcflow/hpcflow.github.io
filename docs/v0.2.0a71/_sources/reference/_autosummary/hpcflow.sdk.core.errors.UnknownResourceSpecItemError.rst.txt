@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.UnknownResourceSpecItemError
-====================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: UnknownResourceSpecItemError

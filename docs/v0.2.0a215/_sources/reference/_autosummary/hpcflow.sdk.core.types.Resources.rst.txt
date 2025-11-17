@@ -1,6 +1,0 @@
-hpcflow.sdk.core.types.Resources
-================================
-
-.. currentmodule:: hpcflow.sdk.core.types
-
-.. autodata:: Resources

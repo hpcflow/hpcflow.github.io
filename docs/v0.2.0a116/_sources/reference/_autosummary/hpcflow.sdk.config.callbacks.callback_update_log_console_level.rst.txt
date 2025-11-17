@@ -1,6 +1,0 @@
-hpcflow.sdk.config.callbacks.callback\_update\_log\_console\_level
-==================================================================
-
-.. currentmodule:: hpcflow.sdk.config.callbacks
-
-.. autofunction:: callback_update_log_console_level

@@ -1,6 +1,0 @@
-hpcflow.app.make\_and\_submit\_demo\_workflow
-=============================================
-
-.. currentmodule:: hpcflow.app
-
-.. autofunction:: make_and_submit_demo_workflow

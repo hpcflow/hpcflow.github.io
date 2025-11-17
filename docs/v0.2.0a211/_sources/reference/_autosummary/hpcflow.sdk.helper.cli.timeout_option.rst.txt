@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.cli.timeout\_option
-======================================
-
-.. currentmodule:: hpcflow.sdk.helper.cli
-
-.. autofunction:: timeout_option

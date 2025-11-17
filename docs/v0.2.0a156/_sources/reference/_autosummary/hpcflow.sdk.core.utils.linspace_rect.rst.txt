@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.linspace\_rect
-=====================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: linspace_rect

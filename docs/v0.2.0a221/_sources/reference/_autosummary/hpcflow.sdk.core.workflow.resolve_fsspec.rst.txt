@@ -1,6 +1,0 @@
-hpcflow.sdk.core.workflow.resolve\_fsspec
-=========================================
-
-.. currentmodule:: hpcflow.sdk.core.workflow
-
-.. autofunction:: resolve_fsspec

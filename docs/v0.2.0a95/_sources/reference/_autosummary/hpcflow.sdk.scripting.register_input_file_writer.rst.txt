@@ -1,6 +1,0 @@
-hpcflow.sdk.scripting.register\_input\_file\_writer
-===================================================
-
-.. currentmodule:: hpcflow.sdk.scripting
-
-.. autofunction:: register_input_file_writer

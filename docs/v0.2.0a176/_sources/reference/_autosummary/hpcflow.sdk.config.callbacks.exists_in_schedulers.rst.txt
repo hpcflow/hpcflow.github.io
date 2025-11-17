@@ -1,6 +1,0 @@
-hpcflow.sdk.config.callbacks.exists\_in\_schedulers
-===================================================
-
-.. currentmodule:: hpcflow.sdk.config.callbacks
-
-.. autofunction:: exists_in_schedulers

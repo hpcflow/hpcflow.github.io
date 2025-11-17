@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.sub\_tasks\_callback
-============================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: sub_tasks_callback

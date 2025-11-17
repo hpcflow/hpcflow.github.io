@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.zip\_path\_opt
-======================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: zip_path_opt

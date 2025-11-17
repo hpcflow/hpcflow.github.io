@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.SubmissionEnvironmentError
-==================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: SubmissionEnvironmentError

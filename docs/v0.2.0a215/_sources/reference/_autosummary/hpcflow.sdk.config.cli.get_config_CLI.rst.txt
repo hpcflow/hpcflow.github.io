@@ -1,6 +1,0 @@
-hpcflow.sdk.config.cli.get\_config\_CLI
-=======================================
-
-.. currentmodule:: hpcflow.sdk.config.cli
-
-.. autofunction:: get_config_CLI

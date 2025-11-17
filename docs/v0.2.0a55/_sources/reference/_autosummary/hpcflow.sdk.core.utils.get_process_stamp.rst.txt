@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.get\_process\_stamp
-==========================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: get_process_stamp

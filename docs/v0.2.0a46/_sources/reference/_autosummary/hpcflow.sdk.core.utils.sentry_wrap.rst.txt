@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.sentry\_wrap
-===================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: sentry_wrap

@@ -1,6 +1,0 @@
-hpcflow.app.cancel
-==================
-
-.. currentmodule:: hpcflow.app
-
-.. autofunction:: cancel

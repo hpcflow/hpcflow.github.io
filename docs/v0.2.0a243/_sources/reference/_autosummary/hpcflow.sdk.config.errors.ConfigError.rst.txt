@@ -1,6 +1,0 @@
-hpcflow.sdk.config.errors.ConfigError
-=====================================
-
-.. currentmodule:: hpcflow.sdk.config.errors
-
-.. autoexception:: ConfigError

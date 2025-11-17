@@ -1,6 +1,0 @@
-hpcflow.sdk.config.errors.UnknownMetaTaskConstitutiveSchema
-===========================================================
-
-.. currentmodule:: hpcflow.sdk.config.errors
-
-.. autoexception:: UnknownMetaTaskConstitutiveSchema

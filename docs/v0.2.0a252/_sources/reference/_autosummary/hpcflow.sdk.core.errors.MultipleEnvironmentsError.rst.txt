@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.MultipleEnvironmentsError
-=================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: MultipleEnvironmentsError

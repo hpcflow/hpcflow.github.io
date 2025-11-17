@@ -1,6 +1,0 @@
-hpcflow.sdk.config.callbacks.callback\_vars
-===========================================
-
-.. currentmodule:: hpcflow.sdk.config.callbacks
-
-.. autofunction:: callback_vars

@@ -1,6 +1,0 @@
-hpcflow.sdk.cli.parse\_jobscript\_wait\_spec
-============================================
-
-.. currentmodule:: hpcflow.sdk.cli
-
-.. autofunction:: parse_jobscript_wait_spec

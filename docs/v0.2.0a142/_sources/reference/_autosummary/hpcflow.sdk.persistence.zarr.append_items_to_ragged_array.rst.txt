@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.zarr.append\_items\_to\_ragged\_array
-=============================================================
-
-.. currentmodule:: hpcflow.sdk.persistence.zarr
-
-.. autofunction:: append_items_to_ragged_array

@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.capitalise\_first\_letter
-================================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: capitalise_first_letter

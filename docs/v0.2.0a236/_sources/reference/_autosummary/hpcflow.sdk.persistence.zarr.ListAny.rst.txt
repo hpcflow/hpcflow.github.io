@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.zarr.ListAny
-====================================
-
-.. currentmodule:: hpcflow.sdk.persistence.zarr
-
-.. autodata:: ListAny

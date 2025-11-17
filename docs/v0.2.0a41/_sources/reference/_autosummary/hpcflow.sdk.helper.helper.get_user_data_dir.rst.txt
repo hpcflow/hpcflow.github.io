@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.helper.get\_user\_data\_dir
-==============================================
-
-.. currentmodule:: hpcflow.sdk.helper.helper
-
-.. autofunction:: get_user_data_dir

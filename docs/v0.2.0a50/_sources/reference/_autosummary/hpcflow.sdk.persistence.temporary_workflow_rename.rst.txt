@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.temporary\_workflow\_rename
-===================================================
-
-.. currentmodule:: hpcflow.sdk.persistence
-
-.. autofunction:: temporary_workflow_rename

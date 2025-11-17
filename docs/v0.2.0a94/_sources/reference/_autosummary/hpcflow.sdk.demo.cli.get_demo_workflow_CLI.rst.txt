@@ -1,6 +1,0 @@
-hpcflow.sdk.demo.cli.get\_demo\_workflow\_CLI
-=============================================
-
-.. currentmodule:: hpcflow.sdk.demo.cli
-
-.. autofunction:: get_demo_workflow_CLI

@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.nth\_value
-=================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: nth_value

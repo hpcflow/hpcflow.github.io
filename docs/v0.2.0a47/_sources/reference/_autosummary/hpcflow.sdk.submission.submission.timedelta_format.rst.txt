@@ -1,6 +1,0 @@
-hpcflow.sdk.submission.submission.timedelta\_format
-===================================================
-
-.. currentmodule:: hpcflow.sdk.submission.submission
-
-.. autofunction:: timedelta_format

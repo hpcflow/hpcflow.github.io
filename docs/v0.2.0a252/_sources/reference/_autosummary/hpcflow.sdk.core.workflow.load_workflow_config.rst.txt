@@ -1,6 +1,0 @@
-hpcflow.sdk.core.workflow.load\_workflow\_config
-================================================
-
-.. currentmodule:: hpcflow.sdk.core.workflow
-
-.. autofunction:: load_workflow_config

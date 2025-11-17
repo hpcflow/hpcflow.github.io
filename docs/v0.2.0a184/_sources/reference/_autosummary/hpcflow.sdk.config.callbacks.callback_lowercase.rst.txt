@@ -1,6 +1,0 @@
-hpcflow.sdk.config.callbacks.callback\_lowercase
-================================================
-
-.. currentmodule:: hpcflow.sdk.config.callbacks
-
-.. autofunction:: callback_lowercase

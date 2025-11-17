@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.types.AnySTask
-======================================
-
-.. currentmodule:: hpcflow.sdk.persistence.types
-
-.. autodata:: AnySTask

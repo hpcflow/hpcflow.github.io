@@ -1,6 +1,0 @@
-hpcflow.sdk.submission.jobscript.group\_resource\_map\_into\_jobscripts
-=======================================================================
-
-.. currentmodule:: hpcflow.sdk.submission.jobscript
-
-.. autofunction:: group_resource_map_into_jobscripts

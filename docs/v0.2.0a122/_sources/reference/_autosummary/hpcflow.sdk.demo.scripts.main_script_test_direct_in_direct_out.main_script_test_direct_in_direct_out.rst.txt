@@ -1,6 +1,0 @@
-hpcflow.sdk.demo.scripts.main\_script\_test\_direct\_in\_direct\_out.main\_script\_test\_direct\_in\_direct\_out
-================================================================================================================
-
-.. currentmodule:: hpcflow.sdk.demo.scripts.main_script_test_direct_in_direct_out
-
-.. autofunction:: main_script_test_direct_in_direct_out

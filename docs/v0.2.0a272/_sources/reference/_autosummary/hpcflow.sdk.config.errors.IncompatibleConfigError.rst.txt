@@ -1,6 +1,0 @@
-hpcflow.sdk.config.errors.IncompatibleConfigError
-=================================================
-
-.. currentmodule:: hpcflow.sdk.config.errors
-
-.. autoexception:: IncompatibleConfigError

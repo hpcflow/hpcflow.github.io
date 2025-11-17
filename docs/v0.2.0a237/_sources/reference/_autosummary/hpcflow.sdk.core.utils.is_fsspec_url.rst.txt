@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.is\_fsspec\_url
-======================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: is_fsspec_url

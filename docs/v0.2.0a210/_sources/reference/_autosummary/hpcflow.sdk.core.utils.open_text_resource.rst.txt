@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.open\_text\_resource
-===========================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: open_text_resource

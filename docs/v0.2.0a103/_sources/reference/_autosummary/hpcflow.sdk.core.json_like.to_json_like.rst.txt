@@ -1,6 +1,0 @@
-hpcflow.sdk.core.json\_like.to\_json\_like
-==========================================
-
-.. currentmodule:: hpcflow.sdk.core.json_like
-
-.. autofunction:: to_json_like

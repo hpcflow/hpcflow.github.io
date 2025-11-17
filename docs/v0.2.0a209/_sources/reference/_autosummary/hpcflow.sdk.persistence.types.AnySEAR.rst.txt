@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.types.AnySEAR
-=====================================
-
-.. currentmodule:: hpcflow.sdk.persistence.types
-
-.. autodata:: AnySEAR

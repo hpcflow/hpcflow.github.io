@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.check\_in\_object\_list
-==============================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: check_in_object_list

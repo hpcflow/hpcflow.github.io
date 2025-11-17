@@ -1,6 +1,0 @@
-hpcflow.sdk.core.test\_utils.make\_workflow
-===========================================
-
-.. currentmodule:: hpcflow.sdk.core.test_utils
-
-.. autofunction:: make_workflow

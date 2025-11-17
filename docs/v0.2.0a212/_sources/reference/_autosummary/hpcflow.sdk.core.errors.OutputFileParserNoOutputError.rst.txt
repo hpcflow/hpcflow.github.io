@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.OutputFileParserNoOutputError
-=====================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: OutputFileParserNoOutputError

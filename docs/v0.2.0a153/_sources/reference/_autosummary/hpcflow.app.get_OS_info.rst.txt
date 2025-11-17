@@ -1,6 +1,0 @@
-hpcflow.app.get\_OS\_info
-=========================
-
-.. currentmodule:: hpcflow.app
-
-.. autofunction:: get_OS_info

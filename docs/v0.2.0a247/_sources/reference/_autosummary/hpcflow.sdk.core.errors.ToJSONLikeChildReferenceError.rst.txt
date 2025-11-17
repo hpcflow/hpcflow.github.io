@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.ToJSONLikeChildReferenceError
-=====================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: ToJSONLikeChildReferenceError

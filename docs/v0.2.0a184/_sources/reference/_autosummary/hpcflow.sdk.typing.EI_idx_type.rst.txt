@@ -1,6 +1,0 @@
-hpcflow.sdk.typing.EI\_idx\_type
-================================
-
-.. currentmodule:: hpcflow.sdk.typing
-
-.. autodata:: EI_idx_type

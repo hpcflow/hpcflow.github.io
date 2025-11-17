@@ -1,6 +1,0 @@
-hpcflow.sdk.typing.PathLike
-===========================
-
-.. currentmodule:: hpcflow.sdk.typing
-
-.. autodata:: PathLike

@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.add\_to\_known\_opt
-===========================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: add_to_known_opt

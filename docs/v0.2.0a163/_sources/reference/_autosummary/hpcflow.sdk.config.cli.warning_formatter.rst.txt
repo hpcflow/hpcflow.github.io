@@ -1,6 +1,0 @@
-hpcflow.sdk.config.cli.warning\_formatter
-=========================================
-
-.. currentmodule:: hpcflow.sdk.config.cli
-
-.. autofunction:: warning_formatter

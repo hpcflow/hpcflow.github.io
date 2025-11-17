@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.helper.stop\_helper
-======================================
-
-.. currentmodule:: hpcflow.sdk.helper.helper
-
-.. autofunction:: stop_helper

@@ -1,6 +1,0 @@
-hpcflow.sdk.app.get\_app\_attribute
-===================================
-
-.. currentmodule:: hpcflow.sdk.app
-
-.. autofunction:: get_app_attribute

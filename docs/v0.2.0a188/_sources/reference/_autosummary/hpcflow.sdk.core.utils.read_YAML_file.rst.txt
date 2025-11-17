@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.read\_YAML\_file
-=======================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: read_YAML_file

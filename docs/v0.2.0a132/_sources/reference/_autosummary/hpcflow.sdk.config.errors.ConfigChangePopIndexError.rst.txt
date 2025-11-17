@@ -1,6 +1,0 @@
-hpcflow.sdk.config.errors.ConfigChangePopIndexError
-===================================================
-
-.. currentmodule:: hpcflow.sdk.config.errors
-
-.. autoexception:: ConfigChangePopIndexError

@@ -1,6 +1,0 @@
-hpcflow.sdk.config.errors.ConfigValidationError
-===============================================
-
-.. currentmodule:: hpcflow.sdk.config.errors
-
-.. autoexception:: ConfigValidationError

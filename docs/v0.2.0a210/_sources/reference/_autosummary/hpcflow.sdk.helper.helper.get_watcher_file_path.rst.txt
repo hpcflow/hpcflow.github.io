@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.helper.get\_watcher\_file\_path
-==================================================
-
-.. currentmodule:: hpcflow.sdk.helper.helper
-
-.. autofunction:: get_watcher_file_path

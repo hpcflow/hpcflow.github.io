@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.utils.infer\_store
-==========================================
-
-.. currentmodule:: hpcflow.sdk.persistence.utils
-
-.. autofunction:: infer_store

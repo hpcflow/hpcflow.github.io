@@ -1,6 +1,0 @@
-hpcflow.sdk.submission.shells.DEFAULT\_SHELL\_NAMES
-===================================================
-
-.. currentmodule:: hpcflow.sdk.submission.shells
-
-.. autodata:: DEFAULT_SHELL_NAMES

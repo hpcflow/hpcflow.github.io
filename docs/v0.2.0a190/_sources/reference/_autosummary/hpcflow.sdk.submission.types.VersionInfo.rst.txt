@@ -1,6 +1,0 @@
-hpcflow.sdk.submission.types.VersionInfo
-========================================
-
-.. currentmodule:: hpcflow.sdk.submission.types
-
-.. autodata:: VersionInfo

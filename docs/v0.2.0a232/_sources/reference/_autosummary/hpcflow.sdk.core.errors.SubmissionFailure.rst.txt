@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.SubmissionFailure
-=========================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: SubmissionFailure

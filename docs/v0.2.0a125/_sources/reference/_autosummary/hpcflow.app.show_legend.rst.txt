@@ -1,6 +1,0 @@
-hpcflow.app.show\_legend
-========================
-
-.. currentmodule:: hpcflow.app
-
-.. autofunction:: show_legend

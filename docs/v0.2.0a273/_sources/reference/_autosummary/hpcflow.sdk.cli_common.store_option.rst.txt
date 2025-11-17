@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.store\_option
-=====================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: store_option

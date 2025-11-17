@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.timedelta\_parse
-=======================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: timedelta_parse

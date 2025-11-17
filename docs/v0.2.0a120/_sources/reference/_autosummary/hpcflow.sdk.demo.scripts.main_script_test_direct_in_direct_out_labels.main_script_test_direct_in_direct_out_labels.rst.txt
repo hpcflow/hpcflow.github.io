@@ -1,6 +1,0 @@
-hpcflow.sdk.demo.scripts.main\_script\_test\_direct\_in\_direct\_out\_labels.main\_script\_test\_direct\_in\_direct\_out\_labels
-================================================================================================================================
-
-.. currentmodule:: hpcflow.sdk.demo.scripts.main_script_test_direct_in_direct_out_labels
-
-.. autofunction:: main_script_test_direct_in_direct_out_labels

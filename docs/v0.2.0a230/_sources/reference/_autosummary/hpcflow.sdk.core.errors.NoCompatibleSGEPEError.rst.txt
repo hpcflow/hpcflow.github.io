@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.NoCompatibleSGEPEError
-==============================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: NoCompatibleSGEPEError

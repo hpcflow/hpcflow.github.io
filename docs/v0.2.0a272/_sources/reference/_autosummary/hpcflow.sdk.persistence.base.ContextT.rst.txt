@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.base.ContextT
-=====================================
-
-.. currentmodule:: hpcflow.sdk.persistence.base
-
-.. autodata:: ContextT

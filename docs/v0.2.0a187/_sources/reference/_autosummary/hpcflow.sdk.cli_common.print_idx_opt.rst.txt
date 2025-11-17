@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.print\_idx\_opt
-=======================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: print_idx_opt

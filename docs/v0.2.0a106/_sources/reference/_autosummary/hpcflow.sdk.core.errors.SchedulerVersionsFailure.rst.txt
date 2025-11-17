@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.SchedulerVersionsFailure
-================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: SchedulerVersionsFailure

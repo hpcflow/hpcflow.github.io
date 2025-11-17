@@ -1,6 +1,0 @@
-hpcflow.sdk.core.actions.ACTION\_SCOPE\_ALLOWED\_KWARGS
-=======================================================
-
-.. currentmodule:: hpcflow.sdk.core.actions
-
-.. autodata:: ACTION_SCOPE_ALLOWED_KWARGS

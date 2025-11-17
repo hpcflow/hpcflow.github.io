@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.set\_in\_container
-=========================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: set_in_container

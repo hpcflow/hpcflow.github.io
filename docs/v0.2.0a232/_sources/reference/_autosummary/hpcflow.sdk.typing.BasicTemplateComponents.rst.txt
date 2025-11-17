@@ -1,6 +1,0 @@
-hpcflow.sdk.typing.BasicTemplateComponents
-==========================================
-
-.. currentmodule:: hpcflow.sdk.typing
-
-.. autodata:: BasicTemplateComponents

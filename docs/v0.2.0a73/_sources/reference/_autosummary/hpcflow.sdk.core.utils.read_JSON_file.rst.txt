@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.read\_JSON\_file
-=======================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: read_JSON_file

@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.IncompatibleSLURMPartitionError
-=======================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: IncompatibleSLURMPartitionError

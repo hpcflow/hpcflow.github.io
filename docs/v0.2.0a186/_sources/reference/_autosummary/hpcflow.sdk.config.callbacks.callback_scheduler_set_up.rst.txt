@@ -1,6 +1,0 @@
-hpcflow.sdk.config.callbacks.callback\_scheduler\_set\_up
-=========================================================
-
-.. currentmodule:: hpcflow.sdk.config.callbacks
-
-.. autofunction:: callback_scheduler_set_up

@@ -1,6 +1,0 @@
-hpcflow.sdk.helper.helper.kill\_proc\_tree
-==========================================
-
-.. currentmodule:: hpcflow.sdk.helper.helper
-
-.. autofunction:: kill_proc_tree

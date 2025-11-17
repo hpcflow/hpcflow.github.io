@@ -1,6 +1,0 @@
-hpcflow.sdk.persistence.discovery.store\_cls\_from\_str
-=======================================================
-
-.. currentmodule:: hpcflow.sdk.persistence.discovery
-
-.. autofunction:: store_cls_from_str

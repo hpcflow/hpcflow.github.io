@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.get\_in\_container
-=========================================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: get_in_container

@@ -1,6 +1,0 @@
-hpcflow.sdk.cli\_common.make\_status\_opt
-=========================================
-
-.. currentmodule:: hpcflow.sdk.cli_common
-
-.. autofunction:: make_status_opt

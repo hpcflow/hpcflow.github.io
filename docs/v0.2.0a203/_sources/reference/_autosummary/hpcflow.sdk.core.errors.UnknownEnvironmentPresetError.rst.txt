@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.UnknownEnvironmentPresetError
-=====================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: UnknownEnvironmentPresetError

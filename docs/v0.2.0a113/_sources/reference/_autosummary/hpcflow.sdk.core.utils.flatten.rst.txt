@@ -1,6 +1,0 @@
-hpcflow.sdk.core.utils.flatten
-==============================
-
-.. currentmodule:: hpcflow.sdk.core.utils
-
-.. autofunction:: flatten

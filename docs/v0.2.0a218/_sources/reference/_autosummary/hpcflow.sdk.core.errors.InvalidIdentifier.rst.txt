@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.InvalidIdentifier
-=========================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: InvalidIdentifier

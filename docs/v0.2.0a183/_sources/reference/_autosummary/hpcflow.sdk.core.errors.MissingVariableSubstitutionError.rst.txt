@@ -1,6 +1,0 @@
-hpcflow.sdk.core.errors.MissingVariableSubstitutionError
-========================================================
-
-.. currentmodule:: hpcflow.sdk.core.errors
-
-.. autoexception:: MissingVariableSubstitutionError

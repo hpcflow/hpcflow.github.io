@@ -1,6 +1,0 @@
-hpcflow.sdk.core.test\_utils.Strs
-=================================
-
-.. currentmodule:: hpcflow.sdk.core.test_utils
-
-.. autodata:: Strs
