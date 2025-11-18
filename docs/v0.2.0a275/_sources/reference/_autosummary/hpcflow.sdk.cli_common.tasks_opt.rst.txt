@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.tasks\_opt
+==================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: tasks_opt
