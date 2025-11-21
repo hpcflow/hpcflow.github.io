@@ -1,0 +1,6 @@
+hpcflow.sdk.config.callbacks.callback\_deprecation\_demo\_data\_manifest\_file
+==============================================================================
+
+.. currentmodule:: hpcflow.sdk.config.callbacks
+
+.. autofunction:: callback_deprecation_demo_data_manifest_file
