@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.WorkflowSpecValidationError
+===================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: WorkflowSpecValidationError
