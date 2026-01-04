@@ -1,0 +1,113 @@
+hpcflow.sdk.core.errors
+=======================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.core.errors
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      format_problem
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+      :toctree:
+   
+      ActionEnvironmentMissingNameError
+      ActionInputHasNoSource
+      ActionOutputNotSchemaOutput
+      CompactException
+      ContainerKeyError
+      DuplicateExecutableError
+      EnvironmentPresetUnknownEnvironmentError
+      ExtraInputs
+      InapplicableInputSourceElementIters
+      IncompatibleParallelModeError
+      IncompatibleSGEPEError
+      IncompatibleSLURMArgumentsError
+      IncompatibleSLURMPartitionError
+      InvalidIdentifier
+      InvalidInputSourceTaskReference
+      JobscriptSubmissionFailure
+      LoopAlreadyExistsError
+      LoopTaskSubsetError
+      MalformedNestingOrderPath
+      MalformedParameterPathError
+      MalformedWorkflowError
+      MayNeedObjectError
+      MissingCompatibleActionEnvironment
+      MissingElementGroup
+      MissingEnvironmentError
+      MissingEnvironmentExecutableError
+      MissingEnvironmentExecutableInstanceError
+      MissingInputs
+      MissingParameterData
+      MissingStoreEARError
+      MissingStoreElementError
+      MissingStoreElementIterationError
+      MissingStoreTaskError
+      MissingVariableSubstitutionError
+      MultipleEnvironmentsError
+      NoAvailableElementSetsError
+      NoCLIFormatMethodError
+      NoCoincidentInputSources
+      NoCompatibleSGEPEError
+      NotSubmitMachineError
+      OutputFileParserNoOutputError
+      ParametersMetadataReadOnlyError
+      ResourceValidationError
+      RunNotAbortableError
+      SubmissionEnvironmentError
+      SubmissionFailure
+      TaskSchemaExtraInputs
+      TaskSchemaMissingActionOutputs
+      TaskSchemaValidationError
+      TaskTemplateInvalidNesting
+      TaskTemplateMultipleInputValues
+      TaskTemplateMultipleSchemaObjectives
+      TaskTemplateUnexpectedInput
+      TaskTemplateUnexpectedSequenceInput
+      UnavailableInputSource
+      UnknownActionDataKey
+      UnknownActionDataParameter
+      UnknownEnvironmentPresetError
+      UnknownResourceSpecItemError
+      UnknownSGEPEError
+      UnknownSLURMPartitionError
+      UnrequiredInputSources
+      UnsetParameterDataError
+      UnsetParameterDataErrorBase
+      UnsetParameterFractionLimitExceededError
+      UnsetParameterNumberLimitExceededError
+      UnsupportedActionDataFormat
+      UnsupportedOSError
+      UnsupportedSchedulerError
+      UnsupportedShellError
+      WorkflowNotFoundError
+      WorkflowSubmissionFailure
+      YAMLError
+   
+   
+
+
+

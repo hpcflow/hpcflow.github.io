@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.format\_problem
+=======================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autofunction:: format_problem

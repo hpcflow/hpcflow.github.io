@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.batch\_warnings
+=========================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autofunction:: batch_warnings
