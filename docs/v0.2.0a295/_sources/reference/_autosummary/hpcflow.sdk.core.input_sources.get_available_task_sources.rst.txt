@@ -1,0 +1,6 @@
+hpcflow.sdk.core.input\_sources.get\_available\_task\_sources
+=============================================================
+
+.. currentmodule:: hpcflow.sdk.core.input_sources
+
+.. autofunction:: get_available_task_sources
