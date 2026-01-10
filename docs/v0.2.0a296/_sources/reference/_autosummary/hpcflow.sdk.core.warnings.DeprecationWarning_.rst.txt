@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.DeprecationWarning\_
+==============================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autoexception:: DeprecationWarning_
