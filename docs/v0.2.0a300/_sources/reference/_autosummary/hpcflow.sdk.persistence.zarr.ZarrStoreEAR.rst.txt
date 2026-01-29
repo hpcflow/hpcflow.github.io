@@ -1,0 +1,51 @@
+hpcflow.sdk.persistence.zarr.ZarrStoreEAR
+=========================================
+
+.. currentmodule:: hpcflow.sdk.persistence.zarr
+
+.. autoclass:: ZarrStoreEAR
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ZarrStoreEAR.decode
+      ~ZarrStoreEAR.encode
+      ~ZarrStoreEAR.to_dict
+      ~ZarrStoreEAR.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZarrStoreEAR.commands_file_ID
+      ~ZarrStoreEAR.end_time
+      ~ZarrStoreEAR.exit_code
+      ~ZarrStoreEAR.metadata
+      ~ZarrStoreEAR.port_number
+      ~ZarrStoreEAR.run_hostname
+      ~ZarrStoreEAR.skip
+      ~ZarrStoreEAR.snapshot_end
+      ~ZarrStoreEAR.snapshot_start
+      ~ZarrStoreEAR.start_time
+      ~ZarrStoreEAR.submission_idx
+      ~ZarrStoreEAR.success
+      ~ZarrStoreEAR.id_
+      ~ZarrStoreEAR.is_pending
+      ~ZarrStoreEAR.elem_iter_ID
+      ~ZarrStoreEAR.action_idx
+      ~ZarrStoreEAR.commands_idx
+      ~ZarrStoreEAR.data_idx
+   
+   
