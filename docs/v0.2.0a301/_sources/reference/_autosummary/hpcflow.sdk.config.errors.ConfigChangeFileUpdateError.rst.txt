@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigChangeFileUpdateError
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigChangeFileUpdateError

@@ -1,0 +1,51 @@
+hpcflow.sdk.typing.ParamSource
+==============================
+
+.. currentmodule:: hpcflow.sdk.typing
+
+.. autoclass:: ParamSource
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ParamSource.clear
+      ~ParamSource.copy
+      ~ParamSource.fromkeys
+      ~ParamSource.get
+      ~ParamSource.items
+      ~ParamSource.keys
+      ~ParamSource.pop
+      ~ParamSource.popitem
+      ~ParamSource.setdefault
+      ~ParamSource.update
+      ~ParamSource.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ParamSource.type
+      ~ParamSource.EAR_ID
+      ~ParamSource.task_insert_ID
+      ~ParamSource.action_idx
+      ~ParamSource.element_idx
+      ~ParamSource.element_set_idx
+      ~ParamSource.run_idx
+      ~ParamSource.sequence_idx
+      ~ParamSource.task_idx
+      ~ParamSource.value_class_method
+      ~ParamSource.import_ID
+   
+   
