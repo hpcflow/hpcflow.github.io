@@ -1,0 +1,6 @@
+hpcflow.sdk.core.object\_list.DotAccessAttributeError
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.core.object_list
+
+.. autoexception:: DotAccessAttributeError

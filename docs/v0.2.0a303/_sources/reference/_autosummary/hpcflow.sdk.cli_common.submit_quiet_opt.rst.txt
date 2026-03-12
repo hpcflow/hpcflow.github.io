@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.submit\_quiet\_opt
+==========================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: submit_quiet_opt
