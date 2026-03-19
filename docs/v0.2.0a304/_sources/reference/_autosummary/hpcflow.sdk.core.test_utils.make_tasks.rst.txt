@@ -1,0 +1,6 @@
+hpcflow.sdk.core.test\_utils.make\_tasks
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.test_utils
+
+.. autofunction:: make_tasks
