@@ -1,0 +1,47 @@
+hpcflow.sdk.submission.types
+============================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.submission.types
+
+   
+   
+   .. rubric:: Module attributes
+
+   .. autosummary::
+      :toctree:
+   
+      VersionInfo
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      JobScriptCreationArguments
+      JobScriptDescriptor
+      JobscriptHeaderArgs
+      ResolvedJobscriptBlockDependencies
+      SchedulerRef
+      SubmissionPart
+   
+   
+
+   
+   
+   
+
+
+
