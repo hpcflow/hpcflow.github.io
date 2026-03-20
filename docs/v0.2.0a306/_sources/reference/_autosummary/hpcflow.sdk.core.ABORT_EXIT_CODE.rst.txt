@@ -1,0 +1,6 @@
+hpcflow.sdk.core.ABORT\_EXIT\_CODE
+==================================
+
+.. currentmodule:: hpcflow.sdk.core
+
+.. autodata:: ABORT_EXIT_CODE

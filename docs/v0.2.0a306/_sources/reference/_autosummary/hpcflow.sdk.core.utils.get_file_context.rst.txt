@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.get\_file\_context
+=========================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: get_file_context
