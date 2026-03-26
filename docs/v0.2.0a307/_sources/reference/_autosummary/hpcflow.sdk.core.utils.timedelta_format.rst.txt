@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.timedelta\_format
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: timedelta_format

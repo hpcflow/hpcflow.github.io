@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigFileInvocationIncompatibleError
+===============================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigFileInvocationIncompatibleError
