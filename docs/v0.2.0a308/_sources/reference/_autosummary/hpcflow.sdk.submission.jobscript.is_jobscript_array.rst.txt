@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.jobscript.is\_jobscript\_array
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript
+
+.. autofunction:: is_jobscript_array

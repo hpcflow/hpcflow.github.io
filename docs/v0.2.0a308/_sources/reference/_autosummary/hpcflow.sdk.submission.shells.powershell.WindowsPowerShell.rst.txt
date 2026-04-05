@@ -1,0 +1,71 @@
+hpcflow.sdk.submission.shells.powershell.WindowsPowerShell
+==========================================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells.powershell
+
+.. autoclass:: WindowsPowerShell
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WindowsPowerShell.format_array
+      ~WindowsPowerShell.format_array_get_item
+      ~WindowsPowerShell.format_commands_file
+      ~WindowsPowerShell.format_env_var_get
+      ~WindowsPowerShell.format_save_parameter
+      ~WindowsPowerShell.format_source_functions_file
+      ~WindowsPowerShell.format_stream_assignment
+      ~WindowsPowerShell.get_command_file_launch_command
+      ~WindowsPowerShell.get_direct_submit_command
+      ~WindowsPowerShell.get_version_info
+      ~WindowsPowerShell.get_wait_command
+      ~WindowsPowerShell.prepare_JS_path
+      ~WindowsPowerShell.prepare_element_run_dirs
+      ~WindowsPowerShell.process_JS_header_args
+      ~WindowsPowerShell.process_app_invoc_executable
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WindowsPowerShell.executable_args
+      ~WindowsPowerShell.os_args
+      ~WindowsPowerShell.DEFAULT_EXE
+      ~WindowsPowerShell.JS_ACT_MULTI
+      ~WindowsPowerShell.JS_ACT_SINGLE
+      ~WindowsPowerShell.JS_BLOCK_HEADER
+      ~WindowsPowerShell.JS_BLOCK_LOOP
+      ~WindowsPowerShell.JS_DIRECT_HEADER
+      ~WindowsPowerShell.JS_ELEMENT_MULTI_LOOP
+      ~WindowsPowerShell.JS_ELEMENT_SINGLE
+      ~WindowsPowerShell.JS_ENV_SETUP_INDENT
+      ~WindowsPowerShell.JS_EXT
+      ~WindowsPowerShell.JS_FOOTER
+      ~WindowsPowerShell.JS_FUNCS
+      ~WindowsPowerShell.JS_HEADER
+      ~WindowsPowerShell.JS_INDENT
+      ~WindowsPowerShell.JS_MAIN
+      ~WindowsPowerShell.JS_RUN
+      ~WindowsPowerShell.JS_RUN_CMD
+      ~WindowsPowerShell.JS_RUN_CMD_COMBINED
+      ~WindowsPowerShell.JS_RUN_LOG_PATH_DISABLE
+      ~WindowsPowerShell.JS_RUN_LOG_PATH_ENABLE
+      ~WindowsPowerShell.JS_SHEBANG
+      ~WindowsPowerShell.executable
+      ~WindowsPowerShell.shebang_executable
+      ~WindowsPowerShell.JS_SCHEDULER_HEADER
+      ~WindowsPowerShell.JS_ELEMENT_MULTI_ARRAY
+   
+   
