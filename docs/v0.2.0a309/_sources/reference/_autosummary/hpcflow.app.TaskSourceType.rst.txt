@@ -1,0 +1,33 @@
+hpcflow.app.TaskSourceType
+==========================
+
+.. currentmodule:: hpcflow.app
+
+.. autoclass:: TaskSourceType
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TaskSourceType.names
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskSourceType.INPUT
+      ~TaskSourceType.OUTPUT
+      ~TaskSourceType.ANY
+   
+   

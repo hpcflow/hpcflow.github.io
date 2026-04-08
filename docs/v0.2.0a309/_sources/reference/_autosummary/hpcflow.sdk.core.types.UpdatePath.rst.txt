@@ -1,0 +1,42 @@
+hpcflow.sdk.core.types.UpdatePath
+=================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: UpdatePath
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~UpdatePath.clear
+      ~UpdatePath.copy
+      ~UpdatePath.fromkeys
+      ~UpdatePath.get
+      ~UpdatePath.items
+      ~UpdatePath.keys
+      ~UpdatePath.pop
+      ~UpdatePath.popitem
+      ~UpdatePath.setdefault
+      ~UpdatePath.update
+      ~UpdatePath.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UpdatePath.type
+      ~UpdatePath.update_path
+   
+   
