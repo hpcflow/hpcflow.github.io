@@ -1,0 +1,24 @@
+hpcflow.sdk.core.parameters.BuiltinSchemaParameter
+==================================================
+
+.. currentmodule:: hpcflow.sdk.core.parameters
+
+.. autoclass:: BuiltinSchemaParameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   
