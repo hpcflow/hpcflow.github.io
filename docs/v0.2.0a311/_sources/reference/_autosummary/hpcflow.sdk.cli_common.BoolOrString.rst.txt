@@ -1,0 +1,40 @@
+hpcflow.sdk.cli_common.BoolOrString
+===================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autoclass:: BoolOrString
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~BoolOrString.convert
+      ~BoolOrString.fail
+      ~BoolOrString.get_metavar
+      ~BoolOrString.get_missing_message
+      ~BoolOrString.shell_complete
+      ~BoolOrString.split_envvar_value
+      ~BoolOrString.to_info_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BoolOrString.arity
+      ~BoolOrString.envvar_list_splitter
+      ~BoolOrString.is_composite
+      ~BoolOrString.name
+   
+   
