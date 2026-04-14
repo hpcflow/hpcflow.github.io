@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.get\_duplicate\_items
+============================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: get_duplicate_items

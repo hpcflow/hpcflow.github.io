@@ -1,0 +1,41 @@
+hpcflow.sdk.config.types.SGEParallelEnvsDescriptor
+==================================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autoclass:: SGEParallelEnvsDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SGEParallelEnvsDescriptor.clear
+      ~SGEParallelEnvsDescriptor.copy
+      ~SGEParallelEnvsDescriptor.fromkeys
+      ~SGEParallelEnvsDescriptor.get
+      ~SGEParallelEnvsDescriptor.items
+      ~SGEParallelEnvsDescriptor.keys
+      ~SGEParallelEnvsDescriptor.pop
+      ~SGEParallelEnvsDescriptor.popitem
+      ~SGEParallelEnvsDescriptor.setdefault
+      ~SGEParallelEnvsDescriptor.update
+      ~SGEParallelEnvsDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SGEParallelEnvsDescriptor.num_cores
+   
+   
