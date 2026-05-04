@@ -1,0 +1,31 @@
+hpcflow.app.ElementRepeats
+==========================
+
+.. currentmodule:: hpcflow.app
+
+.. autoclass:: ElementRepeats
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementRepeats.where
+      ~ElementRepeats.number
+   
+   

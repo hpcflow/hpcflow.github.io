@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.template\_config\_opt
+=============================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: template_config_opt

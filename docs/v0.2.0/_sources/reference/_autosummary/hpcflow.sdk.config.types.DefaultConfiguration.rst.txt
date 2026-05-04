@@ -1,0 +1,42 @@
+hpcflow.sdk.config.types.DefaultConfiguration
+=============================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autoclass:: DefaultConfiguration
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~DefaultConfiguration.clear
+      ~DefaultConfiguration.copy
+      ~DefaultConfiguration.fromkeys
+      ~DefaultConfiguration.get
+      ~DefaultConfiguration.items
+      ~DefaultConfiguration.keys
+      ~DefaultConfiguration.pop
+      ~DefaultConfiguration.popitem
+      ~DefaultConfiguration.setdefault
+      ~DefaultConfiguration.update
+      ~DefaultConfiguration.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DefaultConfiguration.invocation
+      ~DefaultConfiguration.config
+   
+   

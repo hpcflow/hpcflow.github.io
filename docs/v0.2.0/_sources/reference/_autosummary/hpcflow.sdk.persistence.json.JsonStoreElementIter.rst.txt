@@ -1,0 +1,44 @@
+hpcflow.sdk.persistence.json.JsonStoreElementIter
+=================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.json
+
+.. autoclass:: JsonStoreElementIter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~JsonStoreElementIter.append_EAR_IDs
+      ~JsonStoreElementIter.decode
+      ~JsonStoreElementIter.encode
+      ~JsonStoreElementIter.set_EARs_initialised
+      ~JsonStoreElementIter.to_dict
+      ~JsonStoreElementIter.update_data_idx
+      ~JsonStoreElementIter.update_loop_idx
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JsonStoreElementIter.id_
+      ~JsonStoreElementIter.is_pending
+      ~JsonStoreElementIter.element_ID
+      ~JsonStoreElementIter.EARs_initialised
+      ~JsonStoreElementIter.EAR_IDs
+      ~JsonStoreElementIter.data_idx
+      ~JsonStoreElementIter.schema_parameters
+      ~JsonStoreElementIter.loop_idx
+   
+   
