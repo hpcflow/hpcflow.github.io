@@ -1,0 +1,6 @@
+hpcflow.sdk.core.input\_sources.get\_task\_source\_element\_iters
+=================================================================
+
+.. currentmodule:: hpcflow.sdk.core.input_sources
+
+.. autofunction:: get_task_source_element_iters

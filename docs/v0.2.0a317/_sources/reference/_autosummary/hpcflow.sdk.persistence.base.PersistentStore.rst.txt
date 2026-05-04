@@ -1,0 +1,121 @@
+hpcflow.sdk.persistence.base.PersistentStore
+============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autoclass:: PersistentStore
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~PersistentStore.add_EAR
+      ~PersistentStore.add_element
+      ~PersistentStore.add_element_iteration
+      ~PersistentStore.add_element_set
+      ~PersistentStore.add_file
+      ~PersistentStore.add_loop
+      ~PersistentStore.add_set_parameter
+      ~PersistentStore.add_submission
+      ~PersistentStore.add_task
+      ~PersistentStore.add_template_components
+      ~PersistentStore.add_unset_parameter
+      ~PersistentStore.cache_ctx
+      ~PersistentStore.cached_load
+      ~PersistentStore.check_parameters_exist
+      ~PersistentStore.copy
+      ~PersistentStore.delete
+      ~PersistentStore.delete_no_confirm
+      ~PersistentStore.get_EAR_skipped
+      ~PersistentStore.get_EARs
+      ~PersistentStore.get_creation_info
+      ~PersistentStore.get_dirs_array
+      ~PersistentStore.get_element_iterations
+      ~PersistentStore.get_elements
+      ~PersistentStore.get_jobscript_at_submit_metadata
+      ~PersistentStore.get_jobscript_block_dependencies
+      ~PersistentStore.get_jobscript_block_run_ID_array
+      ~PersistentStore.get_jobscript_block_task_actions_array
+      ~PersistentStore.get_jobscript_block_task_elements_map
+      ~PersistentStore.get_loops
+      ~PersistentStore.get_loops_by_IDs
+      ~PersistentStore.get_name
+      ~PersistentStore.get_parameter_set_statuses
+      ~PersistentStore.get_parameter_sources
+      ~PersistentStore.get_parameters
+      ~PersistentStore.get_submission_at_submit_metadata
+      ~PersistentStore.get_submissions
+      ~PersistentStore.get_submissions_by_ID
+      ~PersistentStore.get_task
+      ~PersistentStore.get_task_elements
+      ~PersistentStore.get_tasks
+      ~PersistentStore.get_tasks_by_IDs
+      ~PersistentStore.get_template
+      ~PersistentStore.get_template_components
+      ~PersistentStore.get_text_file
+      ~PersistentStore.get_ts_fmt
+      ~PersistentStore.get_ts_name_fmt
+      ~PersistentStore.parameters_metadata_cache
+      ~PersistentStore.prepare_test_store_from_spec
+      ~PersistentStore.rechunk_parameter_base
+      ~PersistentStore.rechunk_runs
+      ~PersistentStore.reinstate_replaced_dir
+      ~PersistentStore.remove_path
+      ~PersistentStore.remove_replaced_dir
+      ~PersistentStore.rename_path
+      ~PersistentStore.save
+      ~PersistentStore.set_EAR_end
+      ~PersistentStore.set_EAR_skip
+      ~PersistentStore.set_EAR_start
+      ~PersistentStore.set_EARs_initialised
+      ~PersistentStore.set_file
+      ~PersistentStore.set_jobscript_metadata
+      ~PersistentStore.set_multi_run_ends
+      ~PersistentStore.set_multi_run_starts
+      ~PersistentStore.set_parameter_value
+      ~PersistentStore.set_parameter_values
+      ~PersistentStore.set_run_dirs
+      ~PersistentStore.set_run_submission_data
+      ~PersistentStore.unzip
+      ~PersistentStore.update_at_submit_metadata
+      ~PersistentStore.update_iter_data_indices
+      ~PersistentStore.update_loop_num_iters
+      ~PersistentStore.update_loop_parents
+      ~PersistentStore.update_param_source
+      ~PersistentStore.update_run_data_indices
+      ~PersistentStore.using_resource
+      ~PersistentStore.write_empty_workflow
+      ~PersistentStore.zip
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PersistentStore.EAR_cache
+      ~PersistentStore.element_cache
+      ~PersistentStore.element_iter_cache
+      ~PersistentStore.has_pending
+      ~PersistentStore.is_submittable
+      ~PersistentStore.logger
+      ~PersistentStore.num_EARs_cache
+      ~PersistentStore.num_params_cache
+      ~PersistentStore.num_tasks_cache
+      ~PersistentStore.param_sources_cache
+      ~PersistentStore.parameter_cache
+      ~PersistentStore.task_cache
+      ~PersistentStore.ts_fmt
+      ~PersistentStore.use_cache
+      ~PersistentStore.workflow
+   
+   
