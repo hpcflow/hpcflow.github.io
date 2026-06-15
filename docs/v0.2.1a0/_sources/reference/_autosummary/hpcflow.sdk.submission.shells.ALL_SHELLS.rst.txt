@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.shells.ALL\_SHELLS
+=========================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells
+
+.. autodata:: ALL_SHELLS

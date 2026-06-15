@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.IncompatibleSLURMArgumentsError
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: IncompatibleSLURMArgumentsError

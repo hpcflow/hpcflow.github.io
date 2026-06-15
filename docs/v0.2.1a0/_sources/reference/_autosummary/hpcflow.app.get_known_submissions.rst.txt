@@ -1,0 +1,6 @@
+hpcflow.app.get\_known\_submissions
+===================================
+
+.. currentmodule:: hpcflow.app
+
+.. autofunction:: get_known_submissions

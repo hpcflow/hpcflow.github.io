@@ -1,0 +1,6 @@
+hpcflow.sdk.typing.DataIndex
+============================
+
+.. currentmodule:: hpcflow.sdk.typing
+
+.. autodata:: DataIndex

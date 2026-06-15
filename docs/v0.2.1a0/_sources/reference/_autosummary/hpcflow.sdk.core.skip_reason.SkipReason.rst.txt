@@ -1,0 +1,26 @@
+hpcflow.sdk.core.skip_reason.SkipReason
+=======================================
+
+.. currentmodule:: hpcflow.sdk.core.skip_reason
+
+.. autoclass:: SkipReason
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SkipReason.NOT_SKIPPED
+      ~SkipReason.UPSTREAM_FAILURE
+      ~SkipReason.LOOP_TERMINATION
+   
+   

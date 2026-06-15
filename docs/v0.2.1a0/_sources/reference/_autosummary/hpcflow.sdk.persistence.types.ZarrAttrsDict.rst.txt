@@ -1,0 +1,51 @@
+hpcflow.sdk.persistence.types.ZarrAttrsDict
+===========================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autoclass:: ZarrAttrsDict
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ZarrAttrsDict.clear
+      ~ZarrAttrsDict.copy
+      ~ZarrAttrsDict.fromkeys
+      ~ZarrAttrsDict.get
+      ~ZarrAttrsDict.items
+      ~ZarrAttrsDict.keys
+      ~ZarrAttrsDict.pop
+      ~ZarrAttrsDict.popitem
+      ~ZarrAttrsDict.setdefault
+      ~ZarrAttrsDict.update
+      ~ZarrAttrsDict.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZarrAttrsDict.name
+      ~ZarrAttrsDict.ts_fmt
+      ~ZarrAttrsDict.ts_name_fmt
+      ~ZarrAttrsDict.creation_info
+      ~ZarrAttrsDict.template
+      ~ZarrAttrsDict.template_components
+      ~ZarrAttrsDict.num_added_tasks
+      ~ZarrAttrsDict.tasks
+      ~ZarrAttrsDict.loops
+      ~ZarrAttrsDict.submissions
+      ~ZarrAttrsDict.replaced_workflow
+   
+   

@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.normalise\_timestamp
+===========================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: normalise_timestamp
