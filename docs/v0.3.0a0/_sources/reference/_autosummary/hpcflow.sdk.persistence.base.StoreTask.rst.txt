@@ -1,0 +1,37 @@
+hpcflow.sdk.persistence.base.StoreTask
+======================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autoclass:: StoreTask
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~StoreTask.append_element_IDs
+      ~StoreTask.decode
+      ~StoreTask.encode
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StoreTask.task_template
+      ~StoreTask.id_
+      ~StoreTask.index
+      ~StoreTask.is_pending
+      ~StoreTask.element_IDs
+   
+   

@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.base.SerFormT
+=====================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autodata:: SerFormT

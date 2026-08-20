@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigNonConfigurableError
+====================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigNonConfigurableError

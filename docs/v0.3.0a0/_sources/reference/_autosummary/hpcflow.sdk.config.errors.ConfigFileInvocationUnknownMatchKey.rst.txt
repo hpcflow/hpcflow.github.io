@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigFileInvocationUnknownMatchKey
+=============================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigFileInvocationUnknownMatchKey

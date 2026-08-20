@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.RunNotAbortableError
+============================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: RunNotAbortableError

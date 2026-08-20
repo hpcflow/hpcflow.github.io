@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigUnknownOverrideError
+====================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigUnknownOverrideError
