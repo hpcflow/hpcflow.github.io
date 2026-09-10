@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.CompactException
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: CompactException

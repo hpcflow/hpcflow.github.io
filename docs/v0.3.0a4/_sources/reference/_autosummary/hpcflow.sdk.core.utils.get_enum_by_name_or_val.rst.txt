@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.get\_enum\_by\_name\_or\_val
+===================================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: get_enum_by_name_or_val
