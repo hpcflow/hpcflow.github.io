@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.MissingEnvironmentExecutableError
+=========================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: MissingEnvironmentExecutableError

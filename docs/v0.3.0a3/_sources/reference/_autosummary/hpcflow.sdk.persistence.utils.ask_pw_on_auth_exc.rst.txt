@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.utils.ask\_pw\_on\_auth\_exc
+====================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.utils
+
+.. autofunction:: ask_pw_on_auth_exc
