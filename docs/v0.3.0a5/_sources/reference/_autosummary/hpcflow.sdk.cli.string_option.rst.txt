@@ -1,0 +1,6 @@
+hpcflow.sdk.cli.string\_option
+==============================
+
+.. currentmodule:: hpcflow.sdk.cli
+
+.. autofunction:: string_option

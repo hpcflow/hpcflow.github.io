@@ -1,0 +1,64 @@
+hpcflow.sdk.runtime.RunTimeInfo
+===============================
+
+.. currentmodule:: hpcflow.sdk.runtime
+
+.. autoclass:: RunTimeInfo
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunTimeInfo.get_activate_env_command
+      ~RunTimeInfo.get_deactivate_env_command
+      ~RunTimeInfo.show
+      ~RunTimeInfo.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunTimeInfo.executable_name
+      ~RunTimeInfo.executable_path
+      ~RunTimeInfo.invocation_command
+      ~RunTimeInfo.is_apple_silicon
+      ~RunTimeInfo.resolved_executable_name
+      ~RunTimeInfo.resolved_executable_path
+      ~RunTimeInfo.resolved_script_path
+      ~RunTimeInfo.script_path
+      ~RunTimeInfo.name
+      ~RunTimeInfo.package_name
+      ~RunTimeInfo.version
+      ~RunTimeInfo.is_frozen
+      ~RunTimeInfo.working_dir
+      ~RunTimeInfo.logger
+      ~RunTimeInfo.hostname
+      ~RunTimeInfo.in_ipython
+      ~RunTimeInfo.ipython_shell
+      ~RunTimeInfo.is_interactive
+      ~RunTimeInfo.in_pytest
+      ~RunTimeInfo.from_CLI
+      ~RunTimeInfo.bundle_dir
+      ~RunTimeInfo.python_executable_path
+      ~RunTimeInfo.python_version
+      ~RunTimeInfo.is_venv
+      ~RunTimeInfo.is_conda_venv
+      ~RunTimeInfo.sys_prefix
+      ~RunTimeInfo.sys_base_prefix
+      ~RunTimeInfo.sys_real_prefix
+      ~RunTimeInfo.conda_prefix
+      ~RunTimeInfo.venv_path
+      ~RunTimeInfo.CPU_arch
+   
+   

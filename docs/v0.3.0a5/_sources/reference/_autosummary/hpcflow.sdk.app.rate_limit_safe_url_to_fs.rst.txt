@@ -1,0 +1,6 @@
+hpcflow.sdk.app.rate\_limit\_safe\_url\_to\_fs
+==============================================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autofunction:: rate_limit_safe_url_to_fs

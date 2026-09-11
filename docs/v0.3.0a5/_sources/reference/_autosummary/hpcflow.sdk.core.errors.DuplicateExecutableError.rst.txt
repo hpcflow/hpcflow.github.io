@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.DuplicateExecutableError
+================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: DuplicateExecutableError

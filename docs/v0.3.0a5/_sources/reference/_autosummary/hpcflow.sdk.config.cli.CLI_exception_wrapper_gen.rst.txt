@@ -1,0 +1,6 @@
+hpcflow.sdk.config.cli.CLI\_exception\_wrapper\_gen
+===================================================
+
+.. currentmodule:: hpcflow.sdk.config.cli
+
+.. autofunction:: CLI_exception_wrapper_gen
