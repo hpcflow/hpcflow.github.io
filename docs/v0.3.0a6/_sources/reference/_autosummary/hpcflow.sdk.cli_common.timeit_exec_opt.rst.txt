@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.timeit\_exec\_opt
+=========================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: timeit_exec_opt

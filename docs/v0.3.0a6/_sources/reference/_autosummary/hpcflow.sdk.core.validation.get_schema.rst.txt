@@ -1,0 +1,6 @@
+hpcflow.sdk.core.validation.get\_schema
+=======================================
+
+.. currentmodule:: hpcflow.sdk.core.validation
+
+.. autofunction:: get_schema

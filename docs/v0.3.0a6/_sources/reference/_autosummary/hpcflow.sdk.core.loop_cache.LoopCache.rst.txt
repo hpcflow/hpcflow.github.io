@@ -1,0 +1,48 @@
+hpcflow.sdk.core.loop_cache.LoopCache
+=====================================
+
+.. currentmodule:: hpcflow.sdk.core.loop_cache
+
+.. autoclass:: LoopCache
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~LoopCache.add_iteration
+      ~LoopCache.build
+      ~LoopCache.get_iter_IDs
+      ~LoopCache.get_iter_loop_indices
+      ~LoopCache.get_latest_data_idx
+      ~LoopCache.update_loop_indices
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LoopCache.element_dependents
+      ~LoopCache.elements
+      ~LoopCache.zeroth_iters
+      ~LoopCache.data_idx
+      ~LoopCache.iterations
+      ~LoopCache.task_iterations
+      ~LoopCache.run_meta
+      ~LoopCache.task_element_IDs
+      ~LoopCache.element_iteration_IDs
+      ~LoopCache.iteration_run_IDs
+      ~LoopCache.run_data_idx
+      ~LoopCache.run_pending
+      ~LoopCache.param_EAR_ID
+   
+   
