@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.warn\_script\_data\_files\_use\_opt\_deprecated
+=========================================================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autofunction:: warn_script_data_files_use_opt_deprecated

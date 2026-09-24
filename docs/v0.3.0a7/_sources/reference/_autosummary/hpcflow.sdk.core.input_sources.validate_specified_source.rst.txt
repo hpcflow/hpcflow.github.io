@@ -1,0 +1,6 @@
+hpcflow.sdk.core.input\_sources.validate\_specified\_source
+===========================================================
+
+.. currentmodule:: hpcflow.sdk.core.input_sources
+
+.. autofunction:: validate_specified_source

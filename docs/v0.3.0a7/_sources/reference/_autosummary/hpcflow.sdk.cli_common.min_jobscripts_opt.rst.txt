@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.min\_jobscripts\_opt
+============================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: min_jobscripts_opt

@@ -1,0 +1,45 @@
+hpcflow.sdk.typing.WorkflowTemplateFromFileCommonArgs
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.typing
+
+.. autoclass:: WorkflowTemplateFromFileCommonArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowTemplateFromFileCommonArgs.clear
+      ~WorkflowTemplateFromFileCommonArgs.copy
+      ~WorkflowTemplateFromFileCommonArgs.fromkeys
+      ~WorkflowTemplateFromFileCommonArgs.get
+      ~WorkflowTemplateFromFileCommonArgs.items
+      ~WorkflowTemplateFromFileCommonArgs.keys
+      ~WorkflowTemplateFromFileCommonArgs.pop
+      ~WorkflowTemplateFromFileCommonArgs.popitem
+      ~WorkflowTemplateFromFileCommonArgs.setdefault
+      ~WorkflowTemplateFromFileCommonArgs.update
+      ~WorkflowTemplateFromFileCommonArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowTemplateFromFileCommonArgs.path
+      ~WorkflowTemplateFromFileCommonArgs.variables
+      ~WorkflowTemplateFromFileCommonArgs.updates
+      ~WorkflowTemplateFromFileCommonArgs.resources
+      ~WorkflowTemplateFromFileCommonArgs.config
+   
+   

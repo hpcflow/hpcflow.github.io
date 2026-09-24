@@ -1,0 +1,6 @@
+hpcflow.sdk.config.callbacks.callback\_paths
+============================================
+
+.. currentmodule:: hpcflow.sdk.config.callbacks
+
+.. autofunction:: callback_paths
