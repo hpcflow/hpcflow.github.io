@@ -1,0 +1,40 @@
+hpcflow.sdk.persistence.zarr.ZarrStoreParameter
+===============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.zarr
+
+.. autoclass:: ZarrStoreParameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ZarrStoreParameter.decode
+      ~ZarrStoreParameter.encode
+      ~ZarrStoreParameter.set_data
+      ~ZarrStoreParameter.set_file
+      ~ZarrStoreParameter.update_source
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZarrStoreParameter.id_
+      ~ZarrStoreParameter.is_pending
+      ~ZarrStoreParameter.is_set
+      ~ZarrStoreParameter.data
+      ~ZarrStoreParameter.file
+      ~ZarrStoreParameter.source
+   
+   

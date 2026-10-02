@@ -1,0 +1,6 @@
+hpcflow.sdk.core.object\_list.ObjectListMultipleMatchError
+==========================================================
+
+.. currentmodule:: hpcflow.sdk.core.object_list
+
+.. autoexception:: ObjectListMultipleMatchError

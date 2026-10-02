@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.bisect\_slice
+====================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: bisect_slice

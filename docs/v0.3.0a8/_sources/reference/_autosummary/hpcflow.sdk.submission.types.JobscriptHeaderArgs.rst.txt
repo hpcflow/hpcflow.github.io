@@ -1,0 +1,46 @@
+hpcflow.sdk.submission.types.JobscriptHeaderArgs
+================================================
+
+.. currentmodule:: hpcflow.sdk.submission.types
+
+.. autoclass:: JobscriptHeaderArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~JobscriptHeaderArgs.clear
+      ~JobscriptHeaderArgs.copy
+      ~JobscriptHeaderArgs.fromkeys
+      ~JobscriptHeaderArgs.get
+      ~JobscriptHeaderArgs.items
+      ~JobscriptHeaderArgs.keys
+      ~JobscriptHeaderArgs.pop
+      ~JobscriptHeaderArgs.popitem
+      ~JobscriptHeaderArgs.setdefault
+      ~JobscriptHeaderArgs.update
+      ~JobscriptHeaderArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobscriptHeaderArgs.app_invoc
+      ~JobscriptHeaderArgs.workflow_app_alias
+      ~JobscriptHeaderArgs.env_setup
+      ~JobscriptHeaderArgs.app_caps
+      ~JobscriptHeaderArgs.config_dir
+      ~JobscriptHeaderArgs.config_invoc_key
+   
+   

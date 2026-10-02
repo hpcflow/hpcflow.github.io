@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.zarr.ZarrAttrs
+======================================
+
+.. currentmodule:: hpcflow.sdk.persistence.zarr
+
+.. autodata:: ZarrAttrs

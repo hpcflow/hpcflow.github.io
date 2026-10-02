@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.zarr.MAGIC
+==================================
+
+.. currentmodule:: hpcflow.sdk.persistence.zarr
+
+.. autodata:: MAGIC

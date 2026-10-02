@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.MissingTaskSchemaFileError
+====================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: MissingTaskSchemaFileError

@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.schedulers.JSRefType
+===========================================
+
+.. currentmodule:: hpcflow.sdk.submission.schedulers
+
+.. autodata:: JSRefType

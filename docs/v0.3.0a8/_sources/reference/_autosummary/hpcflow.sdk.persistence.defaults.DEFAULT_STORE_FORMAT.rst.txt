@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.defaults.DEFAULT\_STORE\_FORMAT
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.defaults
+
+.. autodata:: DEFAULT_STORE_FORMAT

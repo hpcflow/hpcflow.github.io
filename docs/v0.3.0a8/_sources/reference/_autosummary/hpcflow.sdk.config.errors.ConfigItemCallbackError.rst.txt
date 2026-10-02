@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigItemCallbackError
+=================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigItemCallbackError

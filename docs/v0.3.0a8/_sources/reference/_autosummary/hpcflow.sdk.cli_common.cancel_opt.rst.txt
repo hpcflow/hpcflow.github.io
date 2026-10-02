@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.cancel\_opt
+===================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: cancel_opt

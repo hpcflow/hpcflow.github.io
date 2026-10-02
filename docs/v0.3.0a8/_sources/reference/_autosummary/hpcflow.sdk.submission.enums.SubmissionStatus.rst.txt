@@ -1,0 +1,26 @@
+hpcflow.sdk.submission.enums.SubmissionStatus
+=============================================
+
+.. currentmodule:: hpcflow.sdk.submission.enums
+
+.. autoclass:: SubmissionStatus
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubmissionStatus.PENDING
+      ~SubmissionStatus.SUBMITTED
+      ~SubmissionStatus.PARTIALLY_SUBMITTED
+   
+   

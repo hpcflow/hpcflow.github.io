@@ -1,0 +1,36 @@
+hpcflow.sdk.persistence.pending
+===============================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.persistence.pending
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      CommitResourceMap
+      PendingChanges
+   
+   
+
+   
+   
+   
+
+
+

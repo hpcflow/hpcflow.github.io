@@ -1,0 +1,26 @@
+hpcflow.sdk.compact_errors.FormatMixin
+======================================
+
+.. currentmodule:: hpcflow.sdk.compact_errors
+
+.. autoclass:: FormatMixin
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FormatMixin.format
+      ~FormatMixin.get_formatted_problem
+   
+   
+
+   
+   
+   

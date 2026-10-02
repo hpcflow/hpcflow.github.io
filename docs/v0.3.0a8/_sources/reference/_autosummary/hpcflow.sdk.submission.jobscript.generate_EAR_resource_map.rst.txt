@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.jobscript.generate\_EAR\_resource\_map
+=============================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript
+
+.. autofunction:: generate_EAR_resource_map

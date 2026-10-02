@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.UnsupportedActionDataFormat
+===================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: UnsupportedActionDataFormat

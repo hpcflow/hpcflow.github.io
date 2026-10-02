@@ -1,0 +1,6 @@
+hpcflow.sdk.core.json\_like.PRIMITIVES
+======================================
+
+.. currentmodule:: hpcflow.sdk.core.json_like
+
+.. autodata:: PRIMITIVES

@@ -1,0 +1,6 @@
+hpcflow.app.get\_shell\_info
+============================
+
+.. currentmodule:: hpcflow.app
+
+.. autofunction:: get_shell_info

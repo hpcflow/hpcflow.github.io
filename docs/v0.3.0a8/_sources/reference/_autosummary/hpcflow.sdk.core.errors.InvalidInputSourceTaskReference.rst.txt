@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.InvalidInputSourceTaskReference
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: InvalidInputSourceTaskReference

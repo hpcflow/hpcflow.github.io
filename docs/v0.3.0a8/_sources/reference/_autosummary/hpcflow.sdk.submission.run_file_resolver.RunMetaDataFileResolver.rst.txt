@@ -1,0 +1,38 @@
+hpcflow.sdk.submission.run_file_resolver.RunMetaDataFileResolver
+================================================================
+
+.. currentmodule:: hpcflow.sdk.submission.run_file_resolver
+
+.. autoclass:: RunMetaDataFileResolver
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunMetaDataFileResolver.build_execution_unit_graph
+      ~RunMetaDataFileResolver.get_jobscript_units
+      ~RunMetaDataFileResolver.get_metadata_file_mapping
+      ~RunMetaDataFileResolver.get_reachability
+      ~RunMetaDataFileResolver.get_unit_run_IDs
+      ~RunMetaDataFileResolver.maximum_matching
+      ~RunMetaDataFileResolver.resolve
+      ~RunMetaDataFileResolver.topological_sort
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunMetaDataFileResolver.num_files
+   
+   

@@ -1,0 +1,6 @@
+hpcflow.sdk.config.types.SetterCallback
+=======================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autodata:: SetterCallback

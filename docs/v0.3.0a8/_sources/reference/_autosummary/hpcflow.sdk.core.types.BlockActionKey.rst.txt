@@ -1,0 +1,6 @@
+hpcflow.sdk.core.types.BlockActionKey
+=====================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autodata:: BlockActionKey

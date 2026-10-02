@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.pytest\_file\_or\_dir\_opt
+==================================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: pytest_file_or_dir_opt

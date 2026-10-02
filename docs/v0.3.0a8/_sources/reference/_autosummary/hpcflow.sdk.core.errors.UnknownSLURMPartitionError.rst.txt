@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.UnknownSLURMPartitionError
+==================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: UnknownSLURMPartitionError

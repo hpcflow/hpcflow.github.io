@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigUnknownItemError
+================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigUnknownItemError

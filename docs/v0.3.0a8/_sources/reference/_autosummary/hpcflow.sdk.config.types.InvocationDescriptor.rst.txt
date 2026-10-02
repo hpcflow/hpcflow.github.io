@@ -1,0 +1,42 @@
+hpcflow.sdk.config.types.InvocationDescriptor
+=============================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autoclass:: InvocationDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~InvocationDescriptor.clear
+      ~InvocationDescriptor.copy
+      ~InvocationDescriptor.fromkeys
+      ~InvocationDescriptor.get
+      ~InvocationDescriptor.items
+      ~InvocationDescriptor.keys
+      ~InvocationDescriptor.pop
+      ~InvocationDescriptor.popitem
+      ~InvocationDescriptor.setdefault
+      ~InvocationDescriptor.update
+      ~InvocationDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InvocationDescriptor.environment_setup
+      ~InvocationDescriptor.match
+   
+   

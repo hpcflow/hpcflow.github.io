@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.EnvironmentNotFound
+===========================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: EnvironmentNotFound
