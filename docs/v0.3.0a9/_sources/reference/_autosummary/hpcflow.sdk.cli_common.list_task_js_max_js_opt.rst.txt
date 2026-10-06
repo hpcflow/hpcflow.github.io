@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.list\_task\_js\_max\_js\_opt
+====================================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: list_task_js_max_js_opt
