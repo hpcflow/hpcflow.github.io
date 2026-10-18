@@ -1,0 +1,40 @@
+hpcflow.sdk.persistence.base.StoreParameter
+===========================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autoclass:: StoreParameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~StoreParameter.decode
+      ~StoreParameter.encode
+      ~StoreParameter.set_data
+      ~StoreParameter.set_file
+      ~StoreParameter.update_source
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StoreParameter.id_
+      ~StoreParameter.is_pending
+      ~StoreParameter.is_set
+      ~StoreParameter.data
+      ~StoreParameter.file
+      ~StoreParameter.source
+   
+   

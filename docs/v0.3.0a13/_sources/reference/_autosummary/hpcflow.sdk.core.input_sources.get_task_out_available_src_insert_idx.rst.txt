@@ -1,0 +1,6 @@
+hpcflow.sdk.core.input\_sources.get\_task\_out\_available\_src\_insert\_idx
+===========================================================================
+
+.. currentmodule:: hpcflow.sdk.core.input_sources
+
+.. autofunction:: get_task_out_available_src_insert_idx

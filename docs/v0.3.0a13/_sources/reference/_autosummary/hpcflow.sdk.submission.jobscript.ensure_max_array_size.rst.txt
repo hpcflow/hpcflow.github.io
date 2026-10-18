@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.jobscript.ensure\_max\_array\_size
+=========================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript
+
+.. autofunction:: ensure_max_array_size

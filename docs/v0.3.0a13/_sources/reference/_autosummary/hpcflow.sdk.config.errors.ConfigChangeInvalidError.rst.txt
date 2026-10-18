@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigChangeInvalidError
+==================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigChangeInvalidError

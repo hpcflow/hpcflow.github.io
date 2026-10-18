@@ -1,0 +1,6 @@
+hpcflow.app.run\_hpcflow\_tests
+===============================
+
+.. currentmodule:: hpcflow.app
+
+.. autofunction:: run_hpcflow_tests
