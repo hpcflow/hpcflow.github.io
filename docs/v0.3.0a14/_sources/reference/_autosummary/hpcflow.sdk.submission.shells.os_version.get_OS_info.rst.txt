@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.shells.os\_version.get\_OS\_info
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells.os_version
+
+.. autofunction:: get_OS_info

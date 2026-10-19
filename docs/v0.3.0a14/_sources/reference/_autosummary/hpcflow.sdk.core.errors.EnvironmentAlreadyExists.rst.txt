@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.EnvironmentAlreadyExists
+================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: EnvironmentAlreadyExists
