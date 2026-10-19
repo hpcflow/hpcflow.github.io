@@ -1,0 +1,6 @@
+hpcflow.sdk.core.types.RepeatsDescriptorType
+============================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autodata:: RepeatsDescriptorType
