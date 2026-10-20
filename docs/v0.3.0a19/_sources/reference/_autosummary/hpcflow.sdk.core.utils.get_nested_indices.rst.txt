@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.get\_nested\_indices
+===========================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: get_nested_indices

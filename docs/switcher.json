@@ -1,6 +1,11 @@
 [
     {
-        "name": "dev (v0.3.0a18)",
+        "name": "dev (v0.3.0a19)",
+        "version": "0.3.0a19",
+        "url": "/docs/v0.3.0a19/"
+    },
+    {
+        "name": "v0.3.0a18",
         "version": "0.3.0a18",
         "url": "/docs/v0.3.0a18/"
     },

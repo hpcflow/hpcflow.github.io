@@ -1,0 +1,44 @@
+hpcflow.sdk.core.types.Pending
+==============================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: Pending
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Pending.clear
+      ~Pending.copy
+      ~Pending.fromkeys
+      ~Pending.get
+      ~Pending.items
+      ~Pending.keys
+      ~Pending.pop
+      ~Pending.popitem
+      ~Pending.setdefault
+      ~Pending.update
+      ~Pending.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Pending.template_components
+      ~Pending.tasks
+      ~Pending.loops
+      ~Pending.submissions
+   
+   
