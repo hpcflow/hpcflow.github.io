@@ -1,0 +1,6 @@
+hpcflow.sdk.app.get\_app\_module\_dir
+=====================================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autofunction:: get_app_module_dir

@@ -1,0 +1,6 @@
+hpcflow.sdk.core.task\_schema.SAVE\_FILES\_PATH\_PREFIX
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.core.task_schema
+
+.. autodata:: SAVE_FILES_PATH_PREFIX

@@ -1,0 +1,36 @@
+hpcflow.sdk.compact_errors
+==========================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.compact_errors
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      CompactProblemFormatter
+      FormatMixin
+   
+   
+
+   
+   
+   
+
+
+
