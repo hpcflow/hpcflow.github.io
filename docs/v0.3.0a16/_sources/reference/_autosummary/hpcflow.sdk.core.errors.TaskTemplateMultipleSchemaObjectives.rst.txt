@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.TaskTemplateMultipleSchemaObjectives
+============================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: TaskTemplateMultipleSchemaObjectives
