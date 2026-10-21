@@ -1,0 +1,53 @@
+hpcflow.sdk.log.TimeIt
+======================
+
+.. currentmodule:: hpcflow.sdk.log
+
+.. autoclass:: TimeIt
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TimeIt.decorator
+      ~TimeIt.get_command_overhead_time
+      ~TimeIt.get_command_work_time
+      ~TimeIt.get_orchestration_time
+      ~TimeIt.get_total_orchestration_time
+      ~TimeIt.get_total_time
+      ~TimeIt.reset
+      ~TimeIt.summarise_string
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TimeIt.CLI_end
+      ~TimeIt.CLI_start
+      ~TimeIt.active
+      ~TimeIt.app_launch_time
+      ~TimeIt.child_orchestration_time
+      ~TimeIt.child_work_time
+      ~TimeIt.file_mode
+      ~TimeIt.file_path
+      ~TimeIt.file_preamble
+      ~TimeIt.run_command_time
+      ~TimeIt.timers
+      ~TimeIt.title
+      ~TimeIt.trace
+      ~TimeIt.trace_idx
+      ~TimeIt.trace_idx_prev
+      ~TimeIt.trace_prev
+   
+   

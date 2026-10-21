@@ -1,0 +1,43 @@
+hpcflow.sdk.core.types.MultiplicityDescriptor
+=============================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: MultiplicityDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MultiplicityDescriptor.clear
+      ~MultiplicityDescriptor.copy
+      ~MultiplicityDescriptor.fromkeys
+      ~MultiplicityDescriptor.get
+      ~MultiplicityDescriptor.items
+      ~MultiplicityDescriptor.keys
+      ~MultiplicityDescriptor.pop
+      ~MultiplicityDescriptor.popitem
+      ~MultiplicityDescriptor.setdefault
+      ~MultiplicityDescriptor.update
+      ~MultiplicityDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MultiplicityDescriptor.multiplicity
+      ~MultiplicityDescriptor.nesting_order
+      ~MultiplicityDescriptor.path
+   
+   
