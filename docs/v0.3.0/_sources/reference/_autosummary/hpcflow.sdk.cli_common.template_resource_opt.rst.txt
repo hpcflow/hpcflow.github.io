@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.template\_resource\_opt
+===============================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: template_resource_opt
