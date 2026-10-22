@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.run\_file\_resolver.get\_run\_multi\_chunk\_path
+=======================================================================
+
+.. currentmodule:: hpcflow.sdk.submission.run_file_resolver
+
+.. autofunction:: get_run_multi_chunk_path

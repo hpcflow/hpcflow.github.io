@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.types.AnySElementIter
+=============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autodata:: AnySElementIter
