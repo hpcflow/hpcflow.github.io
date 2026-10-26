@@ -1,0 +1,6 @@
+hpcflow.app.app
+===============
+
+.. currentmodule:: hpcflow.app
+
+.. autodata:: app
