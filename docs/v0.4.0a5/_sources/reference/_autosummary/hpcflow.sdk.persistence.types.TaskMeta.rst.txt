@@ -1,0 +1,43 @@
+hpcflow.sdk.persistence.types.TaskMeta
+======================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autoclass:: TaskMeta
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~TaskMeta.clear
+      ~TaskMeta.copy
+      ~TaskMeta.fromkeys
+      ~TaskMeta.get
+      ~TaskMeta.items
+      ~TaskMeta.keys
+      ~TaskMeta.pop
+      ~TaskMeta.popitem
+      ~TaskMeta.setdefault
+      ~TaskMeta.update
+      ~TaskMeta.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskMeta.id_
+      ~TaskMeta.index
+      ~TaskMeta.element_IDs
+   
+   

@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.get\_relative\_path
+==========================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: get_relative_path
