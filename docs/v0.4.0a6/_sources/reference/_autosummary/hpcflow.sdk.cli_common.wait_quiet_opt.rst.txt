@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.wait\_quiet\_opt
+========================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: wait_quiet_opt
