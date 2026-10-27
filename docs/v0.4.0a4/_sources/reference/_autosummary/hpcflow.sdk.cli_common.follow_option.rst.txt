@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.follow\_option
+======================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: follow_option

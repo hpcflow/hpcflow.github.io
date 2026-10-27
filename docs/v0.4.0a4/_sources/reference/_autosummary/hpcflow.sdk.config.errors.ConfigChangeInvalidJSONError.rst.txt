@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigChangeInvalidJSONError
+======================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigChangeInvalidJSONError

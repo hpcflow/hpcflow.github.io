@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.MissingCompatibleActionEnvironment
+==========================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: MissingCompatibleActionEnvironment
