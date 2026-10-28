@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.warn\_scheduler\_options\_deprecated
+==============================================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autofunction:: warn_scheduler_options_deprecated

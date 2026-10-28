@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.jobscript.merge\_jobscripts\_across\_tasks
+=================================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript
+
+.. autofunction:: merge_jobscripts_across_tasks
