@@ -1,0 +1,43 @@
+hpcflow.sdk.config.types.SchedulerConfigDescriptor
+==================================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autoclass:: SchedulerConfigDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SchedulerConfigDescriptor.clear
+      ~SchedulerConfigDescriptor.copy
+      ~SchedulerConfigDescriptor.fromkeys
+      ~SchedulerConfigDescriptor.get
+      ~SchedulerConfigDescriptor.items
+      ~SchedulerConfigDescriptor.keys
+      ~SchedulerConfigDescriptor.pop
+      ~SchedulerConfigDescriptor.popitem
+      ~SchedulerConfigDescriptor.setdefault
+      ~SchedulerConfigDescriptor.update
+      ~SchedulerConfigDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchedulerConfigDescriptor.defaults
+      ~SchedulerConfigDescriptor.parallel_environments
+      ~SchedulerConfigDescriptor.partitions
+   
+   

@@ -1,0 +1,34 @@
+hpcflow.sdk.core.template_expressions
+=====================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.core.template_expressions
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      resolve_workflow_input_references
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.discovery.ALL\_CREATE\_STORE\_FORMATS
+=============================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.discovery
+
+.. autodata:: ALL_CREATE_STORE_FORMATS
