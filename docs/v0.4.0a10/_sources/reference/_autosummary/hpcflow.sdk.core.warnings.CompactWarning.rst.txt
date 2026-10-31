@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.CompactWarning
+========================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autoexception:: CompactWarning

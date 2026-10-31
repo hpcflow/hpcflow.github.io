@@ -1,0 +1,24 @@
+hpcflow.sdk.core.values.ValuesMixin
+===================================
+
+.. currentmodule:: hpcflow.sdk.core.values
+
+.. autoclass:: ValuesMixin
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   

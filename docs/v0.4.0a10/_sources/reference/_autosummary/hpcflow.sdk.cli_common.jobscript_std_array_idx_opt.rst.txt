@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.jobscript\_std\_array\_idx\_opt
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: jobscript_std_array_idx_opt

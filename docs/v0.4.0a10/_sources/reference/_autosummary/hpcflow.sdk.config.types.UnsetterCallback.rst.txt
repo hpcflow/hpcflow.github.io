@@ -1,0 +1,6 @@
+hpcflow.sdk.config.types.UnsetterCallback
+=========================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autodata:: UnsetterCallback
