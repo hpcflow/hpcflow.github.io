@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.ConfigReadOnlyError
+=============================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: ConfigReadOnlyError

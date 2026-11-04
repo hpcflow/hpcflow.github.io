@@ -1,0 +1,6 @@
+hpcflow.sdk.config.callbacks.set\_use\_rich\_tracebacks
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.config.callbacks
+
+.. autofunction:: set_use_rich_tracebacks

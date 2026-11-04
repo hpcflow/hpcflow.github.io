@@ -1,0 +1,41 @@
+hpcflow.sdk.persistence.base.StoreElement
+=========================================
+
+.. currentmodule:: hpcflow.sdk.persistence.base
+
+.. autoclass:: StoreElement
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~StoreElement.append_iteration_IDs
+      ~StoreElement.decode
+      ~StoreElement.encode
+      ~StoreElement.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StoreElement.id_
+      ~StoreElement.is_pending
+      ~StoreElement.index
+      ~StoreElement.es_idx
+      ~StoreElement.seq_idx
+      ~StoreElement.src_idx
+      ~StoreElement.task_ID
+      ~StoreElement.iteration_IDs
+   
+   

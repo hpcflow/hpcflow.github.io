@@ -1,0 +1,6 @@
+hpcflow.sdk.config.errors.MissingEnvironmentFileError
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.config.errors
+
+.. autoexception:: MissingEnvironmentFileError

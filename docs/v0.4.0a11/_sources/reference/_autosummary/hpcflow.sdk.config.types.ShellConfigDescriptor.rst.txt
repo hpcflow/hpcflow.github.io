@@ -1,0 +1,41 @@
+hpcflow.sdk.config.types.ShellConfigDescriptor
+==============================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autoclass:: ShellConfigDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ShellConfigDescriptor.clear
+      ~ShellConfigDescriptor.copy
+      ~ShellConfigDescriptor.fromkeys
+      ~ShellConfigDescriptor.get
+      ~ShellConfigDescriptor.items
+      ~ShellConfigDescriptor.keys
+      ~ShellConfigDescriptor.pop
+      ~ShellConfigDescriptor.popitem
+      ~ShellConfigDescriptor.setdefault
+      ~ShellConfigDescriptor.update
+      ~ShellConfigDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ShellConfigDescriptor.defaults
+   
+   

@@ -1,0 +1,33 @@
+hpcflow.sdk.core.validation.Schema
+==================================
+
+.. currentmodule:: hpcflow.sdk.core.validation
+
+.. autoclass:: Schema
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~Schema.add_schema
+      ~Schema.to_tree
+      ~Schema.validate
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Schema.rules
+   
+   
