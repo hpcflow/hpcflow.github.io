@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.path\_option
+====================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: path_option
