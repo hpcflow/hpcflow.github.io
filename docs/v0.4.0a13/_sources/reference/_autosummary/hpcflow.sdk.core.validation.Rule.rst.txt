@@ -1,0 +1,31 @@
+hpcflow.sdk.core.validation.Rule
+================================
+
+.. currentmodule:: hpcflow.sdk.core.validation
+
+.. autoclass:: Rule
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Rule.condition
+      ~Rule.path
+   
+   

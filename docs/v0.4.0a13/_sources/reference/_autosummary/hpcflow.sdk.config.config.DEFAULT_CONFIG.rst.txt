@@ -1,0 +1,6 @@
+hpcflow.sdk.config.config.DEFAULT\_CONFIG
+=========================================
+
+.. currentmodule:: hpcflow.sdk.config.config
+
+.. autodata:: DEFAULT_CONFIG
