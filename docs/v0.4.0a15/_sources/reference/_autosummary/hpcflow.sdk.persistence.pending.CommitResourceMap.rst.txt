@@ -1,0 +1,57 @@
+hpcflow.sdk.persistence.pending.CommitResourceMap
+=================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.pending
+
+.. autoclass:: CommitResourceMap
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CommitResourceMap.commit_EAR_ends
+      ~CommitResourceMap.commit_EAR_skips
+      ~CommitResourceMap.commit_EAR_starts
+      ~CommitResourceMap.commit_EAR_submission_indices
+      ~CommitResourceMap.commit_EARs
+      ~CommitResourceMap.commit_EARs_initialised
+      ~CommitResourceMap.commit_at_submit_metadata
+      ~CommitResourceMap.commit_elem_IDs
+      ~CommitResourceMap.commit_elem_iter_EAR_IDs
+      ~CommitResourceMap.commit_elem_iter_IDs
+      ~CommitResourceMap.commit_elem_iters
+      ~CommitResourceMap.commit_element_sets
+      ~CommitResourceMap.commit_elements
+      ~CommitResourceMap.commit_files
+      ~CommitResourceMap.commit_iter_data_idx
+      ~CommitResourceMap.commit_js_metadata
+      ~CommitResourceMap.commit_loop_indices
+      ~CommitResourceMap.commit_loop_num_iters
+      ~CommitResourceMap.commit_loop_parents
+      ~CommitResourceMap.commit_loops
+      ~CommitResourceMap.commit_param_sources
+      ~CommitResourceMap.commit_parameters
+      ~CommitResourceMap.commit_run_data_idx
+      ~CommitResourceMap.commit_set_run_dirs
+      ~CommitResourceMap.commit_submissions
+      ~CommitResourceMap.commit_tasks
+      ~CommitResourceMap.commit_template_components
+      ~CommitResourceMap.groups
+   
+   

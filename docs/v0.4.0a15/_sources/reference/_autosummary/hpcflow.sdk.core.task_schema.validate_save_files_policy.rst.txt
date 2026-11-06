@@ -1,0 +1,6 @@
+hpcflow.sdk.core.task\_schema.validate\_save\_files\_policy
+===========================================================
+
+.. currentmodule:: hpcflow.sdk.core.task_schema
+
+.. autofunction:: validate_save_files_policy

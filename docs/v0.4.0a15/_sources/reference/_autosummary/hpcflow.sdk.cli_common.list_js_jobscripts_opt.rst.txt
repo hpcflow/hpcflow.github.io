@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.list\_js\_jobscripts\_opt
+=================================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: list_js_jobscripts_opt
