@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.shells.get\_supported\_shells
+====================================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells
+
+.. autofunction:: get_supported_shells

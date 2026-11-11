@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.zip\_include\_execute\_opt
+==================================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: zip_include_execute_opt

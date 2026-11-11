@@ -1,0 +1,46 @@
+hpcflow.sdk.persistence.types.FileDescriptor
+============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autoclass:: FileDescriptor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~FileDescriptor.clear
+      ~FileDescriptor.copy
+      ~FileDescriptor.fromkeys
+      ~FileDescriptor.get
+      ~FileDescriptor.items
+      ~FileDescriptor.keys
+      ~FileDescriptor.pop
+      ~FileDescriptor.popitem
+      ~FileDescriptor.setdefault
+      ~FileDescriptor.update
+      ~FileDescriptor.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FileDescriptor.is_input
+      ~FileDescriptor.store_contents
+      ~FileDescriptor.dst_path
+      ~FileDescriptor.path
+      ~FileDescriptor.clean_up
+      ~FileDescriptor.contents
+   
+   

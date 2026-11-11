@@ -1,0 +1,42 @@
+hpcflow.sdk.persistence.types.EncodedStoreParameter
+===================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autoclass:: EncodedStoreParameter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~EncodedStoreParameter.clear
+      ~EncodedStoreParameter.copy
+      ~EncodedStoreParameter.fromkeys
+      ~EncodedStoreParameter.get
+      ~EncodedStoreParameter.items
+      ~EncodedStoreParameter.keys
+      ~EncodedStoreParameter.pop
+      ~EncodedStoreParameter.popitem
+      ~EncodedStoreParameter.setdefault
+      ~EncodedStoreParameter.update
+      ~EncodedStoreParameter.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EncodedStoreParameter.data
+      ~EncodedStoreParameter.type_lookup
+   
+   

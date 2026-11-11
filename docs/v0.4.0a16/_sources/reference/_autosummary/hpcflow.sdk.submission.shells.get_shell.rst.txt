@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.shells.get\_shell
+========================================
+
+.. currentmodule:: hpcflow.sdk.submission.shells
+
+.. autofunction:: get_shell

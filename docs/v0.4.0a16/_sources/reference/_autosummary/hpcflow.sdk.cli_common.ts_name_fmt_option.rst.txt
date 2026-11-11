@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.ts\_name\_fmt\_option
+=============================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: ts_name_fmt_option

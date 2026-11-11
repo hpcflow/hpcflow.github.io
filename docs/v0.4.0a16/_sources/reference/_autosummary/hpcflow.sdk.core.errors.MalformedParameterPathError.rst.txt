@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.MalformedParameterPathError
+===================================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: MalformedParameterPathError

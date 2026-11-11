@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.name\_timestamp\_option
+===============================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: name_timestamp_option

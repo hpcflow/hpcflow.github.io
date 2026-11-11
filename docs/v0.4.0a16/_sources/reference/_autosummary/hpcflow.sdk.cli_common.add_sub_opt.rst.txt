@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.add\_sub\_opt
+=====================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: add_sub_opt
