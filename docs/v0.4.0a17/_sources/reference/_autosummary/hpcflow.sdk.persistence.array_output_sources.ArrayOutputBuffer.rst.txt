@@ -1,0 +1,55 @@
+hpcflow.sdk.persistence.array_output_sources.ArrayOutputBuffer
+==============================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_output_sources
+
+.. autoclass:: ArrayOutputBuffer
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ArrayOutputBuffer.close
+      ~ArrayOutputBuffer.detach
+      ~ArrayOutputBuffer.fileno
+      ~ArrayOutputBuffer.flush
+      ~ArrayOutputBuffer.isatty
+      ~ArrayOutputBuffer.read
+      ~ArrayOutputBuffer.read1
+      ~ArrayOutputBuffer.readable
+      ~ArrayOutputBuffer.readinto
+      ~ArrayOutputBuffer.readinto1
+      ~ArrayOutputBuffer.readline
+      ~ArrayOutputBuffer.readlines
+      ~ArrayOutputBuffer.rollover
+      ~ArrayOutputBuffer.seek
+      ~ArrayOutputBuffer.seekable
+      ~ArrayOutputBuffer.tell
+      ~ArrayOutputBuffer.truncate
+      ~ArrayOutputBuffer.writable
+      ~ArrayOutputBuffer.write
+      ~ArrayOutputBuffer.writelines
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrayOutputBuffer.closed
+      ~ArrayOutputBuffer.encoding
+      ~ArrayOutputBuffer.errors
+      ~ArrayOutputBuffer.mode
+      ~ArrayOutputBuffer.name
+      ~ArrayOutputBuffer.newlines
+   
+   

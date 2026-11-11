@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.cache.read\_cache
+========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.cache
+
+.. autofunction:: read_cache

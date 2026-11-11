@@ -1,0 +1,48 @@
+hpcflow.sdk.monitoring.columns.RenderContext
+============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autoclass:: RenderContext
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RenderContext.actions
+      ~RenderContext.elements
+      ~RenderContext.format_datetime
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RenderContext.full
+      ~RenderContext.view
+      ~RenderContext.include_loop_skipped
+      ~RenderContext.group_elements
+      ~RenderContext.group_iterations
+      ~RenderContext.list_only
+      ~RenderContext.use_cache
+      ~RenderContext.action_widths
+      ~RenderContext.element_widths
+      ~RenderContext.action_summaries
+      ~RenderContext.compact_actions
+      ~RenderContext.compact_elements
+      ~RenderContext.element_summaries
+      ~RenderContext.display_timezone
+      ~RenderContext.current_local_time
+      ~RenderContext.status_icon_width
+   
+   

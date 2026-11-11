@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.compact.task\_progress
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.compact
+
+.. autofunction:: task_progress

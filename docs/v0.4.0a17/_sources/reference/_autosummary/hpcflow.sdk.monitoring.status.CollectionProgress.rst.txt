@@ -1,0 +1,32 @@
+hpcflow.sdk.monitoring.status.CollectionProgress
+================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autoclass:: CollectionProgress
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CollectionProgress.records
+      ~CollectionProgress.pending
+      ~CollectionProgress.checking_activity
+   
+   

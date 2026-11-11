@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.compact.compact\_action\_text
+====================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.compact
+
+.. autofunction:: compact_action_text

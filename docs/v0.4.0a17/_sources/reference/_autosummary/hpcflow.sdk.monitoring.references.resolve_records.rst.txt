@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.references.resolve\_records
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.references
+
+.. autofunction:: resolve_records

@@ -1,0 +1,41 @@
+hpcflow.sdk.persistence.zarr.ZarrStoreElement
+=============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.zarr
+
+.. autoclass:: ZarrStoreElement
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ZarrStoreElement.append_iteration_IDs
+      ~ZarrStoreElement.decode
+      ~ZarrStoreElement.encode
+      ~ZarrStoreElement.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZarrStoreElement.id_
+      ~ZarrStoreElement.is_pending
+      ~ZarrStoreElement.index
+      ~ZarrStoreElement.es_idx
+      ~ZarrStoreElement.seq_idx
+      ~ZarrStoreElement.src_idx
+      ~ZarrStoreElement.task_ID
+      ~ZarrStoreElement.iteration_IDs
+   
+   

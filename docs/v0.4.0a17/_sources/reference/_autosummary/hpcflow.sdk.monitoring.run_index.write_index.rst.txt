@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.run\_index.write\_index
+==============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_index
+
+.. autofunction:: write_index

@@ -1,0 +1,35 @@
+hpcflow.sdk.monitoring.scheduler_cache.SchedulerSnapshot
+========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.scheduler_cache
+
+.. autoclass:: SchedulerSnapshot
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchedulerSnapshot.queried_at
+      ~SchedulerSnapshot.references
+      ~SchedulerSnapshot.states
+      ~SchedulerSnapshot.error
+      ~SchedulerSnapshot.cached
+      ~SchedulerSnapshot.observed_at
+   
+   

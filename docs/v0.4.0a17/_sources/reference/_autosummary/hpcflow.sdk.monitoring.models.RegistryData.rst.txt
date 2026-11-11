@@ -1,0 +1,34 @@
+hpcflow.sdk.monitoring.models.RegistryData
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: RegistryData
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RegistryData.from_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RegistryData.records
+      ~RegistryData.next_local_id
+      ~RegistryData.schema_version
+      ~RegistryData.free_local_ids
+   
+   

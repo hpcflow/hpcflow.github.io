@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.cancel
+====================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: cancel

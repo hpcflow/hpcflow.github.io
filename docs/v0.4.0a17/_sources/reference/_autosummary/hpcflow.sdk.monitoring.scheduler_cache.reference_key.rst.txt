@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.scheduler\_cache.reference\_key
+======================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.scheduler_cache
+
+.. autofunction:: reference_key

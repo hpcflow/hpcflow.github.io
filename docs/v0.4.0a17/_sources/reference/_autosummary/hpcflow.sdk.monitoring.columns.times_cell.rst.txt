@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.columns.times\_cell
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autofunction:: times_cell

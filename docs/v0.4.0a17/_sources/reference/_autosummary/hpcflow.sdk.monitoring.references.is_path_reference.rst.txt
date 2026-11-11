@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.references.is\_path\_reference
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.references
+
+.. autofunction:: is_path_reference

@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.naming.workflow\_name\_from\_path
+========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.naming
+
+.. autofunction:: workflow_name_from_path

@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.availability.existing\_records
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.availability
+
+.. autofunction:: existing_records

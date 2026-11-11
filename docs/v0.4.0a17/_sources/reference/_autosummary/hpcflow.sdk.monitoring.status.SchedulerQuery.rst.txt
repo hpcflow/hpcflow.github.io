@@ -1,0 +1,31 @@
+hpcflow.sdk.monitoring.status.SchedulerQuery
+============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autoclass:: SchedulerQuery
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SchedulerQuery.scheduler
+      ~SchedulerQuery.jobs
+   
+   

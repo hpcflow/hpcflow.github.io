@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.references.resolve\_submission\_id
+=========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.references
+
+.. autofunction:: resolve_submission_id

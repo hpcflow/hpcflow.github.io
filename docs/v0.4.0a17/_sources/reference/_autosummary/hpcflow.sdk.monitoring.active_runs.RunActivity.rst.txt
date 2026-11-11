@@ -1,0 +1,35 @@
+hpcflow.sdk.monitoring.active_runs.RunActivity
+==============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.active_runs
+
+.. autoclass:: RunActivity
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunActivity.is_future
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunActivity.run_ids
+      ~RunActivity.positions
+      ~RunActivity.cursor
+      ~RunActivity.active
+      ~RunActivity.plan_id
+   
+   

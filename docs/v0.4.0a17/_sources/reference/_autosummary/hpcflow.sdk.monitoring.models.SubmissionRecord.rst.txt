@@ -1,0 +1,59 @@
+hpcflow.sdk.monitoring.models.SubmissionRecord
+==============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: SubmissionRecord
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubmissionRecord.from_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubmissionRecord.workflow_path
+      ~SubmissionRecord.workflow_id
+      ~SubmissionRecord.workflow_name
+      ~SubmissionRecord.submission_index
+      ~SubmissionRecord.submission_part_id
+      ~SubmissionRecord.submitted_at
+      ~SubmissionRecord.local_id
+      ~SubmissionRecord.workflow_name_from_metadata
+      ~SubmissionRecord.started_at
+      ~SubmissionRecord.finished_at
+      ~SubmissionRecord.activity
+      ~SubmissionRecord.accessibility
+      ~SubmissionRecord.jobs
+      ~SubmissionRecord.revision
+      ~SubmissionRecord.submitting
+      ~SubmissionRecord.submitting_owner
+      ~SubmissionRecord.app_info
+      ~SubmissionRecord.legacy
+      ~SubmissionRecord.workflow_header_token
+      ~SubmissionRecord.last_checked_at
+      ~SubmissionRecord.scheduler_states
+      ~SubmissionRecord.scheduler_error
+      ~SubmissionRecord.scheduler_availability
+      ~SubmissionRecord.scheduler_cached
+      ~SubmissionRecord.detail_error
+      ~SubmissionRecord.inactive_at
+      ~SubmissionRecord.cancel_requested_at
+      ~SubmissionRecord.last_action_summary
+      ~SubmissionRecord.template_name
+   
+   

@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.ret\_id\_opt
+====================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: ret_id_opt

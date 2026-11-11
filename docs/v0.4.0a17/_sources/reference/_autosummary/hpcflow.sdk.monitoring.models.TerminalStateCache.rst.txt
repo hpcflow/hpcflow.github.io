@@ -1,0 +1,34 @@
+hpcflow.sdk.monitoring.models.TerminalStateCache
+================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: TerminalStateCache
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TerminalStateCache.workflow_id
+      ~TerminalStateCache.submission_index
+      ~TerminalStateCache.terminal_states
+      ~TerminalStateCache.observed_at
+      ~TerminalStateCache.schema_version
+   
+   

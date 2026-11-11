@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.elements.element\_summary
+================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.elements
+
+.. autofunction:: element_summary

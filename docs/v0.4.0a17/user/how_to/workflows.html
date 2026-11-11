@@ -1,0 +1,1051 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Workflow how-tos &#8212; hpcflow 0.4.0a17 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=57b3f318" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=a95f357e85573c9b56d5"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5" />
+
+    <script src="../../_static/documentation_options.js?v=fa9f9af8"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user/how_to/workflows';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.19.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hpcflow.github.io/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.4.0a17';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../../_static/js/custom.js?v=0e67ee37"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Environment how-tos" href="environments.html" />
+    <link rel="prev" title="Workflow templates how-tos" href="workflow_templates.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo-v2.png" class="logo__image only-light" alt="hpcflow 0.4.0a17 documentation - Home"/>
+    <img src="../../_static/logo-v2.png" class="logo__image only-dark pst-js-only" alt="hpcflow 0.4.0a17 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference/index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../development/index.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-box fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Install
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference/index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../development/index.html">
+    Development
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hpcflow/hpcflow" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/hpcflow" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-box fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar"><svg class="pst-icon svg-inline--fa" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/index.html">Getting started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/running_workflows.html">Run a demo workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/custom_task_schemas_and_workflows.html">Write your own task schema and workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advanced_workflow_concepts.html">Advanced workflow concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/errors.html">Errors and debugging</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">How-to guides</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="task_schemas.html">Task Schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="template_components.html">Template Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_templates.html">Workflow Templates</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environments.html">Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meta_tasks.html">Meta-tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loops.html">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="secrets.html">Secrets</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/install-locally.html">Beginner: Install MatFlow on your local machine</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">How-To Guides</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Workflow how-tos</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="workflow-how-tos">
+<h1>Workflow how-tos<a class="headerlink" href="#workflow-how-tos" title="Link to this heading">#</a></h1>
+<section id="generating-a-persistent-workflow-from-a-workflow-template">
+<h2>Generating a persistent workflow from a workflow template<a class="headerlink" href="#generating-a-persistent-workflow-from-a-workflow-template" title="Link to this heading">#</a></h2>
+<p>If you have a workflow template object in Python <code class="code docutils literal notranslate"><span class="pre">wkt</span></code>, you can generate a new persistent workflow via the <a class="reference internal" href="../../reference/_autosummary/hpcflow.app.Workflow.html#hpcflow.app.Workflow.from_template" title="hpcflow.app.Workflow.from_template"><code class="xref py py-func docutils literal notranslate"><span class="pre">hpcflow.app.Workflow.from_template()</span></code></a> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">hpcflow.app</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">hf</span>
+
+<span class="n">wk</span> <span class="o">=</span> <span class="n">hf</span><span class="o">.</span><span class="n">Workflow</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="n">wkt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the CLI, if you have a workflow template YAML file, you can generate a new persistent workflow like this:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow make /path/to/workflow/template.yaml</span>
+</pre></div>
+</div>
+<p>There are several options for telling hpcFlow about the format of the template, and controlling how the workflow is generated. For instance, to specify the workflow name, use the <code class="code docutils literal notranslate"><span class="pre">--name</span></code> option.  See the CLI reference documentation for more details.</p>
+</section>
+<section id="loading-workflows">
+<h2>Loading workflows<a class="headerlink" href="#loading-workflows" title="Link to this heading">#</a></h2>
+<p>We support paths like:</p>
+<ul class="simple">
+<li><p><cite>/path/to/workflow</cite> for local zarr or json</p></li>
+<li><p><cite>/path/to/workflow.zip</cite> for local zarr-zip</p></li>
+<li><p><cite>/path/to/workflow.json</cite> for local json-single # TODO</p></li>
+<li><p><cite>ssh://user&#64;host/path/to/workflow</cite> for remote zarr</p></li>
+<li><p><cite>ssh://user&#64;host/path/to/workflow.zip</cite> for remote zarr-zip</p></li>
+<li><p><cite>ssh://user&#64;host/path/to/workflow.json</cite> for remote json</p></li>
+<li><p><cite>https://sandbox.zenodo.org/record/1210144/files/workflow.zip</cite> for zenodo zarr-zip</p></li>
+</ul>
+<p>You can convert a zarr store to an archived zarr-zip store using <cite>Workflow.zip()</cite>.</p>
+</section>
+<section id="monitor-submissions">
+<h2>Monitor submissions<a class="headerlink" href="#monitor-submissions" title="Link to this heading">#</a></h2>
+<p>In an interactive terminal, <code class="docutils literal notranslate"><span class="pre">show</span></code> displays the table while it collects data.
+Scheduler status starts as <code class="docutils literal notranslate"><span class="pre">Checking...</span></code> and run-state columns as <code class="docutils literal notranslate"><span class="pre">Loading...</span></code>;
+each row fills in when ready. Rows can reorder once activity is known, keeping
+active submissions first. Scheduler queries remain batched across submissions.
+Redirected output prints the completed table once. Use <code class="docutils literal notranslate"><span class="pre">--no-status</span></code> to disable
+progressive display.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span></code> to list active submissions first, followed by
+recent inactive submissions. Submissions whose scheduler cannot be queried remain
+visible with unknown activity. Missing or incompatible workflow data does not imply
+that its jobs have stopped. Workflows with deleted or missing paths are hidden
+by default, before the recent-history limit is applied. Include them with
+<code class="docutils literal notranslate"><span class="pre">--include-missing</span></code> (also available with <code class="docutils literal notranslate"><span class="pre">--list</span></code>). Filtering does not remove
+their registry records or saved cancellation references:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show --include-missing</span>
+<span class="go">hpcflow show --list --include-missing</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show</span>
+<span class="go">hpcflow show --max-recent 10</span>
+<span class="go">hpcflow show 42 --full</span>
+<span class="go">hpcflow show ./my-workflow --ref-type path</span>
+</pre></div>
+</div>
+<p>The Status column places compact coloured scheduler icons to the left of
+activity text. Space is reserved across submissions so the text stays aligned,
+including rows with no icons.
+Add <code class="docutils literal notranslate"><span class="pre">availability</span></code> when you need store readability and scheduler/cache
+diagnostics; it is hidden by default:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show --columns id,name,status,availability,actions</span>
+</pre></div>
+</div>
+<p>Workflows copied from other machines remain inspectable. Foreign schedulers
+are marked remote in Availability rather than making workflow data incompatible.
+Live queries are made only for local jobs or queued jobs whose saved machine
+matches the configured machine. Foreign process IDs are never checked locally.
+Completed action snapshots can establish inactivity; otherwise inaccessible
+schedulers leave activity unknown.</p>
+<p>Local ZIP workflows can be inspected by path or registry reference without
+extraction or changing the archive. Embedded terminal caches are reused when
+present; missing states are read from the archived workflow. Archive status
+reflects saved action data, and archive scheduler references are not queried.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show ./workflow.zip</span>
+</pre></div>
+</div>
+<p>Each invocation queries a compatible scheduler target once across all selected
+submissions, even when their resource directives or submission/cancel commands
+differ. Duplicate references share the same observation. Distinct query
+commands and cluster targets remain separate. Slurm reads one queue snapshot
+and filters job IDs locally, so finished jobs do not trigger additional queries.
+Snapshots are scoped to one invocation; the next <code class="docutils literal notranslate"><span class="pre">show</span></code> refreshes them.</p>
+<p>Rich progress displays workflow loading and scheduler queries. Suppress it
+with <code class="docutils literal notranslate"><span class="pre">--no-status</span></code> (or <code class="docutils literal notranslate"><span class="pre">app.show(status=False)</span></code> in Python).</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span> <span class="pre">--list</span></code> to list all registered submission
+parts, including their local ID, workflow name, submission index, submission
+time, last recorded activity, and path. It reads the registry and checks path
+existence without loading workflows, querying schedulers, updating states, or
+pruning history. Incompatible workflows remain listed; missing workflows are
+included only with <code class="docutils literal notranslate"><span class="pre">--include-missing</span></code>. Activity in this view is the last
+recorded observation, rather than a current scheduler query.</p>
+<p>The list includes all retained inactive submissions by default. An explicit
+<code class="docutils literal notranslate"><span class="pre">--max-recent</span> <span class="pre">N</span></code> limits inactive history; <code class="docutils literal notranslate"><span class="pre">WORKFLOW_REF</span></code> filters the list
+to registered submissions of one workflow, for example
+<code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span> <span class="pre">--list</span> <span class="pre">42</span></code>.</p>
+<p>The optional reference selects one workflow by a displayed local ID, an exact
+registered workflow name, or a path, including
+all retained submission parts for that workflow. Selecting a workflow disables
+the default recent-submission limit; supply <code class="docutils literal notranslate"><span class="pre">--max-recent</span> <span class="pre">N</span></code> explicitly to
+limit its inactive history. This applies to ZIP paths too. An explicit path also supports
+inspecting a workflow whose submission history is no longer retained. Local IDs are
+not reused after automatic pruning. Explicit unregistering frees an ID for reuse.</p>
+<p>Remove a specific registered submission part with <code class="docutils literal notranslate"><span class="pre">unregister</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow unregister 42</span>
+</pre></div>
+</div>
+<p>This removes only the record identified by the displayed submission ID and frees
+that ID for reuse. Other parts of the same workflow remain registered. Running
+jobs continue and workflow files are preserved. Missing workflows can also be
+unregistered. The command is rejected while a submission command is still
+registering jobs, to protect in-progress writes.</p>
+<p>Unregister all inactive submissions with <code class="docutils literal notranslate"><span class="pre">--all</span></code>. Include active and unknown
+records with <code class="docutils literal notranslate"><span class="pre">--include-active</span></code>; this flag requires <code class="docutils literal notranslate"><span class="pre">--all</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow unregister --all</span>
+<span class="go">hpcflow unregister --all --include-active</span>
+</pre></div>
+</div>
+<p>Activity is the last registered observation; no scheduler queries are made.
+Bulk removal is atomic: if any selected submission is still registering jobs,
+the whole operation fails without removing records. Other activity states are
+preserved when removing inactive entries, even if retention limits were lowered.
+Every explicitly removed ID becomes reusable. In Python, use
+<code class="docutils literal notranslate"><span class="pre">app.unregister(all_submissions=True,</span> <span class="pre">include_active=False)</span></code>; bulk calls
+return the removed IDs.</p>
+<p>Future submissions reuse the lowest explicitly freed ID before allocating a new
+ID. Automatic retention pruning does not free IDs. After unregistering, an old
+command using that numeric ID may therefore refer to a newly registered workflow.
+The SDK equivalent is <code class="docutils literal notranslate"><span class="pre">app.unregister(42)</span></code>.</p>
+<p>Filter by exact, case-sensitive workflow template names with <code class="docutils literal notranslate"><span class="pre">--tname</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show --tname my_template</span>
+<span class="go">hpcflow show --tname my_template,another_template</span>
+<span class="go">hpcflow show --list --tname my_template</span>
+</pre></div>
+</div>
+<p>The filter combines with <code class="docutils literal notranslate"><span class="pre">WORKFLOW_REF</span></code> and is applied before the recent
+submission limit and scheduler queries. Names refer to the original template,
+independently of a custom workflow name or directory name. New submissions
+save the template name in the registry. For older entries without a saved name,
+filtering reads only the workflow metadata header; unreadable or missing names
+do not match. <code class="docutils literal notranslate"><span class="pre">--list</span></code> never writes this recovered metadata or queries schedulers.
+In Python, use <code class="docutils literal notranslate"><span class="pre">app.show(template_names=[&quot;my_template&quot;,</span> <span class="pre">&quot;another_template&quot;])</span></code>.</p>
+<p>Choose which columns appear, and their order, in the configuration file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">show_timezone</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span><span class="w">  </span><span class="c1"># or UTC, Europe/London, America/New_York, etc.</span>
+<span class="nt">show_columns</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">status</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">elements</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">times</span><span class="p p-Indicator">]</span>
+<span class="nt">show_list_columns</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">id</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">submission</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">submit</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">status</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">path</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>Omitted columns are hidden. The available identifiers are <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">status</span></code>, <code class="docutils literal notranslate"><span class="pre">availability</span></code>, <code class="docutils literal notranslate"><span class="pre">actions</span></code>, <code class="docutils literal notranslate"><span class="pre">elements</span></code>, <code class="docutils literal notranslate"><span class="pre">submit</span></code>, <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">end</span></code>, <code class="docutils literal notranslate"><span class="pre">times</span></code>,
+<code class="docutils literal notranslate"><span class="pre">submission</span></code>, and <code class="docutils literal notranslate"><span class="pre">path</span></code>. Lists must be nonempty and contain no duplicates.
+The default columns are <code class="docutils literal notranslate"><span class="pre">id,name,status,actions</span></code>. An explicit
+<code class="docutils literal notranslate"><span class="pre">show_columns</span></code> setting takes precedence. Override the configuration for one
+invocation with <code class="docutils literal notranslate"><span class="pre">--columns</span></code>, for example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show --columns id,name,status,elements,times</span>
+<span class="go">hpcflow show --full --columns name,elements,actions</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Elements</span></code> counts one overall state per task element in each submission,
+across all its iterations, using the latest attempt of each action. Errors, aborts, and upstream-failure
+skips take precedence; otherwise running actions and then waiting actions
+determine the state. Fully successful elements show completed; terminal
+task-condition skips remain distinguishable as <code class="docutils literal notranslate"><span class="pre">C</span></code>. Loop-skipped runs are
+omitted by default. When included, terminated future iterations do not change
+an otherwise completed element to <code class="docutils literal notranslate"><span class="pre">L</span></code>; wholly loop-skipped elements show <code class="docutils literal notranslate"><span class="pre">L</span></code>.
+With <code class="docutils literal notranslate"><span class="pre">--full</span></code>, elements sharing an overall state are grouped into aligned
+element ranges, using the same layout as action states.</p>
+<p>For confirmed inactive submissions, runs last recorded as running show as
+<code class="docutils literal notranslate"><span class="pre">interrupted</span></code> (an orange <code class="docutils literal notranslate"><span class="pre">I</span></code>) in both Actions and Elements. This is a terminal
+display state with an unknown exit outcome; it does not change the stored run
+status or invent a finish time. For unknown submissions, recorded running states
+show as <code class="docutils literal notranslate"><span class="pre">unknown</span></code> (a grey <code class="docutils literal notranslate"><span class="pre">?</span></code>); confirmed terminal states remain visible.
+Active submissions retain running states. Use <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">--legend</span></code> to see all state icons.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Submit</span></code>, <code class="docutils literal notranslate"><span class="pre">Start</span></code>, and <code class="docutils literal notranslate"><span class="pre">End</span></code> show their respective datetimes in the
+displaying machine’s local timezone, to seconds. Set <code class="docutils literal notranslate"><span class="pre">show_timezone</span></code> to
+<code class="docutils literal notranslate"><span class="pre">UTC</span></code> or an IANA timezone name to override this. Each timestamp is converted
+independently. All datetime columns (including <code class="docutils literal notranslate"><span class="pre">Times</span></code> and cached observation
+times) omit timezone suffixes when the timestamp’s timezone abbreviation and
+UTC offset match the displaying machine’s current local time. Other timestamps
+retain their abbreviation and offset, including timestamps on the other side
+of a daylight-saving change. This also applies when <code class="docutils literal notranslate"><span class="pre">show_timezone</span></code> selects
+a different display zone. The current local time is captured once per table.
+Stored timestamps, ordering, and duration calculations remain in UTC. Missing
+times show an em dash. <code class="docutils literal notranslate"><span class="pre">Times</span></code> combines all three in one cell, labelled
+<code class="docutils literal notranslate"><span class="pre">submit</span></code>, <code class="docutils literal notranslate"><span class="pre">start</span></code>, and <code class="docutils literal notranslate"><span class="pre">end</span></code> on separate lines. Within <code class="docutils literal notranslate"><span class="pre">Times</span></code>, start/end
+dates are omitted when
+they match the submit date in the display timezone; the separate <code class="docutils literal notranslate"><span class="pre">Start</span></code> and
+<code class="docutils literal notranslate"><span class="pre">End</span></code> columns always retain the full date. Omitted dates leave blank space
+so the clock times stay aligned. Metadata-only selections such as
+<code class="docutils literal notranslate"><span class="pre">id,name,status,submit</span></code> skip action-state loading.
+In <code class="docutils literal notranslate"><span class="pre">--list</span></code> mode, all columns use registered/cached data without refreshing
+workflows or querying schedulers.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span> <span class="pre">my_workflow_2026-11-01_120000</span></code>
+selects the workflow with that registered name. Names also work with <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">--list</span></code>,
+<code class="docutils literal notranslate"><span class="pre">cancel</span></code>, other commands accepting <code class="docutils literal notranslate"><span class="pre">WORKFLOW_REF</span></code>, and the Python <code class="docutils literal notranslate"><span class="pre">Workflow</span></code>
+constructor. Multiple submission parts of the same workflow are selected together.
+If several distinct workflows share a name, use a local ID or path instead.
+Names are matched exactly, including case; numeric local IDs take precedence.
+Use <code class="docutils literal notranslate"><span class="pre">--ref-type</span> <span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">--ref-type</span> <span class="pre">path</span></code> to disambiguate a name from a
+relative path (and <code class="docutils literal notranslate"><span class="pre">--ref-type</span> <span class="pre">name</span></code> for a numeric workflow name). Explicit
+paths such as <code class="docutils literal notranslate"><span class="pre">./my-workflow</span></code> retain path semantics.</p>
+<p>Displayed workflow names come from workflow metadata, so enabling
+<code class="docutils literal notranslate"><span class="pre">workflow_name_use_dir</span></code> keeps the workflow name visible alongside its timestamp.
+New submissions save this name in the registry, keeping it available even when
+the workflow data later becomes unavailable.</p>
+<p>Configure history retention and the default inactive display count independently:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow config set known_submissions_max_inactive 100</span>
+<span class="go">hpcflow config set known_submissions_max_unknown 10</span>
+<span class="go">hpcflow config set show_max_recent 3</span>
+</pre></div>
+</div>
+<p>All values are non-negative integers; zero disables retention for the respective
+activity state or disables inactive display. Unknown records are limited to the
+ten most recently submitted records by default, with local IDs breaking timestamp
+ties. Rechecking an older record does not make it more recent. Active submissions
+are always retained, so the total stored count can exceed these limits.
+Retention is applied during registry writes; <code class="docutils literal notranslate"><span class="pre">--list</span></code> and <code class="docutils literal notranslate"><span class="pre">--no-update</span></code> do
+not prune records. <code class="docutils literal notranslate"><span class="pre">--max-recent</span></code> overrides the inactive display setting for
+one invocation.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">--full</span></code>, elements with identical ordered action states share one row. For
+example, the element range <code class="docutils literal notranslate"><span class="pre">[0–99]</span></code> before the action icons applies separately
+to each of those 100 elements. Task names, element ranges, iteration ranges, and
+action icons use separate columns, keeping the icons aligned across tasks.
+Iterations with identical ordered action states also share a row. For example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>system_analysis  [0–9]  iters {0–22}   ■
+                        iters {23}     ●
+                        iters {24–63}  .
+</pre></div>
+</div>
+<p>This shows completed iterations 0–22, running iteration 23, and pending iterations 24–63.
+Each action pattern applies separately to every iteration in its range and every
+listed element. Nonconsecutive element and iteration ranges are comma-separated,
+using square brackets for elements (<code class="docutils literal notranslate"><span class="pre">[0–9,20–29]</span></code>) and curly braces for
+iterations (<code class="docutils literal notranslate"><span class="pre">{0–9,20–29}</span></code>). Different action orders and retry attempts remain separate.
+Element and iteration numbering are unchanged.</p>
+<p>Choose the Actions and Elements views explicitly with <code class="docutils literal notranslate"><span class="pre">--view</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">counts</span></code> shows overall run-state and element-state counts (the default for plain <code class="docutils literal notranslate"><span class="pre">show</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasks</span></code> shows per-task iteration progress and run totals in Actions, and
+per-task overall element-state totals in Elements, even for small workflows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detail</span></code> shows exact grouped element/iteration patterns in Actions and
+element ranges grouped by overall state in Elements, without automatic compaction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span></code> chooses detailed patterns or task summaries independently for each
+column based on its layout size.
+<code class="docutils literal notranslate"><span class="pre">--full</span></code> is an alias for this behavior when no explicit view is supplied.</p></li>
+</ul>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span> <span class="pre">42</span> <span class="pre">--view</span> <span class="pre">tasks</span></code> requests the task
+summary, and <code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span> <span class="pre">42</span> <span class="pre">--view</span> <span class="pre">detail</span></code> retains the exact
+grouped patterns. Explicit views override <code class="docutils literal notranslate"><span class="pre">--full</span></code>. The same views work with
+<code class="docutils literal notranslate"><span class="pre">--list</span></code> using saved state data. The SDK equivalent is <code class="docutils literal notranslate"><span class="pre">show(view=&quot;tasks&quot;)</span></code>.</p>
+<p>Large <code class="docutils literal notranslate"><span class="pre">--view</span> <span class="pre">auto</span></code> (or <code class="docutils literal notranslate"><span class="pre">--full</span></code>) Actions layouts automatically switch to a compact task summary.
+This happens above 40 detail rows, or above eight rows when long labels would
+crowd the icons. Each task shows its element count, completed and visible
+iteration counts per element (a minimum–maximum range when elements differ),
+and coloured run-state totals. For example, <code class="docutils literal notranslate"><span class="pre">216–256</span> <span class="pre">done</span> <span class="pre">/</span> <span class="pre">486</span> <span class="pre">visible</span></code> means
+each element has completed between 216 and 256 of its 486 visible iterations;
+these are counts, not iteration indices. An iteration counts as done only when
+the latest attempt of every known action succeeded. Entirely condition-skipped
+iterations are reported separately as <code class="docutils literal notranslate"><span class="pre">C</span></code>. Run totals include retry attempts.</p>
+<p>Tasks remain in workflow order, regardless of their states. Up to three problem groups per task include
+element and iteration references; an explicit count reports further omitted
+groups. Names wrap above the icons rather than taking their space. This view
+uses the same collected data and does not make additional scheduler queries.
+Use <code class="docutils literal notranslate"><span class="pre">--view</span> <span class="pre">detail</span></code> to inspect exact ranges while retaining grouping.</p>
+<p>Disable grouping independently with <code class="docutils literal notranslate"><span class="pre">--no-group-elements</span></code> or
+<code class="docutils literal notranslate"><span class="pre">--no-group-iterations</span></code>, or use <code class="docutils literal notranslate"><span class="pre">--no-group</span></code> to disable both. These options
+imply <code class="docutils literal notranslate"><span class="pre">--full</span></code>, preserve icon alignment, and work with <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">--list</span></code> when
+cached state data is available:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show 42 --no-group</span>
+<span class="go">hpcflow show 42 --no-group-iterations</span>
+</pre></div>
+</div>
+<p>The SDK equivalents are <code class="docutils literal notranslate"><span class="pre">group_elements=False</span></code> and <code class="docutils literal notranslate"><span class="pre">group_iterations=False</span></code>.
+Explicit <code class="docutils literal notranslate"><span class="pre">counts</span></code> and <code class="docutils literal notranslate"><span class="pre">tasks</span></code> views cannot be combined with disabled grouping;
+use <code class="docutils literal notranslate"><span class="pre">detail</span></code> or <code class="docutils literal notranslate"><span class="pre">auto</span></code> with those options.</p>
+<p>The Elements task view always counts each element once across all iterations,
+using the same latest-attempt rollup and state precedence as the other views.
+It shows no iteration progress or run-attempt counts. Tasks remain in workflow
+order regardless of their states. In <code class="docutils literal notranslate"><span class="pre">auto</span></code>, large element
+layouts and long, fragmented element ranges use this task summary so range
+labels cannot crowd out the icons. For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow show 42 --view tasks --columns name,elements</span>
+<span class="go">hpcflow show 42 --view tasks --columns actions,elements</span>
+</pre></div>
+</div>
+<p>Runs skipped because a loop terminated are hidden by default in both compact and
+full output. Skips due to upstream failures or unmet task conditions remain visible.
+To include loop-skipped runs, use
+<code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">show</span> <span class="pre">--full</span> <span class="pre">--include-loop-skipped</span></code>.
+All terminal states, including hidden skips and their reasons, remain cached;
+filtering does not change submission activity or completion tracking.
+The action symbols distinguish <code class="docutils literal notranslate"><span class="pre">L</span></code> (loop termination), <code class="docutils literal notranslate"><span class="pre">C</span></code> (task condition
+not met), and <code class="docutils literal notranslate"><span class="pre">s</span></code> (upstream failure or an unspecified skip reason). <code class="docutils literal notranslate"><span class="pre">L</span></code> and
+<code class="docutils literal notranslate"><span class="pre">C</span></code> use the same grey as pending actions. The <em>iters</em> label is italicized;
+element and iteration ranges retain their regular style.</p>
+<p>The monitoring registry is stored separately as <code class="docutils literal notranslate"><span class="pre">known_submissions_v2.json</span></code> in the
+host’s application data directory. Legacy metadata and local IDs are imported when
+the registry is first created; the legacy text file is left untouched. Use
+<code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">open</span> <span class="pre">known-subs</span> <span class="pre">--path</span></code> to locate the registry.</p>
+<p>Terminal action states are cached in
+<code class="docutils literal notranslate"><span class="pre">artifacts/submissions/&lt;index&gt;/tmp/terminal_states.json.zst</span></code> within each workflow,
+using zstd-compressed JSON. Legacy <code class="docutils literal notranslate"><span class="pre">terminal_states.json</span></code> files remain readable
+and are migrated on a writable observation, including already-complete caches.
+<code class="docutils literal notranslate"><span class="pre">--no-update</span></code> prevents migration. ZIP workflows can reuse either embedded
+format and are never modified by cache reads.
+Subsequent queries read valid cached terminal states and refresh unresolved runs.
+Missing or corrupt caches are rebuilt when the workflow is readable. <code class="docutils literal notranslate"><span class="pre">--no-update</span></code>
+queries current information without writing monitoring history or action caches.</p>
+<p>For active workflows, <code class="docutils literal notranslate"><span class="pre">show</span></code> also saves run coordinates and each run’s parent
+jobscript element in <code class="docutils literal notranslate"><span class="pre">artifacts/submissions/&lt;index&gt;/tmp/run_index.json.zst</span></code>.
+The first observation builds this index from the jobscript block arrays and
+inspected runs. Later observations reuse confirmed terminal states and skip
+store lookups for indexed runs whose parent jobscript element is queued or
+waiting. Running items use active-run markers to inspect only current and
+preceding uncached runs, showing their actual individual states and
+progress within sequential jobscripts without loading every future action.
+Runs whose parent is no longer reported are also read to capture their actual
+results, including skip reasons. If every unresolved run is queued or waiting,
+no workflow load is needed. Scheduler queries remain batched across submissions.</p>
+<p>Grey <code class="docutils literal notranslate"><span class="pre">Q</span></code> identifies a scheduler-derived observation: the parent jobscript
+element is queued or waiting. It does not assert the individual action’s stored
+state. Confirmed terminal states take precedence. <code class="docutils literal notranslate"><span class="pre">Q</span></code> observations never
+become terminal-cache entries or invent finish times. Running elements use
+ordinary action-state icons based on store reads; there is no <code class="docutils literal notranslate"><span class="pre">R</span></code> state.</p>
+<p>Executing jobs maintain one small marker per jobscript array item in
+<code class="docutils literal notranslate"><span class="pre">artifacts/submissions/&lt;index&gt;/tmp/active_runs/jobs/&lt;job-tree&gt;/items/&lt;shard-tree&gt;/markers/js_&lt;jobscript&gt;_item_&lt;item&gt;.json</span></code>.
+Array items are grouped into shards of 500. Plans, locks, and temporary files
+live in separate sibling directories, so each directory has at most 500 files,
+including during concurrent marker updates. Parent trees use radix-256 branches
+to keep directory fanout bounded for very large workflows. Existing flat-layout
+cursors remain supported without relocating files used by running jobs.
+Each item executes sequentially and records its current run ID and last-started
+cursor position. Combined scripts advance the cursor one run at a time too.
+Serial/direct jobs use item zero. Markers are replaced atomically; finishing a
+run clears its active ID but retains the cursor, including on exceptions.</p>
+<p>Immutable execution plans in each shard’s <code class="docutils literal notranslate"><span class="pre">plans</span></code> directory record the actual run order
+once when the submission is created. <code class="docutils literal notranslate"><span class="pre">show</span></code> reads uncached runs at or before
+the cursor and adds confirmed results to the terminal cache; runs after it
+remain submitted without store lookups. Numeric run IDs are never sorted to
+infer execution order. The marker remains small and no visited-ID history is
+maintained or appended to. A fingerprint binds each cursor to its plan.
+Cross-item loop, task-condition, and upstream-failure skip notifications ensure
+affected future runs are inspected even if their parent is still queued.</p>
+<p>Marker reads are used alongside a fresh running scheduler observation or a
+confirmed inactive submission. Inactive tracked items also avoid repeatedly
+reading future actions that never started; preceding unfinished runs are still
+inspected and retain the interrupted-state behavior.
+Missing, corrupt, mismatched, or incomplete markers fall back to the existing
+store-read path. New submissions receive an <code class="docutils literal notranslate"><span class="pre">active_runs/enabled.json</span></code>
+capability record before execution can start. Older submissions keep the
+existing fallback; tracking is never enabled halfway through an older job,
+because its execution position cannot be established safely. The older history
+protocol also falls back rather than being reinterpreted as a cursor. Submit a new workflow submission
+to use these hooks, including regenerated combined scripts. This changes
+execution telemetry, not the store format.</p>
+<p>Missing mappings, unavailable schedulers, foreign machines without shared
+scheduler configuration, and ZIP workflows
+fall back to ordinary store reads for unresolved runs. Scheduler observations
+are valid only for the current command and are never persisted as evidence for
+the next command. Corrupt or mismatched indices are rebuilt when writable;
+<code class="docutils literal notranslate"><span class="pre">--no-update</span></code> writes neither index nor terminal cache. Embedded ZIP indices
+remain readable, and archives remain unchanged. Existing terminal caches are
+not rewritten when no new terminal states were observed.</p>
+<p>New submissions save scheduler references after each successful job submission.
+<code class="docutils literal notranslate"><span class="pre">hpcflow</span> <span class="pre">cancel</span> <span class="pre">WORKFLOW_REF</span></code> can therefore request cancellation
+even when workflow data is missing or incompatible, provided scheduler access is
+available. Cancellation requests remain unconfirmed until a subsequent scheduler
+query establishes that jobs have stopped. Legacy records can acquire these
+references only while their workflows remain readable.</p>
+<p>The Python API’s <code class="docutils literal notranslate"><span class="pre">get_known_submissions()</span></code> returns JSON-compatible monitoring
+snapshots, including activity, accessibility, saved job references, and the last
+action summary. It no longer returns live submission objects.</p>
+</section>
+<section id="inspect-individual-action-runs">
+<h2>Inspect individual action runs<a class="headerlink" href="#inspect-individual-action-runs" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">show-runs</span></code> to inspect individual action attempts in a workflow:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">hpcflow workflow WORKFLOW_REF show-runs --state error</span>
+<span class="go">hpcflow workflow WORKFLOW_REF show-runs --state running</span>
+<span class="go">hpcflow workflow WORKFLOW_REF show-runs</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">WORKFLOW_REF</span></code> accepts a registered local ID, an exact registered workflow
+name, or a path. Omit <code class="docutils literal notranslate"><span class="pre">--state</span></code> to list all runs. State names are
+case-insensitive: <code class="docutils literal notranslate"><span class="pre">pending</span></code>, <code class="docutils literal notranslate"><span class="pre">prepared</span></code>, <code class="docutils literal notranslate"><span class="pre">submitted</span></code>, <code class="docutils literal notranslate"><span class="pre">running</span></code>,
+<code class="docutils literal notranslate"><span class="pre">skipped</span></code>, <code class="docutils literal notranslate"><span class="pre">aborted</span></code>, <code class="docutils literal notranslate"><span class="pre">success</span></code>, and <code class="docutils literal notranslate"><span class="pre">error</span></code>.</p>
+<p>The table shows run IDs, task names and insertion IDs, element/iteration/action
+indices, attempt/submission/jobscript indices, coloured states, and exit codes.
+The Action column includes the action index and its <code class="docutils literal notranslate"><span class="pre">short_name()</span></code>. Jobscript
+indices are local to the indicated submission; unassigned runs show an em dash.
+Indices are zero-based. Every attempt is included, so an earlier error remains
+visible after a successful retry. Missing values show an em dash, and an empty
+selection prints a message. This command reads current workflow data without
+querying schedulers or changing the monitoring registry or caches.</p>
+<p>The same inspection is available in Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">workflow</span><span class="o">.</span><span class="n">show_runs</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="s2">"error"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="workflow_templates.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Workflow templates how-tos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="environments.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Environment how-tos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-a-persistent-workflow-from-a-workflow-template">Generating a persistent workflow from a workflow template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-workflows">Loading workflows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-submissions">Monitor submissions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-individual-action-runs">Inspect individual action runs</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/hpcflow/hpcflow/edit/develop/docs/source/user/how_to/workflows.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/user/how_to/workflows.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=a95f357e85573c9b56d5"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=a95f357e85573c9b56d5"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, hpcflow developers.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.19.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.array\_outputs.write\_streamed\_array\_output
+=====================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_outputs
+
+.. autofunction:: write_streamed_array_output
