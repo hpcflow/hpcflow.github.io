@@ -1,0 +1,6 @@
+hpcflow.sdk.config.config.DEFAULTED\_CONFIG\_KEYS
+=================================================
+
+.. currentmodule:: hpcflow.sdk.config.config
+
+.. autodata:: DEFAULTED_CONFIG_KEYS

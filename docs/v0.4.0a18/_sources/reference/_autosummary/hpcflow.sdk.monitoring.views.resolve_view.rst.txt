@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.views.resolve\_view
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.views
+
+.. autofunction:: resolve_view

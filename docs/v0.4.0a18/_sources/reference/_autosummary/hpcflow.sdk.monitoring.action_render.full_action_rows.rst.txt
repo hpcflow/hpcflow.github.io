@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.action\_render.full\_action\_rows
+========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.action_render
+
+.. autofunction:: full_action_rows

@@ -1,0 +1,33 @@
+hpcflow.sdk.monitoring.compact.CountRange
+=========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.compact
+
+.. autoclass:: CountRange
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~CountRange.add
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~CountRange.minimum
+      ~CountRange.maximum
+      ~CountRange.label
+   
+   

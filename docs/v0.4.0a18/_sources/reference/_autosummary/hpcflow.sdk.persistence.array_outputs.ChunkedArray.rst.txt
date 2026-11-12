@@ -1,0 +1,39 @@
+hpcflow.sdk.persistence.array_outputs.ChunkedArray
+==================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_outputs
+
+.. autoclass:: ChunkedArray
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ChunkedArray.reading
+      ~ChunkedArray.verify
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ChunkedArray.ndim
+      ~ChunkedArray.shape
+      ~ChunkedArray.fs
+      ~ChunkedArray.path
+      ~ChunkedArray.dtype
+      ~ChunkedArray.chunks
+      ~ChunkedArray.chunk_idx
+      ~ChunkedArray.row_idx
+   
+   

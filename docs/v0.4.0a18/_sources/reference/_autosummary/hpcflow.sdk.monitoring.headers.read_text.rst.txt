@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.headers.read\_text
+=========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.headers
+
+.. autofunction:: read_text

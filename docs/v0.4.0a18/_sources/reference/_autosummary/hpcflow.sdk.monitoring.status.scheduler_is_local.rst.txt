@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.scheduler\_is\_local
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: scheduler_is_local

@@ -1,0 +1,48 @@
+hpcflow.sdk.monitoring.runs.RunRecord
+=====================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.runs
+
+.. autoclass:: RunRecord
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunRecord.run_id
+      ~RunRecord.task_id
+      ~RunRecord.task_name
+      ~RunRecord.element
+      ~RunRecord.iteration
+      ~RunRecord.action
+      ~RunRecord.action_name
+      ~RunRecord.attempt
+      ~RunRecord.submission
+      ~RunRecord.jobscript
+      ~RunRecord.state
+      ~RunRecord.exit_code
+      ~RunRecord.task_idx
+      ~RunRecord.host
+      ~RunRecord.start
+      ~RunRecord.end
+      ~RunRecord.duration
+      ~RunRecord.array_idx
+      ~RunRecord.end_size_bytes
+   
+   

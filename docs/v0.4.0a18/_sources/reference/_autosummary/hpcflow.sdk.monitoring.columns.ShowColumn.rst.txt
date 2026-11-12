@@ -1,0 +1,34 @@
+hpcflow.sdk.monitoring.columns.ShowColumn
+=========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autoclass:: ShowColumn
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ShowColumn.name
+      ~ShowColumn.title
+      ~ShowColumn.render
+      ~ShowColumn.list_title
+      ~ShowColumn.requires_summary
+   
+   

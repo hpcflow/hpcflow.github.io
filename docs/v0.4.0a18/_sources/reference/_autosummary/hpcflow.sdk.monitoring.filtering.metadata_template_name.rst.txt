@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.filtering.metadata\_template\_name
+=========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.filtering
+
+.. autofunction:: metadata_template_name

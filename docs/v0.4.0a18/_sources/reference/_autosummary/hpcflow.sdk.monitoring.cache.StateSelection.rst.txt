@@ -1,0 +1,32 @@
+hpcflow.sdk.monitoring.cache.StateSelection
+===========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.cache
+
+.. autoclass:: StateSelection
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StateSelection.entries
+      ~StateSelection.unresolved
+      ~StateSelection.index
+   
+   

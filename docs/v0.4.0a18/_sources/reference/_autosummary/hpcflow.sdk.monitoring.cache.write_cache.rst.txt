@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.cache.write\_cache
+=========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.cache
+
+.. autofunction:: write_cache

@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.zarr.decode\_msgpack
+============================================
+
+.. currentmodule:: hpcflow.sdk.persistence.zarr
+
+.. autofunction:: decode_msgpack

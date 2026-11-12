@@ -1,0 +1,31 @@
+hpcflow.sdk.monitoring.run_filters.IndexSelection
+=================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_filters
+
+.. autoclass:: IndexSelection
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~IndexSelection.within
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~IndexSelection.ranges
+   
+   

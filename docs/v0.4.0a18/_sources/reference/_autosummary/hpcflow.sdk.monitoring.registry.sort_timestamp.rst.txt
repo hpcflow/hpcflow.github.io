@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.registry.sort\_timestamp
+===============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autofunction:: sort_timestamp

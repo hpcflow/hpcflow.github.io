@@ -1,0 +1,6 @@
+hpcflow.app.unregister
+======================
+
+.. currentmodule:: hpcflow.app
+
+.. autofunction:: unregister

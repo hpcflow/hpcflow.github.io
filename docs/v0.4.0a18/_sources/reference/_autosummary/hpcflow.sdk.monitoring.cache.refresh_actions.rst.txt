@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.cache.refresh\_actions
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.cache
+
+.. autofunction:: refresh_actions

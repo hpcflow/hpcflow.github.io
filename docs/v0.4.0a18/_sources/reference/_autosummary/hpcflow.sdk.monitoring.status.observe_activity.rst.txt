@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.observe\_activity
+===============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: observe_activity

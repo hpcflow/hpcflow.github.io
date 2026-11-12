@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.registry.job\_record
+===========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autofunction:: job_record

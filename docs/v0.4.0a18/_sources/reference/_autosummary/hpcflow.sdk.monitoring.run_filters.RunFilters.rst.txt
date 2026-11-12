@@ -1,0 +1,38 @@
+hpcflow.sdk.monitoring.run_filters.RunFilters
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_filters
+
+.. autoclass:: RunFilters
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunFilters.matches
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunFilters.task_idx
+      ~RunFilters.task_id
+      ~RunFilters.names
+      ~RunFilters.element_idx
+      ~RunFilters.iteration_idx
+      ~RunFilters.action_idx
+      ~RunFilters.run_id
+      ~RunFilters.run_idx
+   
+   

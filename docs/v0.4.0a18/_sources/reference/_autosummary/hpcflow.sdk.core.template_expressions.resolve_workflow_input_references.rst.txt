@@ -1,0 +1,6 @@
+hpcflow.sdk.core.template\_expressions.resolve\_workflow\_input\_references
+===========================================================================
+
+.. currentmodule:: hpcflow.sdk.core.template_expressions
+
+.. autofunction:: resolve_workflow_input_references

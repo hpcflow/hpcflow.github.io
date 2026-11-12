@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.run\_filters.index\_selection
+====================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_filters
+
+.. autofunction:: index_selection

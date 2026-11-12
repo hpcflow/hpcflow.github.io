@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.runs.collect\_runs
+=========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.runs
+
+.. autofunction:: collect_runs

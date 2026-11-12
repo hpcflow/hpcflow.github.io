@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.array\_outputs.write\_chunked\_array\_output
+====================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_outputs
+
+.. autofunction:: write_chunked_array_output

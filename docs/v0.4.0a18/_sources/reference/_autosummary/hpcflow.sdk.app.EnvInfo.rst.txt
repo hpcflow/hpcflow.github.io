@@ -1,0 +1,34 @@
+hpcflow.sdk.app.EnvInfo
+=======================
+
+.. currentmodule:: hpcflow.sdk.app
+
+.. autoclass:: EnvInfo
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~EnvInfo.count
+      ~EnvInfo.index
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~EnvInfo.exe
+      ~EnvInfo.manager
+      ~EnvInfo.prefix
+   
+   

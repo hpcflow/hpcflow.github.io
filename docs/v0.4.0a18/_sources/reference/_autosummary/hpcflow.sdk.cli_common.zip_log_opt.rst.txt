@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.zip\_log\_opt
+=====================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: zip_log_opt

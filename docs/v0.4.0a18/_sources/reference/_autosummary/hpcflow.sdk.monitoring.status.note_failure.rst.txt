@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.note\_failure
+===========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: note_failure
