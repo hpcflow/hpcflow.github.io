@@ -1,0 +1,6 @@
+hpcflow.sdk.config.types.GetterCallback
+=======================================
+
+.. currentmodule:: hpcflow.sdk.config.types
+
+.. autodata:: GetterCallback

@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.jobscript.resolve\_jobscript\_dependencies
+=================================================================
+
+.. currentmodule:: hpcflow.sdk.submission.jobscript
+
+.. autofunction:: resolve_jobscript_dependencies

@@ -1,0 +1,33 @@
+hpcflow.sdk.persistence.array_output_sources.ArrayOutputSource
+==============================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_output_sources
+
+.. autoclass:: ArrayOutputSource
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrayOutputSource.metadata
+      ~ArrayOutputSource.shapes
+      ~ArrayOutputSource.dtype
+      ~ArrayOutputSource.entry_order
+   
+   

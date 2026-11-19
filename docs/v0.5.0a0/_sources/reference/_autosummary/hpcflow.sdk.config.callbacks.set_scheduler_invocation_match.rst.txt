@@ -1,0 +1,6 @@
+hpcflow.sdk.config.callbacks.set\_scheduler\_invocation\_match
+==============================================================
+
+.. currentmodule:: hpcflow.sdk.config.callbacks
+
+.. autofunction:: set_scheduler_invocation_match

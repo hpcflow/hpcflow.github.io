@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.active\_runs.read\_activity
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.active_runs
+
+.. autofunction:: read_activity

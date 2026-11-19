@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.registry.recent\_key
+===========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autofunction:: recent_key

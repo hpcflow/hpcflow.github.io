@@ -1,0 +1,42 @@
+hpcflow.sdk.persistence.discovery
+=================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.persistence.discovery
+
+   
+   
+   .. rubric:: Module attributes
+
+   .. autosummary::
+      :toctree:
+   
+      ALL_STORE_FORMATS
+      ALL_CREATE_STORE_FORMATS
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      store_cls_from_str
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

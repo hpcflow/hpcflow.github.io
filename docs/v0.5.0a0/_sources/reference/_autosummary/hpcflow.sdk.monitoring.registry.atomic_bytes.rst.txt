@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.registry.atomic\_bytes
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autofunction:: atomic_bytes

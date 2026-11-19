@@ -1,0 +1,6 @@
+hpcflow.sdk.core.ALL\_TEMPLATE\_FORMATS
+=======================================
+
+.. currentmodule:: hpcflow.sdk.core
+
+.. autodata:: ALL_TEMPLATE_FORMATS

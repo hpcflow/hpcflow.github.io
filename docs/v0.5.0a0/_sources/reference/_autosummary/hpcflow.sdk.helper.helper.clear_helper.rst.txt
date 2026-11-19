@@ -1,0 +1,6 @@
+hpcflow.sdk.helper.helper.clear\_helper
+=======================================
+
+.. currentmodule:: hpcflow.sdk.helper.helper
+
+.. autofunction:: clear_helper

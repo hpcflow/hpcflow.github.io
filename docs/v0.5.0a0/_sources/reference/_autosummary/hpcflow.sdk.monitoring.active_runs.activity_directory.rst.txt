@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.active\_runs.activity\_directory
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.active_runs
+
+.. autofunction:: activity_directory

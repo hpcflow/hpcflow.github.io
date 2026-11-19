@@ -1,0 +1,32 @@
+hpcflow.sdk.monitoring.models.JobObservation
+============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: JobObservation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobObservation.state
+      ~JobObservation.elements
+      ~JobObservation.fresh
+   
+   

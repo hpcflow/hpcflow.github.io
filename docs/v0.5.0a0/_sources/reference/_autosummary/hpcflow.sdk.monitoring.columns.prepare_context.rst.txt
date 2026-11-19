@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.columns.prepare\_context
+===============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autofunction:: prepare_context

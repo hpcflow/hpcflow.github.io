@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.filtering.filter\_templates
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.filtering
+
+.. autofunction:: filter_templates
