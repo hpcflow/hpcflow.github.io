@@ -1,0 +1,43 @@
+hpcflow.sdk.monitoring.models.JobRecord
+=======================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: JobRecord
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~JobRecord.from_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobRecord.jobscript_index
+      ~JobRecord.scheduler_type
+      ~JobRecord.os_name
+      ~JobRecord.scheduler_args
+      ~JobRecord.hostname
+      ~JobRecord.machine
+      ~JobRecord.scheduler_reference
+      ~JobRecord.is_array
+      ~JobRecord.run_ids
+      ~JobRecord.process_created_at
+      ~JobRecord.last_checked_at
+      ~JobRecord.last_observed_state
+      ~JobRecord.observation
+   
+   

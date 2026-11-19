@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.delete\_option
+======================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: delete_option

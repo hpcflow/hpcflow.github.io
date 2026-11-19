@@ -1,0 +1,42 @@
+hpcflow.sdk.submission.types.ResolvedJobscriptBlockDependencies
+===============================================================
+
+.. currentmodule:: hpcflow.sdk.submission.types
+
+.. autoclass:: ResolvedJobscriptBlockDependencies
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ResolvedJobscriptBlockDependencies.clear
+      ~ResolvedJobscriptBlockDependencies.copy
+      ~ResolvedJobscriptBlockDependencies.fromkeys
+      ~ResolvedJobscriptBlockDependencies.get
+      ~ResolvedJobscriptBlockDependencies.items
+      ~ResolvedJobscriptBlockDependencies.keys
+      ~ResolvedJobscriptBlockDependencies.pop
+      ~ResolvedJobscriptBlockDependencies.popitem
+      ~ResolvedJobscriptBlockDependencies.setdefault
+      ~ResolvedJobscriptBlockDependencies.update
+      ~ResolvedJobscriptBlockDependencies.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ResolvedJobscriptBlockDependencies.js_element_mapping
+      ~ResolvedJobscriptBlockDependencies.is_array
+   
+   

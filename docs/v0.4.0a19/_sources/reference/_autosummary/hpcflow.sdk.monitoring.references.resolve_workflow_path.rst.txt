@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.references.resolve\_workflow\_path
+=========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.references
+
+.. autofunction:: resolve_workflow_path

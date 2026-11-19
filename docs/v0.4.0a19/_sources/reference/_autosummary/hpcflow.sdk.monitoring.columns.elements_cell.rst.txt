@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.columns.elements\_cell
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autofunction:: elements_cell

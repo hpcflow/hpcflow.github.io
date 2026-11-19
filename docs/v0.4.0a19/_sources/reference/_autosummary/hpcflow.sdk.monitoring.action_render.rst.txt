@@ -1,0 +1,53 @@
+hpcflow.sdk.monitoring.action_render
+====================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.monitoring.action_render
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      action_column_widths
+      action_text
+      display_summary
+      element_ranges
+      full_action_rows
+      iteration_runs
+      iteration_text
+      needs_compact_layout
+      state_icons
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      ActionColumnWidths
+      FullActionRow
+      IterationRange
+   
+   
+
+   
+   
+   
+
+
+

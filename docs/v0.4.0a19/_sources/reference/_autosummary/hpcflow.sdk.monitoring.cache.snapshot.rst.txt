@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.cache.snapshot
+=====================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.cache
+
+.. autofunction:: snapshot

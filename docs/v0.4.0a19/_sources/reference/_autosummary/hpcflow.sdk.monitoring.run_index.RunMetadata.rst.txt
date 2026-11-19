@@ -1,0 +1,41 @@
+hpcflow.sdk.monitoring.run_index.RunMetadata
+============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_index
+
+.. autoclass:: RunMetadata
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunMetadata.from_json
+      ~RunMetadata.from_state
+      ~RunMetadata.scheduler_state
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunMetadata.task
+      ~RunMetadata.task_name
+      ~RunMetadata.element
+      ~RunMetadata.iteration
+      ~RunMetadata.action
+      ~RunMetadata.attempt
+      ~RunMetadata.jobscript_index
+      ~RunMetadata.jobscript_element
+      ~RunMetadata.started_at
+   
+   

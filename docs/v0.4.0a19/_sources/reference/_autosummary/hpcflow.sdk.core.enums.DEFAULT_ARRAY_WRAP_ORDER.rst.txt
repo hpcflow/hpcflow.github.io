@@ -1,0 +1,6 @@
+hpcflow.sdk.core.enums.DEFAULT\_ARRAY\_WRAP\_ORDER
+==================================================
+
+.. currentmodule:: hpcflow.sdk.core.enums
+
+.. autodata:: DEFAULT_ARRAY_WRAP_ORDER

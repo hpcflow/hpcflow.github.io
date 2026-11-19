@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.member\_array\_outputs.member\_array\_output\_record\_has\_array
+========================================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.member_array_outputs
+
+.. autofunction:: member_array_output_record_has_array

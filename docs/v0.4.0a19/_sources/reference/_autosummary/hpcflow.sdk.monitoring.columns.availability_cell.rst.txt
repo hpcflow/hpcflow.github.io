@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.columns.availability\_cell
+=================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autofunction:: availability_cell

@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.active\_runs.execution\_plans
+====================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.active_runs
+
+.. autofunction:: execution_plans

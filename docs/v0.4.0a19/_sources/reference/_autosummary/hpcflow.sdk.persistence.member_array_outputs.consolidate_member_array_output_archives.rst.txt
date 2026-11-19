@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.member\_array\_outputs.consolidate\_member\_array\_output\_archives
+===========================================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.member_array_outputs
+
+.. autofunction:: consolidate_member_array_output_archives

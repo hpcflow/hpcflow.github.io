@@ -1,0 +1,6 @@
+hpcflow.sdk.cli.redirect\_std\_to\_file\_click
+==============================================
+
+.. currentmodule:: hpcflow.sdk.cli
+
+.. autofunction:: redirect_std_to_file_click

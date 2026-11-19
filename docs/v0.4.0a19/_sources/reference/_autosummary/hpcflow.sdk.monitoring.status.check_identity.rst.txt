@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.check\_identity
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: check_identity

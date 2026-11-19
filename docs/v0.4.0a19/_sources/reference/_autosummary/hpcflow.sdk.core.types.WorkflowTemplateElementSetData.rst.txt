@@ -1,0 +1,54 @@
+hpcflow.sdk.core.types.WorkflowTemplateElementSetData
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: WorkflowTemplateElementSetData
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowTemplateElementSetData.clear
+      ~WorkflowTemplateElementSetData.copy
+      ~WorkflowTemplateElementSetData.fromkeys
+      ~WorkflowTemplateElementSetData.get
+      ~WorkflowTemplateElementSetData.items
+      ~WorkflowTemplateElementSetData.keys
+      ~WorkflowTemplateElementSetData.pop
+      ~WorkflowTemplateElementSetData.popitem
+      ~WorkflowTemplateElementSetData.setdefault
+      ~WorkflowTemplateElementSetData.update
+      ~WorkflowTemplateElementSetData.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowTemplateElementSetData.inputs
+      ~WorkflowTemplateElementSetData.input_files
+      ~WorkflowTemplateElementSetData.repeats
+      ~WorkflowTemplateElementSetData.groups
+      ~WorkflowTemplateElementSetData.resources
+      ~WorkflowTemplateElementSetData.sequences
+      ~WorkflowTemplateElementSetData.multi_path_sequences
+      ~WorkflowTemplateElementSetData.input_sources
+      ~WorkflowTemplateElementSetData.nesting_order
+      ~WorkflowTemplateElementSetData.env_preset
+      ~WorkflowTemplateElementSetData.environments
+      ~WorkflowTemplateElementSetData.sourceable_elem_iters
+      ~WorkflowTemplateElementSetData.allow_non_coincident_task_sources
+      ~WorkflowTemplateElementSetData.is_creation
+   
+   

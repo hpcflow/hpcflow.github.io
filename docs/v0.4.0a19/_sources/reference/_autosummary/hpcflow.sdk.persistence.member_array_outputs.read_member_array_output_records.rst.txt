@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.member\_array\_outputs.read\_member\_array\_output\_records
+===================================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.member_array_outputs
+
+.. autofunction:: read_member_array_output_records
