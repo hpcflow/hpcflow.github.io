@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.headers.read\_bytes
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.headers
+
+.. autofunction:: read_bytes

@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.scheduler\_ref
+============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: scheduler_ref

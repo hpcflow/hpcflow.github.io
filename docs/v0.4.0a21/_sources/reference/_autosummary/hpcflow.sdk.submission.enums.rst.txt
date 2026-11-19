@@ -1,0 +1,36 @@
+hpcflow.sdk.submission.enums
+============================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.submission.enums
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      JobscriptElementState
+      SubmissionStatus
+   
+   
+
+   
+   
+   
+
+
+

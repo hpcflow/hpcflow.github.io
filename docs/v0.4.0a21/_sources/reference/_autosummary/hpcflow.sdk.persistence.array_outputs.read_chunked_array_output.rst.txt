@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.array\_outputs.read\_chunked\_array\_output
+===================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_outputs
+
+.. autofunction:: read_chunked_array_output

@@ -1,0 +1,39 @@
+hpcflow.sdk.monitoring.registry.SubmissionRegistry
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autoclass:: SubmissionRegistry
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~SubmissionRegistry.add_job
+      ~SubmissionRegistry.begin
+      ~SubmissionRegistry.finish
+      ~SubmissionRegistry.read
+      ~SubmissionRegistry.transaction
+      ~SubmissionRegistry.unregister
+      ~SubmissionRegistry.unregister_all
+      ~SubmissionRegistry.unregister_many
+      ~SubmissionRegistry.update
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SubmissionRegistry.SCHEMA_VERSION
+   
+   

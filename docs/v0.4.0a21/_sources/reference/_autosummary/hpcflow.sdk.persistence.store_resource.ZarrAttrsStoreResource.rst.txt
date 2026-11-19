@@ -1,0 +1,32 @@
+hpcflow.sdk.persistence.store_resource.ZarrAttrsStoreResource
+=============================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.store_resource
+
+.. autoclass:: ZarrAttrsStoreResource
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ZarrAttrsStoreResource.close
+      ~ZarrAttrsStoreResource.open
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZarrAttrsStoreResource.logger
+   
+   

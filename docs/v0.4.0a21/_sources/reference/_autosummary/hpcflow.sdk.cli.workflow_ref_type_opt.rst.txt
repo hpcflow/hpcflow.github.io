@@ -1,0 +1,6 @@
+hpcflow.sdk.cli.workflow\_ref\_type\_opt
+========================================
+
+.. currentmodule:: hpcflow.sdk.cli
+
+.. autofunction:: workflow_ref_type_opt

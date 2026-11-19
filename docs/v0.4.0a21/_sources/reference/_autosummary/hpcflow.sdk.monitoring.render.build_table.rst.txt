@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.render.build\_table
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.render
+
+.. autofunction:: build_table

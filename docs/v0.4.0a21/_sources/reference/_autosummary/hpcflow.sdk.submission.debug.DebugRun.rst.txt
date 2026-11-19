@@ -1,0 +1,37 @@
+hpcflow.sdk.submission.debug.DebugRun
+=====================================
+
+.. currentmodule:: hpcflow.sdk.submission.debug
+
+.. autoclass:: DebugRun
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~DebugRun.execute
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DebugRun.run_id
+      ~DebugRun.directory
+      ~DebugRun.commands_path
+      ~DebugRun.jobscript_path
+      ~DebugRun.script_path
+      ~DebugRun.jobscript
+      ~DebugRun.direct
+   
+   

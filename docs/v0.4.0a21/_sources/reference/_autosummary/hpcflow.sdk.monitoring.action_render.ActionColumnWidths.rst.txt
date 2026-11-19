@@ -1,0 +1,33 @@
+hpcflow.sdk.monitoring.action_render.ActionColumnWidths
+=======================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.action_render
+
+.. autoclass:: ActionColumnWidths
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ActionColumnWidths.task
+      ~ActionColumnWidths.elements
+      ~ActionColumnWidths.iterations
+      ~ActionColumnWidths.icons
+   
+   

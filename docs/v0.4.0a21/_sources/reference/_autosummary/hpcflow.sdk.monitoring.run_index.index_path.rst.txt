@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.run\_index.index\_path
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_index
+
+.. autofunction:: index_path

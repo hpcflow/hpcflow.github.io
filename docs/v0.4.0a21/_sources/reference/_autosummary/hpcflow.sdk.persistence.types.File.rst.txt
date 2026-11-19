@@ -1,0 +1,42 @@
+hpcflow.sdk.persistence.types.File
+==================================
+
+.. currentmodule:: hpcflow.sdk.persistence.types
+
+.. autoclass:: File
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~File.clear
+      ~File.copy
+      ~File.fromkeys
+      ~File.get
+      ~File.items
+      ~File.keys
+      ~File.pop
+      ~File.popitem
+      ~File.setdefault
+      ~File.update
+      ~File.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~File.store_contents
+      ~File.path
+   
+   

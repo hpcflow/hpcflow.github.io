@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.registry.file\_lock
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autofunction:: file_lock

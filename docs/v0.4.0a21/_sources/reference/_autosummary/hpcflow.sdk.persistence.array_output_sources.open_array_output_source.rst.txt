@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.array\_output\_sources.open\_array\_output\_source
+==========================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_output_sources
+
+.. autofunction:: open_array_output_source

@@ -1,0 +1,33 @@
+hpcflow.sdk.monitoring.models.ElementGroup
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: ElementGroup
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ElementGroup.from_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ElementGroup.task
+      ~ElementGroup.pattern
+      ~ElementGroup.elements
+   
+   

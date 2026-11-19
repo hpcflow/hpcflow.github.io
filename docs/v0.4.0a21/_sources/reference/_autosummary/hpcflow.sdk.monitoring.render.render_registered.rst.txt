@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.render.render\_registered
+================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.render
+
+.. autofunction:: render_registered

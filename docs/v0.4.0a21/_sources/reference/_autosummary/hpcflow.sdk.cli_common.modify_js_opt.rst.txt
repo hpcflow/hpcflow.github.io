@@ -1,0 +1,6 @@
+hpcflow.sdk.cli\_common.modify\_js\_opt
+=======================================
+
+.. currentmodule:: hpcflow.sdk.cli_common
+
+.. autofunction:: modify_js_opt

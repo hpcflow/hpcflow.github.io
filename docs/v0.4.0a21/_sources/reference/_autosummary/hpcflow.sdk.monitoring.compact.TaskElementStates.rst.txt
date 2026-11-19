@@ -1,0 +1,31 @@
+hpcflow.sdk.monitoring.compact.TaskElementStates
+================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.compact
+
+.. autoclass:: TaskElementStates
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~TaskElementStates.name
+      ~TaskElementStates.counts
+   
+   

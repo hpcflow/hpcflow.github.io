@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.registry.timestamp
+=========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.registry
+
+.. autofunction:: timestamp

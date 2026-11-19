@@ -1,0 +1,34 @@
+hpcflow.sdk.monitoring.app.MonitoringMixin
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.app
+
+.. autoclass:: MonitoringMixin
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~MonitoringMixin.clear_registry
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MonitoringMixin.get_known_submissions
+      ~MonitoringMixin.show
+      ~MonitoringMixin.show_legend
+      ~MonitoringMixin.unregister
+   
+   
