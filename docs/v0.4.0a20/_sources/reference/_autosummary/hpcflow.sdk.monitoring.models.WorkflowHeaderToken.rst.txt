@@ -1,0 +1,36 @@
+hpcflow.sdk.monitoring.models.WorkflowHeaderToken
+=================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: WorkflowHeaderToken
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~WorkflowHeaderToken.from_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~WorkflowHeaderToken.filename
+      ~WorkflowHeaderToken.device
+      ~WorkflowHeaderToken.inode
+      ~WorkflowHeaderToken.size
+      ~WorkflowHeaderToken.modified_ns
+      ~WorkflowHeaderToken.changed_ns
+   
+   

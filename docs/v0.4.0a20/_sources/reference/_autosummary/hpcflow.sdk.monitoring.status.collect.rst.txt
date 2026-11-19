@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.status.collect
+=====================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.status
+
+.. autofunction:: collect

@@ -1,0 +1,60 @@
+hpcflow.sdk.persistence.zarr
+============================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.persistence.zarr
+
+   
+   
+   .. rubric:: Module attributes
+
+   .. autosummary::
+      :toctree:
+   
+      ListAny
+      ZarrAttrs
+      MAGIC
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      append_items_to_ragged_array
+      decode_msgpack
+      encode_msgpack
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      ZarrPersistentStore
+      ZarrStoreEAR
+      ZarrStoreElement
+      ZarrStoreElementIter
+      ZarrStoreParameter
+      ZarrStoreTask
+      ZarrZipPersistentStore
+   
+   
+
+   
+   
+   
+
+
+

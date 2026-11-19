@@ -1,0 +1,6 @@
+hpcflow.sdk.core.task\_schema.split\_save\_files\_policy
+========================================================
+
+.. currentmodule:: hpcflow.sdk.core.task_schema
+
+.. autofunction:: split_save_files_policy

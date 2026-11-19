@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.search\_dir\_files\_by\_regex
+====================================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: search_dir_files_by_regex

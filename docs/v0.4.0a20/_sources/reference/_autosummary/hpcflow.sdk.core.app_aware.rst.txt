@@ -1,0 +1,35 @@
+hpcflow.sdk.core.app_aware
+==========================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.core.app_aware
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      AppAware
+   
+   
+
+   
+   
+   
+
+
+

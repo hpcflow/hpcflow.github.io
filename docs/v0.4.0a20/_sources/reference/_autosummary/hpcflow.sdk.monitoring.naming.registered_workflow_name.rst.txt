@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.naming.registered\_workflow\_name
+========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.naming
+
+.. autofunction:: registered_workflow_name

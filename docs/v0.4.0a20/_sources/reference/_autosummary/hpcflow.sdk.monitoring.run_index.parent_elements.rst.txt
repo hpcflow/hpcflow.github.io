@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.run\_index.parent\_elements
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_index
+
+.. autofunction:: parent_elements

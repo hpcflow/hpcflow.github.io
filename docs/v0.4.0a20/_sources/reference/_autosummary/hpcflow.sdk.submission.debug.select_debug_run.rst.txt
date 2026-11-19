@@ -1,0 +1,6 @@
+hpcflow.sdk.submission.debug.select\_debug\_run
+===============================================
+
+.. currentmodule:: hpcflow.sdk.submission.debug
+
+.. autofunction:: select_debug_run

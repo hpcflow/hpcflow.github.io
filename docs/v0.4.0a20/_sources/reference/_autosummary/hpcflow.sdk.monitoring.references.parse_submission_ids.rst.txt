@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.references.parse\_submission\_ids
+========================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.references
+
+.. autofunction:: parse_submission_ids

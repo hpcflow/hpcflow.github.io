@@ -1,0 +1,48 @@
+hpcflow.sdk.monitoring.compact
+==============================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.monitoring.compact
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      compact_action_text
+      compact_element_text
+      task_progress
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      CountRange
+      ProblemGroup
+      TaskElementStates
+      TaskProgress
+   
+   
+
+   
+   
+   
+
+
+

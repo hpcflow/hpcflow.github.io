@@ -1,0 +1,6 @@
+hpcflow.sdk.core.errors.YAMLError
+=================================
+
+.. currentmodule:: hpcflow.sdk.core.errors
+
+.. autoexception:: YAMLError

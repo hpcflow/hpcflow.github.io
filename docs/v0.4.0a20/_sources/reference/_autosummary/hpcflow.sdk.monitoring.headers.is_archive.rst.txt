@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.headers.is\_archive
+==========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.headers
+
+.. autofunction:: is_archive

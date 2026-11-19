@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.utils.ARRAY\_OUTPUT\_CONSOLIDATED\_NAME
+===============================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.utils
+
+.. autodata:: ARRAY_OUTPUT_CONSOLIDATED_NAME

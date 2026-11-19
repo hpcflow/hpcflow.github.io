@@ -1,0 +1,33 @@
+hpcflow.sdk.monitoring.action_render.FullActionRow
+==================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.action_render
+
+.. autoclass:: FullActionRow
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FullActionRow.task
+      ~FullActionRow.elements
+      ~FullActionRow.iterations
+      ~FullActionRow.icons
+   
+   
