@@ -1,0 +1,38 @@
+hpcflow.sdk.monitoring.references
+=================================
+
+.. toctree::
+   :includehidden:
+
+.. automodule:: hpcflow.sdk.monitoring.references
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      is_path_reference
+      parse_submission_ids
+      resolve_records
+      resolve_submission_id
+      resolve_workflow_path
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

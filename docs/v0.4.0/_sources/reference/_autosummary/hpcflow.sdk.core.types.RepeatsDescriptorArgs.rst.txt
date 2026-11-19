@@ -1,0 +1,45 @@
+hpcflow.sdk.core.types.RepeatsDescriptorArgs
+============================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: RepeatsDescriptorArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RepeatsDescriptorArgs.clear
+      ~RepeatsDescriptorArgs.copy
+      ~RepeatsDescriptorArgs.fromkeys
+      ~RepeatsDescriptorArgs.get
+      ~RepeatsDescriptorArgs.items
+      ~RepeatsDescriptorArgs.keys
+      ~RepeatsDescriptorArgs.pop
+      ~RepeatsDescriptorArgs.popitem
+      ~RepeatsDescriptorArgs.setdefault
+      ~RepeatsDescriptorArgs.update
+      ~RepeatsDescriptorArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RepeatsDescriptorArgs.number
+      ~RepeatsDescriptorArgs.name
+      ~RepeatsDescriptorArgs.nesting_order
+      ~RepeatsDescriptorArgs.generate_seed_sequence
+      ~RepeatsDescriptorArgs.master_seed
+   
+   

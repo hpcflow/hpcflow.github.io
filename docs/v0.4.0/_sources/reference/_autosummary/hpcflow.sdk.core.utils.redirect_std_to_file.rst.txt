@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.redirect\_std\_to\_file
+==============================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: redirect_std_to_file

@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.runs.resolve\_run\_state
+===============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.runs
+
+.. autofunction:: resolve_run_state

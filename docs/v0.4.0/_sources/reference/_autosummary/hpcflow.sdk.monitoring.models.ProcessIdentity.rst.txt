@@ -1,0 +1,32 @@
+hpcflow.sdk.monitoring.models.ProcessIdentity
+=============================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.models
+
+.. autoclass:: ProcessIdentity
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ProcessIdentity.from_json
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ProcessIdentity.pid
+      ~ProcessIdentity.created_at
+   
+   

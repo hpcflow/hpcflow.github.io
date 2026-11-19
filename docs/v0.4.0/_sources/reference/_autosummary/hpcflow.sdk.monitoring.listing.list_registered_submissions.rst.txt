@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.listing.list\_registered\_submissions
+============================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.listing
+
+.. autofunction:: list_registered_submissions

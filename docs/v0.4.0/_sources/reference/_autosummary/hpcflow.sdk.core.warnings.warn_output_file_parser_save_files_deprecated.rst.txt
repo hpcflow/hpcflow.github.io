@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.warn\_output\_file\_parser\_save\_files\_deprecated
+=============================================================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autofunction:: warn_output_file_parser_save_files_deprecated

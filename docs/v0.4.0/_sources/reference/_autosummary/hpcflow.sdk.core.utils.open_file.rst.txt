@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.open\_file
+=================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: open_file

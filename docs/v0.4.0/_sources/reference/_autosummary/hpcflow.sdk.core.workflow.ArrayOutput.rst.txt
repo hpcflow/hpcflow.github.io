@@ -1,0 +1,43 @@
+hpcflow.sdk.core.workflow.ArrayOutput
+=====================================
+
+.. currentmodule:: hpcflow.sdk.core.workflow
+
+.. autoclass:: ArrayOutput
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ArrayOutput.dtype
+      ~ArrayOutput.member_idx
+      ~ArrayOutput.shape
+      ~ArrayOutput.name
+      ~ArrayOutput.data
+      ~ArrayOutput.task_insert_ID
+      ~ArrayOutput.task_idx
+      ~ArrayOutput.element_idx
+      ~ArrayOutput.element_ID
+      ~ArrayOutput.iteration_idx
+      ~ArrayOutput.iteration_ID
+      ~ArrayOutput.action_idx
+      ~ArrayOutput.run_idx
+      ~ArrayOutput.run_ID
+   
+   

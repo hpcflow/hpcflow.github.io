@@ -1,0 +1,47 @@
+hpcflow.sdk.core.types.JobscriptSubmissionFailureArgs
+=====================================================
+
+.. currentmodule:: hpcflow.sdk.core.types
+
+.. autoclass:: JobscriptSubmissionFailureArgs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~JobscriptSubmissionFailureArgs.clear
+      ~JobscriptSubmissionFailureArgs.copy
+      ~JobscriptSubmissionFailureArgs.fromkeys
+      ~JobscriptSubmissionFailureArgs.get
+      ~JobscriptSubmissionFailureArgs.items
+      ~JobscriptSubmissionFailureArgs.keys
+      ~JobscriptSubmissionFailureArgs.pop
+      ~JobscriptSubmissionFailureArgs.popitem
+      ~JobscriptSubmissionFailureArgs.setdefault
+      ~JobscriptSubmissionFailureArgs.update
+      ~JobscriptSubmissionFailureArgs.values
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~JobscriptSubmissionFailureArgs.submit_cmd
+      ~JobscriptSubmissionFailureArgs.js_idx
+      ~JobscriptSubmissionFailureArgs.js_path
+      ~JobscriptSubmissionFailureArgs.stdout
+      ~JobscriptSubmissionFailureArgs.stderr
+      ~JobscriptSubmissionFailureArgs.subprocess_exc
+      ~JobscriptSubmissionFailureArgs.job_ID_parse_exc
+   
+   

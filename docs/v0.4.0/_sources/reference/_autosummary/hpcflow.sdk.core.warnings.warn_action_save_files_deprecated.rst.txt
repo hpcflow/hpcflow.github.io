@@ -1,0 +1,6 @@
+hpcflow.sdk.core.warnings.warn\_action\_save\_files\_deprecated
+===============================================================
+
+.. currentmodule:: hpcflow.sdk.core.warnings
+
+.. autofunction:: warn_action_save_files_deprecated

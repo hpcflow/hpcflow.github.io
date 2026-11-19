@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.array\_output\_sources.normalize\_metadata
+==================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.array_output_sources
+
+.. autofunction:: normalize_metadata

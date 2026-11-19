@@ -1,0 +1,6 @@
+hpcflow.sdk.monitoring.columns.status\_cell
+===========================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.columns
+
+.. autofunction:: status_cell

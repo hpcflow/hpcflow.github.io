@@ -1,0 +1,6 @@
+hpcflow.sdk.core.utils.split\_param\_label
+==========================================
+
+.. currentmodule:: hpcflow.sdk.core.utils
+
+.. autofunction:: split_param_label

@@ -1,0 +1,6 @@
+hpcflow.sdk.persistence.member\_array\_outputs.write\_member\_array\_output\_archive
+====================================================================================
+
+.. currentmodule:: hpcflow.sdk.persistence.member_array_outputs
+
+.. autofunction:: write_member_array_output_archive

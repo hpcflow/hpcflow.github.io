@@ -1,0 +1,32 @@
+hpcflow.sdk.monitoring.run_columns.RunRenderContext
+===================================================
+
+.. currentmodule:: hpcflow.sdk.monitoring.run_columns
+
+.. autoclass:: RunRenderContext
+   :members:
+   :show-inheritance:
+   :undoc-members:
+   :inherited-members:   
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RunRenderContext.time
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RunRenderContext.display_timezone
+      ~RunRenderContext.current_local_time
+   
+   
